@@ -25,6 +25,7 @@ require.config(
       string: '../../chipper/requirejs-plugins/string',
 
       // common directories, uppercase names to identify them in require imports
+      ASSERT: '../../assert/js',
       AXON: '../../axon/js',
       BRAND: '../../brand/js',
       DOT: '../../dot/js',
@@ -35,9 +36,13 @@ require.config(
       SCENERY: '../../scenery/js',
       SCENERY_PHET: '../../scenery-phet/js',
       SUN: '../../sun/js',
-
+      // states of matter sim
+      STATES_OF_MATTER: '../../states-of-matter/js',
       // this sim
       ATOMIC_INTERACTIONS: '.'
+    },
+    shim: {
+      underscore: { exports: "_" }
     },
 
     urlArgs: new Date().getTime()  // cache buster to make browser reload all included scripts
