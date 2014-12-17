@@ -1,3 +1,12 @@
 {
-  "atomic-interactions.name": "Atomic Interactions"
+  "atomic-interactions.name": "Atomic Interactions",
+  "forces": "Forces",
+  "hideForces": "Hide Forces",
+  "totalForce": "Total Force",
+  "attractive": "Attractive",
+  "repulsive": "Repulsive",
+  "vanderwaals": "(van der Waals)",
+  "electronOverlap": "(electron overlap)",
+  "normal": "Normal",
+  "slowMotion": "Slow Motion"
 }
