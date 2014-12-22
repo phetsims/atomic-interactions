@@ -8,5 +8,13 @@
   "vanderwaals": "(van der Waals)",
   "electronOverlap": "(electron overlap)",
   "normal": "Normal",
-  "slowMotion": "Slow Motion"
+  "slowMotion": "Slow Motion",
+  "pinned": "Pinned",
+  "moving": "Moving",
+  "atomDiameter": "Atom Diameter",
+  "interactionStrength": "Interaction Strength",
+  "small": "small",
+  "large": "Large",
+  "weak": "Weak",
+  "strong": "Strong"
 }
