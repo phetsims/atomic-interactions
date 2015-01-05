@@ -11,11 +11,14 @@ define( function( require ) {
   // modules
   var AtomicInteractionsScreen = require( 'ATOMIC_INTERACTIONS/atomic-interactions/AtomicInteractionsScreen' );
   var Sim = require( 'JOIST/Sim' );
+  var GlobalOptionsNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/GlobalOptionsNode' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
+  var Property = require( 'AXON/Property' );
 
   // strings
   var simTitle = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.name' );
 
+  var colorsProperty = new Property( false );
   var simOptions = {
     credits: {
       //TODO fill in proper credits, all of these fields are optional, see joist.AboutDialog
@@ -25,7 +28,8 @@ define( function( require ) {
       qualityAssurance: '',
       graphicArts: '',
       thanks: ''
-    }
+    },
+    optionsNode: new GlobalOptionsNode( colorsProperty )
   };
 
   // Appending '?dev' to the URL will enable developer-only features.
@@ -36,7 +40,7 @@ define( function( require ) {
   }
 
   SimLauncher.launch( function() {
-    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( true, simTitle ) ], simOptions );
+    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( true, simTitle, colorsProperty ) ], simOptions );
     sim.start();
   } );
 } );
