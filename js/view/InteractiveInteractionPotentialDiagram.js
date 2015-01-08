@@ -19,7 +19,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
-  var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/AtomicInteractionColors' );
+  var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/view/AtomicInteractionColors' );
 
   var RESIZE_HANDLE_SIZE_PROPORTION = 0.05;
   var EPSILON_HANDLE_OFFSET_PROPORTION = 0.08;
