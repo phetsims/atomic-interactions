@@ -21,7 +21,6 @@ define( function( require ) {
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var RadioButtonGroup = require( 'SUN/buttons/RadioButtonGroup' );
   var HSlider = require( 'SUN/HSlider' );
-  var Property = require( 'AXON/Property' );
   var Dimension2 = require( 'DOT/Dimension2' );
   var StatesOfMatterConstants = require( 'STATES_OF_MATTER/common/StatesOfMatterConstants' );
   var Path = require( 'SCENERY/nodes/Path' );
@@ -60,8 +59,8 @@ define( function( require ) {
   /**
    *
    * @param {DualAtomModel}model
-   * @param enableHeterogeneousMolecules
-   * @param options
+   * @param {Boolean }enableHeterogeneousMolecules
+   * @param {Object} options that can be passed on to the underlying node
    * @constructor
    */
   function AtomicInteractionsControlPanel( model, enableHeterogeneousMolecules, options ) {
@@ -104,7 +103,6 @@ define( function( require ) {
 
     if ( enableHeterogeneousMolecules ) {
       textOptions = {font: new PhetFont( 12 ), fill: options.textColor};
-
       neonAndNeon = [ new Text( neonString, textOptions ), new Text( neonString, textOptions ) ];
       argonAndArgon = [  new Text( argonString, textOptions ), new Text( argonString, textOptions ) ];
       oxygenAndOxygen = [ new Text( oxygenString, textOptions ), new Text( oxygenString, textOptions )];
@@ -125,31 +123,29 @@ define( function( require ) {
 
       // pad inserts a spacing node (HStrut) so that the rows occupy a certain fixed width.
       createItem = function( itemSpec ) {
-
         var strutWidth1 = maxWidth - itemSpec[0].width + 15;
         var strutWidth2 = maxWidth - itemSpec[1].width;
         return new HBox( { children: [ itemSpec[0], new HStrut( strutWidth1 ),
                                        itemSpec[1], new HStrut( strutWidth2 ) ] } );
       };
-
+      var particleRadius = 8;
       var neonNeonRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_NEON,
-        createItem( neonAndNeon ), { radius: 8 } );
+        createItem( neonAndNeon ), { radius: particleRadius } );
       var argonArgonRadio = new AquaRadioButton( model.moleculeTypeProperty, ARGON_ARGON,
-        createItem( argonAndArgon ), { radius: 8 } );
+        createItem( argonAndArgon ), { radius: particleRadius } );
       var oxygenOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, OXYGEN_OXYGEN,
-        createItem( oxygenAndOxygen ), { radius: 8 } );
+        createItem( oxygenAndOxygen ), { radius: particleRadius } );
       var neonArgonRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_ARGON,
-        createItem( neonAndArgon ), { radius: 8 } );
+        createItem( neonAndArgon ), { radius: particleRadius } );
       var neonOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_OXYGEN,
-        createItem( neonAndOxygen ), { radius: 8 } );
+        createItem( neonAndOxygen ), { radius: particleRadius } );
       var argonOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, ARGON_OXYGEN,
-        createItem( argonAndOxygen ), { radius: 8 } );
+        createItem( argonAndOxygen ), { radius: particleRadius } );
       var adjustableAttractionRadio = new AquaRadioButton( model.moleculeTypeProperty, ADJUSTABLE,
-        new HBox( { children: [customAttraction] } ), { radius: 8 } );
-
-      var imageNode = new Image( pushPinImg, {scale: 0.2} );
+        new HBox( { children: [customAttraction] } ), { radius: particleRadius } );
+      var pushpinImage = new Image( pushPinImg, { scale: 0.2 } );
       var pinnedNodeText = new HBox( {
-        children: [ imageNode, new Text( pinnedString, textOptions )],
+        children: [pushpinImage, new Text( pinnedString, textOptions ), new HStrut( pushpinImage.width )],
         spacing: 10
       } );
       titleText = [ pinnedNodeText , new Text( movingString, textOptions ) ];
@@ -223,7 +219,7 @@ define( function( require ) {
       this.addChild( titleNode );
       titleNode.centerX = radioButtonGroup.centerX + 15;
     }
-
+    // add atom diameter slider
     var atomDiameterTitle = new Text( atomDiameterString, textOptions );
     atomDiameterTitle.centerX = radioButtonGroup.centerX - 15;
     atomDiameterTitle.top = radioButtonGroup.bottom + 10;
@@ -246,19 +242,20 @@ define( function( require ) {
         }
       } );
     atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MIN_SIGMA,
-      new Text( smallString, {fill: options.tickTextColor } ) );
+      new Text( smallString, { fill: options.tickTextColor } ) );
     atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MAX_SIGMA,
-      new Text( largeString, {fill: options.tickTextColor } ) );
+      new Text( largeString, { fill: options.tickTextColor } ) );
     atomDiameterSlider.centerX = atomDiameterTitle.centerX + 30;
     atomDiameterSlider.top = atomDiameterTitle.bottom + 5;
     var atomDiameter = new Node( {
       children: [atomDiameterTitle, atomDiameterSlider]
     } );
 
+    // add interaction strength slider
     var interactionStrengthTitle = new Text( interactionStrengthString, textOptions );
     interactionStrengthTitle.centerX = radioButtonGroup.centerX - 5;
     interactionStrengthTitle.top = atomDiameterSlider.bottom + 5;
-    model.interactionStrengthProperty.value = model.getEpsilon();
+    model.interactionStrength = model.getEpsilon();
     var interactionStrengthSlider = new HSlider( model.interactionStrengthProperty,
       { min: StatesOfMatterConstants.MIN_EPSILON, max: StatesOfMatterConstants.MAX_EPSILON },
       {
@@ -291,7 +288,7 @@ define( function( require ) {
     } );
 
     // Update the text when the value or units changes.
-    Property.multilink( [model.moleculeTypeProperty],
+    model.moleculeTypeProperty.link(
       function( moleculeType ) {
         switch( moleculeType ) {
           case NEON_NEON:
@@ -357,36 +354,25 @@ define( function( require ) {
           );
           background.setShape( backgroundShape2 );
         }
-
-
-      }
-    );
-
-
+      } );
     this.addChild( radioButtonGroup );
-
-
     this.mutate( options );
   }
 
   //Create an icon for the adjustable attraction  button
   var createAdjustableAttractionIcon = function() {
-    var dot1 = new Circle( 5, {fill: '#B15AFF' } );
-    return new Node( {children: [ dot1 ]} );
+    return new Circle( 5, {fill: '#B15AFF' } );
   };
 
   //Create an icon for the neon  button
   var createNeonIcon = function() {
-    var dot1 = new Circle( 5, { fill: '#1AFFFB' } );
-    return new Node( {children: [  dot1 ]} );
+    return new Circle( 5, { fill: '#1AFFFB' } );
   };
 
   //Create an icon for the argon  button
   var createArgonIcon = function() {
-    var dot1 = new Circle( 5, {fill: '#FF8A75'} );
-    return new Node( {children: [ dot1 ]} );
+    return new Circle( 5, {fill: '#FF8A75'} );
   };
-
 
   return inherit( Node, AtomicInteractionsControlPanel );
 } );
