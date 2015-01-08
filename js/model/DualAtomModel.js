@@ -37,7 +37,6 @@ define( function( require ) {
 
     this.fixedAtom = null;
     this.movableAtom = null;
-    this.timeStep = 0.3;
     this.settingBothAtomTypes = false;  // Flag used to prevent getting in disallowed state.
     this.bondingState = BONDING_STATE_UNBONDED; // Tracks whether the atoms have formed a chemical bond.
     this.vibrationCounter = 0; // Used to vibrate fixed atom during bonding.
@@ -82,7 +81,10 @@ define( function( require ) {
       getMovableAtomType: function() {
         return this.movableAtom.getType();
       },
-
+      /**
+       *
+       * @param {String} atomType indicates type of molecule
+       */
       setFixedAtomType: function( atomType ) {
 
         if ( this.fixedAtom === null || this.fixedAtom.getType() !== atomType ) {
@@ -119,6 +121,10 @@ define( function( require ) {
           this.resetMovableAtomPos();
         }
       },
+      /**
+       *
+       * @param {String} atomType indicates type of molecule
+       */
       setMovableAtomType: function( atomType ) {
 
         if ( this.movableAtom === null || this.movableAtom.getType() !== atomType ) {
@@ -155,12 +161,14 @@ define( function( require ) {
               InteractionStrengthTable.getInteractionPotential( this.fixedAtom.getType(),
                 this.movableAtom.getType() ) );
           }
-
-
           this.resetMovableAtomPos();
         }
       },
 
+      /**
+       *
+       * @param {String} atomType indicates type of molecule
+       */
       ensureValidAtomType: function( atomType ) {
         // Verify that this is a supported value.
         if ( ( atomType !== AtomType.NEON ) &&
@@ -171,6 +179,10 @@ define( function( require ) {
           //assert false;
         }
       },
+      /**
+       *
+       * @param {String} atomType indicates type of molecule
+       */
       setBothAtomTypes: function( atomType ) {
 
         if ( this.fixedAtom === null || this.movableAtom === null || this.fixedAtom.getType() !== atomType ||
@@ -282,7 +294,10 @@ define( function( require ) {
         }
       },
 
-
+      /**
+       *
+       * @param {Boolean} paused  is to set particle motion
+       */
       setMotionPaused: function( paused ) {
         this.motionPaused = paused;
         this.movableAtom.setVx( 0 );
@@ -320,7 +335,10 @@ define( function( require ) {
         this.shadowMovableAtom.velocity = movableAtom.getVelocity();
         this.shadowMovableAtom.accel = movableAtom.getAccel();
       },
-
+      /**
+       * Called by the animation loop.
+       * @param {Number} dt -- time in seconds
+       */
       step: function( dt ) {
         // prevent sudden dt bursts when the user comes back to the tab after a while
         dt = ( dt > 0.04 ) ? 0.04 : dt;
@@ -330,9 +348,18 @@ define( function( require ) {
           this.stepInternal( adjustedDT );
         }
       },
+
+      /**
+       *
+       * @param {Number} dt -- time in second
+       */
       stepInternal: function( dt ) {
         this.handleClockTicked( dt );
       },
+      /**
+       *
+       * @param { Number }clockEvent --- time in second
+       */
       handleClockTicked: function( clockEvent ) {
 
         // atom type doesn't really matter for the shadowMovableAtom. Position, acceleration, velocity matter though
@@ -417,6 +444,10 @@ define( function( require ) {
           }
         }
       },
+      /**
+       *
+       * @param {Number} dt -- time in seconds
+       */
       updateTimeStep: function( dt ) {
         this.timeStep = dt / CALCULATIONS_PER_TICK;
       },
