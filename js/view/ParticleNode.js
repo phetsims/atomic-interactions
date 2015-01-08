@@ -21,22 +21,20 @@ define( function( require ) {
   var HydrogenAtom = require( 'STATES_OF_MATTER/common/model/particle/HydrogenAtom' );
   var HydrogenAtom2 = require( 'STATES_OF_MATTER/common/model/particle/HydrogenAtom2' );
   var ConfigurableStatesOfMatterAtom = require( 'STATES_OF_MATTER/common/model/particle/ConfigurableStatesOfMatterAtom' );
-
   var Shape = require( 'KITE/Shape' );
   var Path = require( 'SCENERY/nodes/Path' );
   // constants
   var MVT_SCALE = 0.25;
-
   var OVERLAP_ENLARGEMENT_FACTOR = 1.25;
 
   /**
-   * Main constructor.
    *
-   * @param particle      - The particle in the model that this node will represent in the view.
-   * @param modelViewTransform           - The model view transform for transforming particle position.
-   * @param useGradient   - True to use a gradient when displaying the node, false if not.  The gradient is
-   *                      computationally intensive to create, so use only when needed.
-   * @param enableOverlap - True if the node should be larger than the actual particle, thus allowing particles
+   * @param {Particle} particle  - The particle in the model that this node will represent in the view.
+   * @param {ModelViewTransform2} modelViewTransform to convert between model and view co-ordinates
+   * @param {Boolean}useGradient - true to use a gradient when displaying the node, false if not.
+   * The gradient is computationally intensive to create, so use only when needed.
+   * @param {Boolean}enableOverlap - true if the node should be larger than the actual particle, thus allowing particles
+   * @constructor
    */
   function ParticleNode( particle, modelViewTransform, useGradient, enableOverlap ) {
     assert && assert( particle && modelViewTransform );
@@ -178,7 +176,6 @@ define( function( require ) {
       else {
         baseColor = new Color( 255, 138, 117 );
       }
-
       return baseColor;
     }
   } );
