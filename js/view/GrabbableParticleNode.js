@@ -10,7 +10,7 @@ define( function( require ) {
 
   // modules
   var inherit = require( 'PHET_CORE/inherit' );
-  var ParticleForceNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/ParticleForceNode' );
+  var ParticleForceNode = require( 'ATOMIC_INTERACTIONS/view/ParticleForceNode' );
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
   /**
@@ -38,11 +38,13 @@ define( function( require ) {
     // Put a cursor handler into place.
     this.cursor = 'pointer';
     var startDragX, endDragX;
+    var initialStartX = this.x;
     this.addInputListener( new SimpleDragHandler( {
       start: function( event ) {
         // Stop the model from moving the particle at the same time the user
         // is moving it.
         model.setMotionPaused( true );
+        initialStartX = grabbableParticleNode.x;
         startDragX = grabbableParticleNode.globalToParentPoint( event.pointer.point ).x;
       },
       drag: function( event ) {
@@ -54,7 +56,7 @@ define( function( require ) {
         endDragX = grabbableParticleNode.globalToParentPoint( event.pointer.point ).x;
         var d = endDragX - startDragX;
         // Make sure we don't exceed the positional limits.
-        var newPosX = startDragX + d;
+        var newPosX = initialStartX + d;
         if ( newPosX > grabbableParticleNode.maxX ) {
           newPosX = grabbableParticleNode.maxX;
         }

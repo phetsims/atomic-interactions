@@ -9,9 +9,9 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var AtomicInteractionsScreen = require( 'ATOMIC_INTERACTIONS/atomic-interactions/AtomicInteractionsScreen' );
+  var AtomicInteractionsScreen = require( 'ATOMIC_INTERACTIONS/AtomicInteractionsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var GlobalOptionsNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/GlobalOptionsNode' );
+  var GlobalOptionsNode = require( 'ATOMIC_INTERACTIONS/view/GlobalOptionsNode' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var Property = require( 'AXON/Property' );
 
