@@ -13,7 +13,7 @@ define( function( require ) {
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var ResetAllButton = require( 'SCENERY_PHET/buttons/ResetAllButton' );
-  var InteractiveInteractionPotentialDiagram = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/InteractiveInteractionPotentialDiagram' );
+  var InteractiveInteractionPotentialDiagram = require( 'ATOMIC_INTERACTIONS/view/InteractiveInteractionPotentialDiagram' );
   var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/buttons/StepButton' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
@@ -22,14 +22,14 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var Text = require( 'SCENERY/nodes/Text' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var ForcesControlNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/ForcesControlPanel' );
-  var AtomicInteractionsControlPanel = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/AtomicInteractionsControlPanel' );
+  var ForcesControlNode = require( 'ATOMIC_INTERACTIONS/view/ForcesControlPanel' );
+  var AtomicInteractionsControlPanel = require( 'ATOMIC_INTERACTIONS/view/AtomicInteractionsControlPanel' );
   var TextPushButton = require( 'SUN/buttons/TextPushButton' );
-  var ParticleForceNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/ParticleForceNode' );
-  var GrabbableParticleNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/GrabbableParticleNode' );
-  var PushpinNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/PushpinNode' );
-  var HandNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/HandNode' );
-  var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/AtomicInteractionColors' );
+  var ParticleForceNode = require( 'ATOMIC_INTERACTIONS/view/ParticleForceNode' );
+  var GrabbableParticleNode = require( 'ATOMIC_INTERACTIONS/view/GrabbableParticleNode' );
+  var PushpinNode = require( 'ATOMIC_INTERACTIONS/view/PushpinNode' );
+  var HandNode = require( 'ATOMIC_INTERACTIONS/view/HandNode' );
+  var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/view/AtomicInteractionColors' );
 
 
   // strings
@@ -73,24 +73,13 @@ define( function( require ) {
     this.modelViewTransform = ModelViewTransform2.createSinglePointScaleMapping( new Vector2( 0, 0 ),
       new Vector2( 80, 370 ), mvtScale );
 
-    var tickTextColor;
-    var textColor;
-    var backgroundColor;
-    if ( enableHeterogeneousMolecules ) {
-      tickTextColor = 'black';
-      textColor = 'black';
-      backgroundColor = '#D1D2FF';
-    }
-    else {
-      tickTextColor = 'white';
-      textColor = 'white';
-      backgroundColor = 'black';
-
-    }
+    var tickTextColor = enableHeterogeneousMolecules ? 'black' : 'white';
+    var textColor = enableHeterogeneousMolecules ? 'black' : 'white';
+    var backgroundColor = enableHeterogeneousMolecules ? '#D1D2FF' : 'black';
     var atomicInteractionsControlPanel = new AtomicInteractionsControlPanel( dualAtomModel,
       enableHeterogeneousMolecules, {
-        right: this.layoutBounds.maxX - 10,
-        top: this.layoutBounds.minY + 10,
+        right: this.layoutBounds.maxX - inset,
+        top: this.layoutBounds.minY + inset,
         tickTextColor: tickTextColor,
         textColor: textColor,
         backgroundColor: backgroundColor
@@ -99,8 +88,8 @@ define( function( require ) {
     // add interactive potential diagram
     this.interactiveInteractionPotentialDiagram = new InteractiveInteractionPotentialDiagram(
       dualAtomModel.getSigma(), dualAtomModel.getEpsilon(), true, dualAtomModel, {
-        left: this.layoutBounds.minX + 10,
-        top: atomicInteractionsControlPanel.top + 5
+        left: this.layoutBounds.minX + inset,
+        top: atomicInteractionsControlPanel.top + inset / 2
       } );
     this.addChild( this.interactiveInteractionPotentialDiagram );
 
@@ -124,8 +113,8 @@ define( function( require ) {
         dualAtomModel.reset();
         atomicInteractionsScreenView.handleNode.setVisible( true );
       },
-      right: this.layoutBounds.maxX - 10,
-      bottom: this.layoutBounds.maxY - 10
+      right: this.layoutBounds.maxX - inset,
+      bottom: this.layoutBounds.maxY - inset
     } );
     this.addChild( resetAllButton );
 
@@ -151,11 +140,11 @@ define( function( require ) {
       textColor: textColor,
       backgroundColor: backgroundColor
     } );
+    var atomicInteractionsControlPanelRightOffset = 60;
     if ( enableHeterogeneousMolecules ) {
-      resetAllButton.right = this.layoutBounds.maxX - 10;
-      atomicInteractionsControlPanel.right = this.layoutBounds.maxX - 60;
-      forceControlNode.right = this.layoutBounds.maxX - 60;
-
+      resetAllButton.right = this.layoutBounds.maxX - inset;
+      atomicInteractionsControlPanel.right = this.layoutBounds.maxX - atomicInteractionsControlPanelRightOffset;
+      forceControlNode.right = atomicInteractionsControlPanel.right;
     }
 
     // add play pause
@@ -231,7 +220,7 @@ define( function( require ) {
     this.handleFixedParticleAdded( dualAtomModel.fixedAtom );
     this.handleMovableParticleAdded( dualAtomModel.movableAtom );
     dualAtomModel.moleculeTypeProperty.link( function() {
-      forceControlNode.top = atomicInteractionsControlPanel.bottom + 5;
+      forceControlNode.top = atomicInteractionsControlPanel.bottom + inset / 2;
       forceControlNode.right = atomicInteractionsControlPanel.right;
       atomicInteractionsScreenView.handleFixedParticleRemoved( dualAtomModel.fixedAtom );
       atomicInteractionsScreenView.handleFixedParticleAdded( dualAtomModel.fixedAtom );
@@ -283,11 +272,13 @@ define( function( require ) {
 
   return inherit( ScreenView, AtomicInteractionsScreenView, {
 
-    // Called by the animation loop. Optional, so if your view has no animation, you can omit this.
+
+    /**
+     * Called by the animation loop. Optional, so if your view has no animation, you can omit this.
+     * @param{Number} dt - time in seconds
+     */
     step: function( dt ) {
-
       this.handlePositionChanged();
-
     },
     /**
      * Turn on/off the displaying of the force arrows that represent the
