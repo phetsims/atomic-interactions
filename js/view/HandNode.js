@@ -28,6 +28,8 @@ define( function( require ) {
 
     Node.call( this );
     var handNode = this;
+    this.minX = minX;
+    this.maxX = maxX;
     var handShape = new Path( new Shape()
       .moveTo( 11, 67 )
       .quadraticCurveTo( 0, 58, 12, 54 )//thumb round
@@ -69,11 +71,11 @@ define( function( require ) {
         var d = endDragX - startDragX;
         startDragX = endDragX;        // Make sure we don't exceed the positional limits.
         var newPosX = mvt.modelToViewX( particle.getX() ) + d;
-        if ( newPosX > maxX ) {
-          newPosX = maxX;
+        if ( newPosX > handNode.maxX ) {
+          newPosX = handNode.maxX;
         }
-        else if ( newPosX < minX ) {
-          newPosX = minX;
+        else if ( newPosX < handNode.minX ) {
+          newPosX = handNode.minX;
         }
         // Move the particle based on the amount of mouse movement.
         particle.setPosition( mvt.viewToModelX( newPosX ), particle.getY() );
@@ -92,6 +94,24 @@ define( function( require ) {
 
   }
 
-  return inherit( Node, HandNode );
+  return inherit( Node, HandNode, {
+
+    getMinX: function() {
+      return this.minX;
+    },
+
+
+    setMinX: function( minX ) {
+      this.minX = minX;
+    },
+
+
+    getMaxX: function() {
+      return this.maxX;
+    },
+    setMaxX: function( maxX ) {
+      this.maxX = maxX;
+    }
+  } );
 
 } );
