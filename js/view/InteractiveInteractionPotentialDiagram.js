@@ -45,7 +45,7 @@ define( function( require ) {
     this.model = model;
     var interactiveInteractionPotentialDiagram = this;
 
-
+    this.interactionEnabled = false;
     // Add the line that will indicate the value of epsilon.
     var epsilonLineLength = EPSILON_HANDLE_OFFSET_PROPORTION * this.widthOfGraph * 2.2;
     this.epsilonLine = new Rectangle( -epsilonLineLength / 4, 0, epsilonLineLength / 2, 3, {
@@ -221,6 +221,7 @@ define( function( require ) {
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.gridNode.horizontalLinesNode, 'stroke' );
     AtomicInteractionColors.linkAttribute( 'potentialEnergyLine', this.potentialEnergyLine, 'stroke' );
     this.mutate( options );
+
   }
 
   return inherit( InteractionPotentialDiagramNode, InteractiveInteractionPotentialDiagram, {
