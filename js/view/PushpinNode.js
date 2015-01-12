@@ -19,8 +19,6 @@ define( function( require ) {
     this.setPickable( false );
 
     var imageNode = new Image( pushPinImg );
-    imageNode.setTranslation( -this.getWidth(), -this.getHeight() );
-
     this.addChild( imageNode, {scale: 0.3} );
   }
 
