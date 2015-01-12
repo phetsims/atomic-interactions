@@ -145,7 +145,7 @@ define( function( require ) {
         new HBox( { children: [customAttraction] } ), { radius: particleRadius } );
       var pushpinImage = new Image( pushPinImg, { scale: 0.2 } );
       var pinnedNodeText = new HBox( {
-        children: [pushpinImage, new Text( pinnedString, textOptions ), new HStrut( pushpinImage.width )],
+        children: [ pushpinImage, new Text( pinnedString, textOptions ), new HStrut( pushpinImage.width )],
         spacing: 10
       } );
       titleText = [ pinnedNodeText , new Text( movingString, textOptions ) ];
@@ -197,7 +197,7 @@ define( function( require ) {
         cornerRadius: 5,
         baseColor: 'black',
         disabledBaseColor: 'black',
-        selectedLineWidth: 3,
+        selectedLineWidth: 1,
         selectedStroke: '#FFFCD3',
         deselectedLineWidth: 0,
         deselectedContentOpacity: 1
@@ -250,7 +250,6 @@ define( function( require ) {
     var atomDiameter = new Node( {
       children: [atomDiameterTitle, atomDiameterSlider]
     } );
-
     // add interaction strength slider
     var interactionStrengthTitle = new Text( interactionStrengthString, textOptions );
     interactionStrengthTitle.centerX = radioButtonGroup.centerX - 5;
@@ -366,12 +365,12 @@ define( function( require ) {
 
   //Create an icon for the neon  button
   var createNeonIcon = function() {
-    return new Circle( 5, { fill: '#1AFFFB' } );
+    return new Circle( 4, { fill: '#1AFFFB' } );
   };
 
   //Create an icon for the argon  button
   var createArgonIcon = function() {
-    return new Circle( 5, {fill: '#FF8A75'} );
+    return new Circle( 6, {fill: '#FF8A75'} );
   };
 
   return inherit( Node, AtomicInteractionsControlPanel );
