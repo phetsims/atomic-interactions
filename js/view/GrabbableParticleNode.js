@@ -14,15 +14,16 @@ define( function( require ) {
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
   /**
-   * Constructor.
    *
+   * @param {HandNode} handNode
    * @param particle      - The particle within the model.
    * @param mvt           - Model-view transform.
-   * @param enableOverlap TODO
+   * @param enableOverlap
    * @param minX          - Minimum value in the X direction to which the particle can be moved.
    * @param maxX          - Maximum value in the X direction to which the particle can be moved.
+   * @constructor
    */
-  function GrabbableParticleNode( model, particle, mvt, useGradient, enableOverlap, minX, maxX ) {
+  function GrabbableParticleNode( handNode, model, particle, mvt, useGradient, enableOverlap, minX, maxX ) {
 
 
     ParticleForceNode.call( this, particle, mvt, useGradient, enableOverlap );
@@ -37,7 +38,8 @@ define( function( require ) {
 
     // Put a cursor handler into place.
     this.cursor = 'pointer';
-    var startDragX, endDragX;
+    var startDragX;
+    var endDragX;
     var initialStartX = this.x;
     this.addInputListener( new SimpleDragHandler( {
       start: function( event ) {
@@ -70,6 +72,7 @@ define( function( require ) {
         // Let the model move the particles again.  Note that this happens
         // even if the motion was paused by some other means.
         model.setMotionPaused( false );
+        handNode.setVisible( false )
       }
     } ) );
   }
