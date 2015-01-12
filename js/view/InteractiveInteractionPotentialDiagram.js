@@ -20,7 +20,7 @@ define( function( require ) {
   var ArrowNode = require( 'SCENERY_PHET/ArrowNode' );
   var Rectangle = require( 'SCENERY/nodes/Rectangle' );
   var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/view/AtomicInteractionColors' );
-
+  var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var RESIZE_HANDLE_SIZE_PROPORTION = 0.05;
   var EPSILON_HANDLE_OFFSET_PROPORTION = 0.08;
   var SIGMA_HANDLE_OFFSET_PROPORTION = 0.08;
@@ -190,6 +190,20 @@ define( function( require ) {
     this.addChild( this.horizontalAxisLabel );
     this.addChild( this.horizontalAxis );
     this.addChild( this.verticalAxisLabel );
+    var ljGraPhAxisLabelFont = new PhetFont( 20 );
+
+    this.verticalAxisLabel.setTranslation(
+        this.graphXOrigin / 2,
+        this.graphYOrigin - this.graphHeight / 2 + 1.3 * this.verticalAxisLabel.height
+    );
+    this.verticalAxisLabel.font = ljGraPhAxisLabelFont;
+
+    this.horizontalAxisLabel.setTranslation(
+        this.graphXOrigin + this.graphWidth / 2 - this.horizontalAxisLabel.width / 2.4,
+        this.graphYOrigin + 1.3 * this.horizontalAxisLabel.height
+    );
+    this.horizontalAxisLabel.font = ljGraPhAxisLabelFont;
+
     this.addChild( this.verticalAxis );
     this.addChild( this.ljPotentialGraph );
 
