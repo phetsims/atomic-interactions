@@ -111,7 +111,7 @@ define( function( require ) {
     var resetAllButton = new ResetAllButton( {
       listener: function() {
         dualAtomModel.reset();
-        atomicInteractionsScreenView.handleNode.setVisible( true );
+        atomicInteractionsScreenView.handNode.setVisible( true );
       },
       right: this.layoutBounds.maxX - inset,
       bottom: this.layoutBounds.maxY - inset
@@ -128,7 +128,7 @@ define( function( require ) {
         radius: 12,
         stroke: 'black',
         fill: '#005566',
-        centerX: this.layoutBounds.centerX,
+        centerX: this.layoutBounds.centerX + 110,
         bottom: this.layoutBounds.bottom - 14
       } );
     this.addChild( stepButton );
@@ -210,9 +210,7 @@ define( function( require ) {
     this.addChild( this.fixedParticleLayer );
     this.movableParticleLayer = new Node();
     this.addChild( this.movableParticleLayer );
-    this.movableParticleWiggleMeNode = new Node();
 
-    this.addChild( this.movableParticleWiggleMeNode );
     this.addChild( atomicInteractionsControlPanel );
     this.addChild( forceControlNode );
 
@@ -228,6 +226,7 @@ define( function( require ) {
       atomicInteractionsScreenView.handleMovableParticleAdded( dualAtomModel.movableAtom );
       dualAtomModel.interactionStrength = 300;
       dualAtomModel.atomDiameter = 300;
+      atomicInteractionsScreenView.handNode.setVisible( false );
     } );
     dualAtomModel.forcesProperty.link( function( forces ) {
       switch( forces ) {
@@ -267,7 +266,7 @@ define( function( require ) {
      var rightSideOfChartMarker = new Path(new Shape().moveTo( 0, 0).lineTo(  0, 500 ),{fill: 'green', stroke: 'green'});
      rightSideOfChartMarker.setTranslation( 1100, 0 );
      this.addChild( rightSideOfChartMarker );*/
-
+    atomicInteractionsScreenView.handNode.setVisible( true );
   }
 
   return inherit( ScreenView, AtomicInteractionsScreenView, {
@@ -351,15 +350,15 @@ define( function( require ) {
       // Add the atom node for this guy.
 
       this.movableParticle = particle;
-      this.movableParticleNode = new GrabbableParticleNode( this.dualAtomModel, particle,
+      this.handNode = new HandNode( this.dualAtomModel, this.dualAtomModel.movableAtom, this.modelViewTransform, 0,
+          1.0 / 0.0 );
+      this.movableParticleNode = new GrabbableParticleNode( this.handNode, this.dualAtomModel, particle,
         this.modelViewTransform, true, true, 0, 1.0 / 0.0 );
-      this.handleNode = new HandNode( this.dualAtomModel, this.dualAtomModel.movableAtom, this.modelViewTransform, 0,
-        1200 );
       this.movableParticleNode.setShowAttractiveForces( this.showAttractiveForces );
       this.movableParticleNode.setShowRepulsiveForces( this.showRepulsiveForces );
       this.movableParticleNode.setShowTotalForces( this.showTotalForces );
       this.movableParticleLayer.addChild( this.movableParticleNode );
-      this.movableParticleWiggleMeNode.addChild( this.handleNode );
+      this.addChild( this.handNode );
 
       // Limit the particle's motion in the X direction so that it can't
       // get to where there is too much overlap, or is on the other side
@@ -383,9 +382,9 @@ define( function( require ) {
       }
       this.updatePositionMarkerOnDiagram();
       this.movableParticleNode = null;
-      if ( this.handleNode !== null ) {
+      if ( this.handNode !== null ) {
         // Remove the particle node.
-        this.movableParticleWiggleMeNode.removeChild( this.handleNode );
+        this.removeChild( this.handNode );
       }
     },
 
@@ -463,6 +462,7 @@ define( function( require ) {
     updateMinimumXForMovableAtom: function() {
       if ( this.movableParticle !== null && this.fixedParticle !== null ) {
         this.movableParticleNode.setMinX( this.modelViewTransform.modelToViewX( this.dualAtomModel.getSigma() * 0.9 ) );
+        this.handNode.setMinX( this.modelViewTransform.modelToViewX( this.dualAtomModel.getSigma() * 0.9 ) );
       }
     },
     updateForceVectors: function() {
