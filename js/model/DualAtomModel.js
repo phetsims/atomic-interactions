@@ -4,6 +4,7 @@
  * interaction potential.
  *
  * @author John Blanco
+ * @author Siddhartha Chinthapally (Actual Concepts)
  */
 define( function( require ) {
   'use strict';
@@ -461,7 +462,7 @@ define( function( require ) {
 
       updateForces: function() {
 
-        var distance = this.shadowMovableAtom.getPositionReference().distance( new Vector2( 0, 0 ) );
+        var distance = this.shadowMovableAtom.getPositionReference().distance( Vector2.ZERO );
 
         if ( distance < ( this.fixedAtom.getRadius() + this.movableAtom.getRadius() ) / 8 ) {
           // The atoms are too close together, and calculating the force
