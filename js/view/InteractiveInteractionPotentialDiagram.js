@@ -79,7 +79,7 @@ define( function( require ) {
     // Add the arrow nodes that will allow the user to control the
     // parameters of the LJ potential.
     this.epsilonResizeHandle = new ArrowNode( 0, -RESIZE_HANDLE_SIZE_PROPORTION * this.widthOfGraph / 2, 0,
-        RESIZE_HANDLE_SIZE_PROPORTION * this.widthOfGraph / 2, {
+      RESIZE_HANDLE_SIZE_PROPORTION * this.widthOfGraph / 2, {
         headHeight: 10,
         headWidth: 10,
         tailWidth: 5,
@@ -112,7 +112,7 @@ define( function( require ) {
 
     // add sigma arrow node
     this.sigmaResizeHandle = new ArrowNode( -RESIZE_HANDLE_SIZE_PROPORTION * this.widthOfGraph / 2, 0,
-        RESIZE_HANDLE_SIZE_PROPORTION * this.widthOfGraph / 2, 0, {
+      RESIZE_HANDLE_SIZE_PROPORTION * this.widthOfGraph / 2, 0, {
         headHeight: 10,
         headWidth: 10,
         tailWidth: 5,
@@ -169,7 +169,7 @@ define( function( require ) {
         model.setMotionPaused( false );
       }
     } ) );
-    Property.multilink( [model.moleculeTypeProperty, model.interactionStrengthProperty, model.atomDiameterProperty],
+    Property.multilink( [ model.moleculeTypeProperty, model.interactionStrengthProperty, model.atomDiameterProperty ],
       function( moleculeType, interactionStrength, atomDiameter ) {
 
         if ( moleculeType === AtomType.ADJUSTABLE ) {
@@ -193,14 +193,14 @@ define( function( require ) {
     var ljGraPhAxisLabelFont = new PhetFont( 20 );
 
     this.verticalAxisLabel.setTranslation(
-        this.graphXOrigin / 2,
-        this.graphYOrigin - this.graphHeight / 2 + 1.3 * this.verticalAxisLabel.height
+      this.graphXOrigin / 2,
+      this.graphYOrigin - this.graphHeight / 2 + 1.3 * this.verticalAxisLabel.height
     );
     this.verticalAxisLabel.font = ljGraPhAxisLabelFont;
 
     this.horizontalAxisLabel.setTranslation(
-        this.graphXOrigin + this.graphWidth / 2 - this.horizontalAxisLabel.width / 2.4,
-        this.graphYOrigin + 1.3 * this.horizontalAxisLabel.height
+      this.graphXOrigin + this.graphWidth / 2 - this.horizontalAxisLabel.width / 2.4,
+      this.graphYOrigin + 1.3 * this.horizontalAxisLabel.height
     );
     this.horizontalAxisLabel.font = ljGraPhAxisLabelFont;
 
@@ -248,7 +248,7 @@ define( function( require ) {
       if ( this.sigmaResizeHandle !== undefined ) {
         var zeroCrossingPoint = this.getZeroCrossingPoint();
         this.sigmaResizeHandle.setTranslation( zeroCrossingPoint.x,
-            ( this.getGraphHeight() / 2 ) - SIGMA_HANDLE_OFFSET_PROPORTION * this.heightOfGraph );
+          ( this.getGraphHeight() / 2 ) - SIGMA_HANDLE_OFFSET_PROPORTION * this.heightOfGraph );
         this.sigmaResizeHandle.setVisible( this.interactionEnabled );
         this.sigmaResizeHandle.setPickable( this.interactionEnabled );
       }

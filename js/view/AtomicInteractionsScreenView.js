@@ -178,16 +178,16 @@ define( function( require ) {
     var touchAreaHeightExpansion = radioButtonSpacing / 2;
     slowMotionRadioBox.touchArea = new Bounds2(
       slowMotionRadioBox.localBounds.minX,
-        slowMotionRadioBox.localBounds.minY - touchAreaHeightExpansion,
-        slowMotionRadioBox.localBounds.minX + speedControlMaxWidth,
-        slowMotionRadioBox.localBounds.maxY + touchAreaHeightExpansion
+      slowMotionRadioBox.localBounds.minY - touchAreaHeightExpansion,
+      slowMotionRadioBox.localBounds.minX + speedControlMaxWidth,
+      slowMotionRadioBox.localBounds.maxY + touchAreaHeightExpansion
     );
 
     normalMotionRadioBox.touchArea = new Bounds2(
       normalMotionRadioBox.localBounds.minX,
-        normalMotionRadioBox.localBounds.minY - touchAreaHeightExpansion,
+      normalMotionRadioBox.localBounds.minY - touchAreaHeightExpansion,
       ( normalMotionRadioBox.localBounds.minX + speedControlMaxWidth ),
-        normalMotionRadioBox.localBounds.maxY + touchAreaHeightExpansion
+      normalMotionRadioBox.localBounds.maxY + touchAreaHeightExpansion
     );
 
     var speedControl = new VBox( {
@@ -351,7 +351,7 @@ define( function( require ) {
 
       this.movableParticle = particle;
       this.handNode = new HandNode( this.dualAtomModel, this.dualAtomModel.movableAtom, this.modelViewTransform, 0,
-          1.0 / 0.0 );
+        1.0 / 0.0 );
       this.movableParticleNode = new GrabbableParticleNode( this.handNode, this.dualAtomModel, particle,
         this.modelViewTransform, true, true, 0, 1.0 / 0.0 );
       this.movableParticleNode.setShowAttractiveForces( this.showAttractiveForces );

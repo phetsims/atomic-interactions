@@ -26,7 +26,7 @@ define( function( require ) {
     Screen.call( this, simTitle, new Image( atomicInteractionScreenIcon ),
       function() { return new DualAtomModel(); },
       function( model ) { return new AtomicInteractionsScreenView( model, enableHeterogeneousMolecules ); },
-      { backgroundColor: AtomicInteractionColors.background.toCSS()}
+      { backgroundColor: AtomicInteractionColors.background.toCSS() }
     );
 
     colorsProperty.link( function( color ) {

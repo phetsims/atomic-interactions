@@ -64,7 +64,7 @@ define( function( require ) {
       var highlightColor = Color.WHITE;
       var shadowColor = mainColor.darkerColor();
       this.sphereNode.fill = new RadialGradient( this.radius * -0.4, this.radius * -0.4, 0, this.radius * -0.4,
-          this.radius * -0.4, 2 * this.radius )
+        this.radius * -0.4, 2 * this.radius )
         .addColorStop( 0, highlightColor )
         .addColorStop( 0.5, mainColor )
         .addColorStop( 1, shadowColor );

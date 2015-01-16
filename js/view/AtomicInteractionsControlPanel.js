@@ -102,13 +102,13 @@ define( function( require ) {
     var titleNode;
 
     if ( enableHeterogeneousMolecules ) {
-      textOptions = {font: new PhetFont( 12 ), fill: options.textColor};
+      textOptions = { font: new PhetFont( 12 ), fill: options.textColor };
       neonAndNeon = [ new Text( neonString, textOptions ), new Text( neonString, textOptions ) ];
-      argonAndArgon = [  new Text( argonString, textOptions ), new Text( argonString, textOptions ) ];
-      oxygenAndOxygen = [ new Text( oxygenString, textOptions ), new Text( oxygenString, textOptions )];
-      neonAndArgon = [ new Text( neonString, textOptions ), new Text( argonString, textOptions )];
-      neonAndOxygen = [ new Text( neonString, textOptions ), new Text( oxygenString, textOptions )];
-      argonAndOxygen = [ new Text( argonString, textOptions ), new Text( oxygenString, textOptions )];
+      argonAndArgon = [ new Text( argonString, textOptions ), new Text( argonString, textOptions ) ];
+      oxygenAndOxygen = [ new Text( oxygenString, textOptions ), new Text( oxygenString, textOptions ) ];
+      neonAndArgon = [ new Text( neonString, textOptions ), new Text( argonString, textOptions ) ];
+      neonAndOxygen = [ new Text( neonString, textOptions ), new Text( oxygenString, textOptions ) ];
+      argonAndOxygen = [ new Text( argonString, textOptions ), new Text( oxygenString, textOptions ) ];
       var customAttraction = new Text( customAttractionString, textOptions );
 
       /*var maxWidth = Math.max(
@@ -123,10 +123,12 @@ define( function( require ) {
 
       // pad inserts a spacing node (HStrut) so that the rows occupy a certain fixed width.
       createItem = function( itemSpec ) {
-        var strutWidth1 = maxWidth - itemSpec[0].width + 15;
-        var strutWidth2 = maxWidth - itemSpec[1].width;
-        return new HBox( { children: [ itemSpec[0], new HStrut( strutWidth1 ),
-                                       itemSpec[1], new HStrut( strutWidth2 ) ] } );
+        var strutWidth1 = maxWidth - itemSpec[ 0 ].width + 15;
+        var strutWidth2 = maxWidth - itemSpec[ 1 ].width;
+        return new HBox( {
+          children: [ itemSpec[ 0 ], new HStrut( strutWidth1 ),
+            itemSpec[ 1 ], new HStrut( strutWidth2 ) ]
+        } );
       };
       var particleRadius = 8;
       var neonNeonRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_NEON,
@@ -142,17 +144,17 @@ define( function( require ) {
       var argonOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, ARGON_OXYGEN,
         createItem( argonAndOxygen ), { radius: particleRadius } );
       var adjustableAttractionRadio = new AquaRadioButton( model.moleculeTypeProperty, ADJUSTABLE,
-        new HBox( { children: [customAttraction] } ), { radius: particleRadius } );
+        new HBox( { children: [ customAttraction ] } ), { radius: particleRadius } );
       var pushpinImage = new Image( pushPinImg, { scale: 0.2 } );
       var pinnedNodeText = new HBox( {
-        children: [ pushpinImage, new Text( pinnedString, textOptions ), new HStrut( pushpinImage.width )],
+        children: [ pushpinImage, new Text( pinnedString, textOptions ), new HStrut( pushpinImage.width ) ],
         spacing: 10
       } );
-      titleText = [ pinnedNodeText , new Text( movingString, textOptions ) ];
+      titleText = [ pinnedNodeText, new Text( movingString, textOptions ) ];
       titleNode = createItem( titleText );
       radioButtonGroup = new VBox( {
-        children: [titleNode, neonNeonRadio, argonArgonRadio, oxygenOxygenRadio,
-                   neonArgonRadio, neonOxygenRadio, argonOxygenRadio, adjustableAttractionRadio],
+        children: [ titleNode, neonNeonRadio, argonArgonRadio, oxygenOxygenRadio,
+          neonArgonRadio, neonOxygenRadio, argonOxygenRadio, adjustableAttractionRadio ],
         align: 'left',
         spacing: 2
       } );
@@ -160,14 +162,16 @@ define( function( require ) {
     }
 
     else {
-      textOptions = {font: new PhetFont( 12 ), fill: "#FFFFFF"};
+      textOptions = { font: new PhetFont( 12 ), fill: "#FFFFFF" };
 
       // itemSpec describes the pieces that make up an item in the control panel,
       // conforms to the contract: { label: {Node}, icon: {Node} (optional) }
       var neon = { label: new Text( neonString, textOptions ), icon: createNeonIcon() };
-      var argon = { label: new Text( argonString, textOptions ), icon: createArgonIcon()};
-      adjustableAttraction = { label: new Text( adjustableAttractionString,
-        textOptions ), icon: createAdjustableAttractionIcon()};
+      var argon = { label: new Text( argonString, textOptions ), icon: createArgonIcon() };
+      adjustableAttraction = {
+        label: new Text( adjustableAttractionString, textOptions ),
+        icon: createAdjustableAttractionIcon()
+      };
 
       // compute the maximum item width
       var widestItemSpec = _.max( [ neon, argon, adjustableAttraction ], function( item ) {
@@ -182,14 +186,14 @@ define( function( require ) {
           return new HBox( { children: [ itemSpec.label, new HStrut( strutWidth ), itemSpec.icon ] } );
         }
         else {
-          return new HBox( { children: [ itemSpec.label] } );
+          return new HBox( { children: [ itemSpec.label ] } );
         }
       };
 
       var radioButtonContent = [
         { value: 'NEON_NEON', node: createItem( neon ) },
-        { value: 'ARGON_ARGON', node: createItem( argon )},
-        { value: 'ADJUSTABLE', node: createItem( adjustableAttraction )}
+        { value: 'ARGON_ARGON', node: createItem( argon ) },
+        { value: 'ADJUSTABLE', node: createItem( adjustableAttraction ) }
       ];
       radioButtonGroup = new RadioButtonGroup( model.moleculeTypeProperty, radioButtonContent, {
         orientation: 'vertical',
@@ -203,19 +207,20 @@ define( function( require ) {
         deselectedContentOpacity: 1
       } );
       titleText = new Text( tittleString,
-        { font: new PhetFont( 14 ),
+        {
+          font: new PhetFont( 14 ),
           fill: '#FFFFFF',
           fontWeight: 'bold'
         } );
       var titleBackground = new Rectangle( 0, 0,
-          titleText.width + 5, titleText.height,
+        titleText.width + 5, titleText.height,
         {
           fill: 'black'
         } );
 
       titleBackground.centerX = titleText.centerX;
       titleBackground.centerY = titleText.centerY;
-      titleNode = new Node( {children: [ titleBackground, titleText ]} );
+      titleNode = new Node( { children: [ titleBackground, titleText ] } );
       this.addChild( titleNode );
       titleNode.centerX = radioButtonGroup.centerX + 15;
     }
@@ -248,7 +253,7 @@ define( function( require ) {
     atomDiameterSlider.centerX = atomDiameterTitle.centerX + 30;
     atomDiameterSlider.top = atomDiameterTitle.bottom + 5;
     var atomDiameter = new Node( {
-      children: [atomDiameterTitle, atomDiameterSlider]
+      children: [ atomDiameterTitle, atomDiameterSlider ]
     } );
     // add interaction strength slider
     var interactionStrengthTitle = new Text( interactionStrengthString, textOptions );
@@ -279,7 +284,7 @@ define( function( require ) {
     interactionStrengthSlider.centerX = interactionStrengthTitle.centerX + 20;
     interactionStrengthSlider.top = interactionStrengthTitle.bottom + 5;
     var interactionStrength = new Node( {
-      children: [interactionStrengthTitle, interactionStrengthSlider]
+      children: [ interactionStrengthTitle, interactionStrengthSlider ]
     } );
     var radioButtonPanel = new Panel( radioButtonGroup, {
       stroke: 'black',
@@ -360,7 +365,7 @@ define( function( require ) {
 
   //Create an icon for the adjustable attraction  button
   var createAdjustableAttractionIcon = function() {
-    return new Circle( 5, {fill: '#B15AFF' } );
+    return new Circle( 5, { fill: '#B15AFF' } );
   };
 
   //Create an icon for the neon  button
@@ -370,7 +375,7 @@ define( function( require ) {
 
   //Create an icon for the argon  button
   var createArgonIcon = function() {
-    return new Circle( 6, {fill: '#FF8A75'} );
+    return new Circle( 6, { fill: '#FF8A75' } );
   };
 
   return inherit( Node, AtomicInteractionsControlPanel );

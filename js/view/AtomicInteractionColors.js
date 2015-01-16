@@ -41,7 +41,7 @@ define( function( require ) {
   // initial properties object, to load into the PropertySet (so reset works nicely)
   var initialProperties = {};
   for ( var key in colors ) {
-    initialProperties[key] = colors[key].default;
+    initialProperties[ key ] = colors[ key ].default;
   }
 
   var AtomicInteractionColors = extend( new PropertySet( initialProperties ), {
@@ -54,11 +54,11 @@ define( function( require ) {
       assert && assert( profileName === 'default' || profileName === 'projector' );
 
       for ( var key in colors ) {
-        if ( profileName in colors[key] ) {
-          var oldColor = this[key];
-          var newColor = colors[key][profileName];
+        if ( profileName in colors[ key ] ) {
+          var oldColor = this[ key ];
+          var newColor = colors[ key ][ profileName ];
           if ( !newColor.equals( oldColor ) ) {
-            this[key] = newColor;
+            this[ key ] = newColor;
             reportColor( key );
           }
         }
@@ -72,7 +72,7 @@ define( function( require ) {
 
   // sends iframe communication to report the current color for the key name
   function reportColor( key ) {
-    var hexColor = AtomicInteractionColors[key].toNumber().toString( 16 );
+    var hexColor = AtomicInteractionColors[ key ].toNumber().toString( 16 );
     while ( hexColor.length < 6 ) {
       hexColor = '0' + hexColor;
     }
@@ -93,7 +93,7 @@ define( function( require ) {
   window.addEventListener( 'message', function( evt ) {
     var data = JSON.parse( evt.data );
     if ( data.type === 'setColor' ) {
-      AtomicInteractionColors[data.name] = new Color( data.value );
+      AtomicInteractionColors[ data.name ] = new Color( data.value );
     }
   } );
 

@@ -19,7 +19,7 @@ define( function( require ) {
     this.setPickable( false );
 
     var imageNode = new Image( pushPinImg );
-    this.addChild( imageNode, {scale: 0.3} );
+    this.addChild( imageNode, { scale: 0.3 } );
   }
 
   return inherit( Node, PushpinNode );

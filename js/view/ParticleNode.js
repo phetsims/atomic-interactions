@@ -139,7 +139,7 @@ define( function( require ) {
         return ( new RadialGradient( 0, 0, 0, 0, 0, radius )
           .addColorStop( 0, baseColor )
           .addColorStop( 1, transparentDarkenedBasedColor )
-          );
+        );
       }
       else {
         return baseColor;

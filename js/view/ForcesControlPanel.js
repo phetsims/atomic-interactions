@@ -77,17 +77,21 @@ define( function( require ) {
 
     var textOptions = { font: new PhetFont( 12 ), fill: options.textColor };
     var hideForcesText = { label: new Text( hideForcesString, textOptions ) };
-    var totalForceText = { label: new Text( totalForceString, textOptions ), icon: totalForceArrow};
-    var attractiveText = { label: new Text( attractiveString, textOptions ), icon: attractiveArrow};
-    var vanderwaalsText = { label: new Text( vanderwaalsString,
-      { font: new PhetFont( 10 ), fill: options.textColor } )};
+    var totalForceText = { label: new Text( totalForceString, textOptions ), icon: totalForceArrow };
+    var attractiveText = { label: new Text( attractiveString, textOptions ), icon: attractiveArrow };
+    var vanderwaalsText = {
+      label: new Text( vanderwaalsString,
+        { font: new PhetFont( 10 ), fill: options.textColor } )
+    };
     var repulsiveText = { label: new Text( repulsiveString, textOptions ), icon: repulsiveArrow };
-    var electronOverlapText = { label: new Text( electronOverlapString,
-      { font: new PhetFont( 10 ), fill: options.textColor } )};
+    var electronOverlapText = {
+      label: new Text( electronOverlapString,
+        { font: new PhetFont( 10 ), fill: options.textColor } )
+    };
 
     // compute the maximum item width
     var widestItem = _.max( [ hideForcesText, totalForceText, attractiveText, vanderwaalsText, repulsiveText,
-                              electronOverlapText ], function( item ) {
+      electronOverlapText ], function( item ) {
       return item.label.width + ((item.icon) ? item.icon.width : 0);
     } );
     var maxWidth = widestItem.label.width + ((widestItem.icon) ? widestItem.icon.width : 0);
@@ -99,15 +103,15 @@ define( function( require ) {
         return new HBox( { children: [ itemSpec.label, new HStrut( strutWidth ), itemSpec.icon ] } );
       }
       else {
-        return new HBox( { children: [ itemSpec.label] } );
+        return new HBox( { children: [ itemSpec.label ] } );
       }
     };
 
     var componentForceText = new VBox( {
-      children: [createItem( attractiveText ),
-                 createItem( vanderwaalsText ),
-                 createItem( repulsiveText ),
-                 createItem( electronOverlapText )],
+      children: [ createItem( attractiveText ),
+        createItem( vanderwaalsText ),
+        createItem( repulsiveText ),
+        createItem( electronOverlapText ) ],
       align: 'left'
     } );
 
@@ -127,15 +131,15 @@ define( function( require ) {
 
     var componentForce = new HBox( {
       spacing: 2,
-      children: [curveShape, componentForceText]
+      children: [ curveShape, componentForceText ]
     } );
     var totalForce = new HBox( {
       spacing: 2,
-      children: [ new HStrut( curveShape.width ), createItem( totalForceText )]
+      children: [ new HStrut( curveShape.width ), createItem( totalForceText ) ]
     } );
     var hideForce = new HBox( {
       spacing: 2,
-      children: [ new HStrut( curveShape.width ), createItem( hideForcesText )]
+      children: [ new HStrut( curveShape.width ), createItem( hideForcesText ) ]
     } );
 
     var hideForcesRadio = new AquaRadioButton( forcesProperty, 'hideForces', hideForce,
@@ -146,7 +150,7 @@ define( function( require ) {
       { radius: 8 } );
 
     var radioButtonGroup = new VBox( {
-      children: [ hideForcesRadio, totalForceRadio, componentForceRadio],
+      children: [ hideForcesRadio, totalForceRadio, componentForceRadio ],
       align: 'left',
       spacing: 3
     } );

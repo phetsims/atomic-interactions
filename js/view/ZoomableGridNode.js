@@ -34,8 +34,8 @@ define( function( require ) {
     Node.call( this );
     var gridNode = this;
     var initialHorizontalLines = MIN_LINES_HORIZONTAL;
-    this.horizontalLinesNode = new Path( null, {stroke: 'white', lineWidth: 0.8} );
-    this.verticalLinesNode = new Path( null, {stroke: 'white', lineWidth: 0.8} );
+    this.horizontalLinesNode = new Path( null, { stroke: 'white', lineWidth: 0.8 } );
+    this.verticalLinesNode = new Path( null, { stroke: 'white', lineWidth: 0.8 } );
     this.zoomInButton = new ZoomButton( {
       listener: function() {
         initialHorizontalLines -= ZOOM_INCREMENT;
@@ -83,7 +83,7 @@ define( function( require ) {
     var verticalLineShape = new Shape();
     var line;
     for ( var i = 0; i < this.verticalLines.length; i++ ) {
-      line = this.verticalLines[i];
+      line = this.verticalLines[ i ];
       verticalLineShape.moveTo( line.x1, line.y1 );
       verticalLineShape.lineTo( line.x2, line.y2 );
     }
@@ -93,13 +93,15 @@ define( function( require ) {
     for ( var y = 0; y < initialHorizontalLines; y++ ) {
       var viewY = y * (height / (initialHorizontalLines - 1));
       this.horizontalLines.push( {
-        x1: offsetX, y1: viewY + offsetY,
-        x2: width + offsetX, y2: viewY + offsetY
+        x1: offsetX,
+        y1: viewY + offsetY,
+        x2: width + offsetX,
+        y2: viewY + offsetY
       } );
     }
     var horizontalLineShape = new Shape();
     for ( i = 0; i < this.horizontalLines.length; i++ ) {
-      line = this.horizontalLines[i];
+      line = this.horizontalLines[ i ];
       horizontalLineShape.moveTo( line.x1, line.y1 );
       horizontalLineShape.lineTo( line.x2, line.y2 );
     }
@@ -121,14 +123,17 @@ define( function( require ) {
       this.horizontalLines = [];
       for ( var y = 0; y < noOfHorizontalLines; y++ ) {
         var viewY = y * (height / (noOfHorizontalLines - 1));
-        this.horizontalLines.push( { x1: offsetX, y1: viewY + offsetY,
-          x2: width + offsetX, y2: viewY + offsetY
+        this.horizontalLines.push( {
+          x1: offsetX,
+          y1: viewY + offsetY,
+          x2: width + offsetX,
+          y2: viewY + offsetY
         } );
       }
       var horizontalLineShape = new Shape();
       var line;
       for ( var i = 0; i < this.horizontalLines.length; i++ ) {
-        line = this.horizontalLines[i];
+        line = this.horizontalLines[ i ];
         horizontalLineShape.moveTo( line.x1, line.y1 );
         horizontalLineShape.lineTo( line.x2, line.y2 );
       }
