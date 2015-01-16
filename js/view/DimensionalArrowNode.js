@@ -8,11 +8,11 @@ define( function( require ) {
   var Vector2 = require( 'DOT/Vector2' );
 
   /*
-   * @param {number} tailX
-   * @param {number} tailY
-   * @param {number} tipX
-   * @param {number} tipY
-   * @param {Object} [options]
+   * @param {Number} tailX - arrowNode tail X position
+   * @param {Number} tailY - arrowNode tail Y position
+   * @param {Number} tipX - arrowNode tip X position
+   * @param {Number} tipY - arrowNode tip Y position
+   * @param {Object} options that can be passed on to the underlying node
    * @constructor
    */
   function DimensionalArrowNode( tailX, tailY, tipX, tipY, options ) {
@@ -28,7 +28,9 @@ define( function( require ) {
       stroke: 'black',
       lineWidth: 1
     }, options );
-
+    // arrowNode tip and tail locations
+    this.tailLocation = new Vector2( 0, 0 );
+    this.tipLocation = new Vector2( 0, 0 );
     // things you're likely to mess up, add more as needed
     assert && assert( options.headWidth > options.tailWidth );
 
@@ -37,18 +39,25 @@ define( function( require ) {
   }
 
   return inherit( Path, DimensionalArrowNode, {
+    /**
+     *
+     * @param {Number} tailX - tail X position
+     * @param {Number} tailY - tail Y position
+     * @param {Number} tipX - tip X position
+     * @param {Number} tipY - tip Y position
+     */
     setTailAndTip: function( tailX, tailY, tipX, tipY ) {
-      var tailLocation = new Vector2( tailX, tailY );
-      var tipLocation = new Vector2( tipX, tipY );
+      this.tailLocation.setXY( tailX, tailY );
+      this.tipLocation.setXY( tipX, tipY );
       var tempHeadHeight;
       var tempHeadWidth;
       var tempTailWidth;
-      if ( tailLocation.distance( tipLocation ) !== 0 ) {
+      if ( this.tailLocation.distance( this.tipLocation ) !== 0 ) {
 
         tempHeadHeight = this.options.headHeight;
         tempHeadWidth = this.options.headWidth;
         tempTailWidth = this.options.tailWidth;
-        var length = tipLocation.distance( tailLocation );
+        var length = this.tipLocation.distance( this.tailLocation );
 
         var fractionalHeadHeight = 0.5;
         if ( length < this.options.headHeight / fractionalHeadHeight ) {
