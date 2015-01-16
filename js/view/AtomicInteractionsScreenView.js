@@ -79,7 +79,7 @@ define( function( require ) {
     var atomicInteractionsControlPanel = new AtomicInteractionsControlPanel( dualAtomModel,
       enableHeterogeneousMolecules, {
         right: this.layoutBounds.maxX - inset,
-        top: this.layoutBounds.minY + inset,
+        top:   this.layoutBounds.minY + inset,
         tickTextColor: tickTextColor,
         textColor: textColor,
         backgroundColor: backgroundColor
@@ -89,7 +89,7 @@ define( function( require ) {
     this.interactiveInteractionPotentialDiagram = new InteractiveInteractionPotentialDiagram(
       dualAtomModel.getSigma(), dualAtomModel.getEpsilon(), true, dualAtomModel, {
         left: this.layoutBounds.minX + inset,
-        top: atomicInteractionsControlPanel.top + inset / 2
+        top:  atomicInteractionsControlPanel.top + inset / 2
       } );
     this.addChild( this.interactiveInteractionPotentialDiagram );
 
@@ -113,7 +113,7 @@ define( function( require ) {
         dualAtomModel.reset();
         atomicInteractionsScreenView.handNode.setVisible( true );
       },
-      right: this.layoutBounds.maxX - inset,
+      right:  this.layoutBounds.maxX - inset,
       bottom: this.layoutBounds.maxY - inset
     } );
     this.addChild( resetAllButton );
@@ -129,7 +129,7 @@ define( function( require ) {
         stroke: 'black',
         fill: '#005566',
         centerX: this.layoutBounds.centerX + 110,
-        bottom: this.layoutBounds.bottom - 14
+        bottom:  this.layoutBounds.bottom - 14
       } );
     this.addChild( stepButton );
 
