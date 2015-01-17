@@ -35,6 +35,7 @@ define( function( require ) {
   // strings
   var normalString = require( 'string!ATOMIC_INTERACTIONS/normal' );
   var slowMotionString = require( 'string!ATOMIC_INTERACTIONS/slowMotion' );
+  var returnAtomString = require( 'string!ATOMIC_INTERACTIONS/returnAtom' );
   var inset = 10;
 
 
@@ -51,8 +52,8 @@ define( function( require ) {
 
   /**
    *
-   * @param{DualAtomModel} dualAtomModel
-   * @param {Boolean} enableHeterogeneousMolecules
+   * @param {DualAtomModel} dualAtomModel of the simulation
+   * @param {Boolean} enableHeterogeneousMolecules - true to use a enable heterogeneous molecules, false if not.
    * @constructor
    */
   function AtomicInteractionsScreenView( dualAtomModel, enableHeterogeneousMolecules ) {
@@ -76,6 +77,7 @@ define( function( require ) {
     var tickTextColor = enableHeterogeneousMolecules ? 'black' : 'white';
     var textColor = enableHeterogeneousMolecules ? 'black' : 'white';
     var backgroundColor = enableHeterogeneousMolecules ? '#D1D2FF' : 'black';
+    var forceControlPanelButtonAlign = enableHeterogeneousMolecules ? 'right' : 'left';
     var atomicInteractionsControlPanel = new AtomicInteractionsControlPanel( dualAtomModel,
       enableHeterogeneousMolecules, {
         right: this.layoutBounds.maxX - inset,
@@ -94,17 +96,16 @@ define( function( require ) {
     this.addChild( this.interactiveInteractionPotentialDiagram );
 
     // Add the button for retrieving the atom to the canvas.
-    this.retrieveAtomButtonNode = new TextPushButton( 'Return Atom', {
+    this.retrieveAtomButtonNode = new TextPushButton( returnAtomString, {
       font: new PhetFont( 12 ),
       baseColor: '#61BEE3',
       listener: function() {
         dualAtomModel.resetMovableAtomPos();
       },
-      centerX: this.layoutBounds.minX,
-      bottom: this.layoutBounds.bottom - 14
+      left:   this.layoutBounds.minX + inset,
+      bottom: this.layoutBounds.bottom - inset
     } );
 
-    //  this.retrieveAtomButtonNode.setVisible( false );
     this.addChild( this.retrieveAtomButtonNode );
 
     // Create and add the Reset All Button in the bottom right, which resets the model
@@ -129,16 +130,17 @@ define( function( require ) {
         stroke: 'black',
         fill: '#005566',
         centerX: this.layoutBounds.centerX + 110,
-        bottom:  this.layoutBounds.bottom - 14
+        bottom: this.layoutBounds.bottom - inset
       } );
     this.addChild( stepButton );
 
 
     // add force control
-    var forceControlNode = new ForcesControlNode( dualAtomModel.forcesProperty, {
+    var forceControlNode = new ForcesControlNode( dualAtomModel.forcesProperty, dualAtomModel.forceControlPanelExpandProperty, {
       tickTextColor: tickTextColor,
       textColor: textColor,
-      backgroundColor: backgroundColor
+      backgroundColor: backgroundColor,
+      buttonAlign: forceControlPanelButtonAlign
     } );
     var atomicInteractionsControlPanelRightOffset = 60;
     if ( enableHeterogeneousMolecules ) {
