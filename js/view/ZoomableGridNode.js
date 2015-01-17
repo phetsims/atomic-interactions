@@ -15,6 +15,7 @@ define( function( require ) {
   var Path = require( 'SCENERY/nodes/Path' );
   var Shape = require( 'KITE/Shape' );
   var ZoomButton = require( 'SCENERY_PHET/buttons/ZoomButton' );
+  var rectangularButtonView = require( 'SUN/buttons/RectangularButtonView' );
 
   var MAX_LINES_HORIZONTAL = 13;
   var MIN_LINES_HORIZONTAL = 5;
@@ -25,8 +26,8 @@ define( function( require ) {
    * @param atomsView
    * @param {Number} offsetX
    * @param {Number} offsetY
-   * @param {Number} width
-   * @param {Number} height
+   * @param {Number} width - width of the graph
+   * @param {Number} height - height of the graph
    * @constructor
    */
   function ZoomableGridNode( atomsView, offsetX, offsetY, width, height ) {
@@ -46,7 +47,9 @@ define( function( require ) {
       baseColor: 'white',
       radius: 10,
       xMargin: 3,
-      yMargin: 3
+      yMargin: 3,
+      disabledBaseColor: '#4A4A4A',
+      buttonAppearanceStrategy: rectangularButtonView.flatAppearanceStrategy
     } );
     this.zoomInButton.setTranslation( -50, 0 );
     this.zoomInButton.enabled = false;
@@ -62,6 +65,8 @@ define( function( require ) {
       radius: 10,
       xMargin: 3,
       yMargin: 3,
+      disabledBaseColor: 'gray',
+      buttonAppearanceStrategy: rectangularButtonView.flatAppearanceStrategy,
       in: false,
       top: this.zoomInButton.bottom + 5,
       left: this.zoomInButton.left
@@ -112,11 +117,11 @@ define( function( require ) {
 
     /**
      *
-     * @param offsetX
-     * @param offsetY
-     * @param width
-     * @param height
-     * @param noOfHorizontalLines
+     * @param {Number} offsetX
+     * @param {Number} offsetY
+     * @param {Number} width
+     * @param {Number} height
+     * @param {Number} noOfHorizontalLines
      */
     addHorizontalLines: function( offsetX, offsetY, width, height, noOfHorizontalLines ) {
 
