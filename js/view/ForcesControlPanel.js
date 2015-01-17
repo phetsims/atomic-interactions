@@ -33,12 +33,14 @@ define( function( require ) {
   var electronOverlapString = require( 'string!ATOMIC_INTERACTIONS/electronOverlap' );
 
   /**
+   *
    * @param {Property<String>} forcesProperty that determines which forces to display
+   * @param {Property<Boolean>} forceControlPanelExpandProperty -true to use force panel expand,false if not
    * @param {Object} options for various panel display properties
    * @constructor
    */
 
-  function ForcesControlPanel( forcesProperty, options ) {
+  function ForcesControlPanel( forcesProperty, forceControlPanelExpandProperty, options ) {
 
     options = _.extend( {
       xMargin: 5,
@@ -47,6 +49,7 @@ define( function( require ) {
       stroke: 'gray',
       tickTextColor: 'black',
       textColor: 'black',
+      buttonAlign: 'left',
       lineWidth: 1,
       backgroundColor: '#D1D2FF',
       cornerRadius: 5 // radius of the rounded corners on the background
@@ -163,10 +166,10 @@ define( function( require ) {
         titleNode: new Text( forcesString, { fill: options.textColor, font: new PhetFont( { size: 14 } ) } ),
         fill: options.backgroundColor,
         stroke: 'white',
-        // expandedProperty: expandedProperty,
+        expandedProperty: forceControlPanelExpandProperty,
         contentAlign: 'center',
         titleAlign: 'left',
-        buttonAlign: 'right',
+        buttonAlign: options.buttonAlign,
         cornerRadius: 4,
         contentYSpacing: 1,
         contentXSpacing: 3,

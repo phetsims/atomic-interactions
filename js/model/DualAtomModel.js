@@ -54,10 +54,10 @@ define( function( require ) {
         isPlaying: true,
         speed: 'normal',
         atomDiameter: 150,// atom diameter
-        forces: 'hideForces'
+        forces: 'hideForces',
+        forceControlPanelExpand: true
       }
     );
-
     // Put the model into its initial state.
     this.reset();
   }
