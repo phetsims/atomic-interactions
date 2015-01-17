@@ -56,14 +56,16 @@ define( function( require ) {
   var ARGON_OXYGEN = 'ARGON_OXYGEN';
   var ADJUSTABLE = 'ADJUSTABLE';
 
+  var inset = 10;
+
   /**
    *
-   * @param {DualAtomModel}model
-   * @param {Boolean }enableHeterogeneousMolecules
+   * @param {DualAtomModel} dualAtomModel - model of the simulation
+   * @param {Boolean} enableHeterogeneousMolecules - true to use a enable heterogeneous molecules , false if not.
    * @param {Object} options that can be passed on to the underlying node
    * @constructor
    */
-  function AtomicInteractionsControlPanel( model, enableHeterogeneousMolecules, options ) {
+  function AtomicInteractionsControlPanel( dualAtomModel, enableHeterogeneousMolecules, options ) {
 
     var atomicInteractionsControlPanel = this;
     options = _.extend( {
@@ -119,7 +121,7 @@ define( function( require ) {
        adjustableAttraction.width
        ) / 2;*/
 
-      maxWidth = customAttraction.width / 2 + 10;
+      maxWidth = customAttraction.width / 2 + inset;
 
       // pad inserts a spacing node (HStrut) so that the rows occupy a certain fixed width.
       createItem = function( itemSpec ) {
@@ -131,19 +133,19 @@ define( function( require ) {
         } );
       };
       var particleRadius = 8;
-      var neonNeonRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_NEON,
+      var neonNeonRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, NEON_NEON,
         createItem( neonAndNeon ), { radius: particleRadius } );
-      var argonArgonRadio = new AquaRadioButton( model.moleculeTypeProperty, ARGON_ARGON,
+      var argonArgonRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, ARGON_ARGON,
         createItem( argonAndArgon ), { radius: particleRadius } );
-      var oxygenOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, OXYGEN_OXYGEN,
+      var oxygenOxygenRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, OXYGEN_OXYGEN,
         createItem( oxygenAndOxygen ), { radius: particleRadius } );
-      var neonArgonRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_ARGON,
+      var neonArgonRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, NEON_ARGON,
         createItem( neonAndArgon ), { radius: particleRadius } );
-      var neonOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, NEON_OXYGEN,
+      var neonOxygenRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, NEON_OXYGEN,
         createItem( neonAndOxygen ), { radius: particleRadius } );
-      var argonOxygenRadio = new AquaRadioButton( model.moleculeTypeProperty, ARGON_OXYGEN,
+      var argonOxygenRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, ARGON_OXYGEN,
         createItem( argonAndOxygen ), { radius: particleRadius } );
-      var adjustableAttractionRadio = new AquaRadioButton( model.moleculeTypeProperty, ADJUSTABLE,
+      var adjustableAttractionRadio = new AquaRadioButton( dualAtomModel.moleculeTypeProperty, ADJUSTABLE,
         new HBox( { children: [ customAttraction ] } ), { radius: particleRadius } );
       var pushpinImage = new Image( pushPinImg, { scale: 0.2 } );
       var pinnedNodeText = new HBox( {
@@ -169,8 +171,8 @@ define( function( require ) {
       var neon = { label: new Text( neonString, textOptions ), icon: createNeonIcon() };
       var argon = { label: new Text( argonString, textOptions ), icon: createArgonIcon() };
       adjustableAttraction = {
-        label: new Text( adjustableAttractionString, textOptions ),
-        icon: createAdjustableAttractionIcon()
+        label: new Text( adjustableAttractionString,
+          textOptions ), icon: createAdjustableAttractionIcon()
       };
 
       // compute the maximum item width
@@ -191,11 +193,11 @@ define( function( require ) {
       };
 
       var radioButtonContent = [
-        { value: 'NEON_NEON', node: createItem( neon ) },
-        { value: 'ARGON_ARGON', node: createItem( argon ) },
-        { value: 'ADJUSTABLE', node: createItem( adjustableAttraction ) }
+        { value: NEON_NEON, node: createItem( neon ) },
+        { value: ARGON_ARGON, node: createItem( argon ) },
+        { value: ADJUSTABLE, node: createItem( adjustableAttraction ) }
       ];
-      radioButtonGroup = new RadioButtonGroup( model.moleculeTypeProperty, radioButtonContent, {
+      radioButtonGroup = new RadioButtonGroup( dualAtomModel.moleculeTypeProperty, radioButtonContent, {
         orientation: 'vertical',
         spacing: 1,
         cornerRadius: 5,
@@ -213,8 +215,7 @@ define( function( require ) {
           fontWeight: 'bold'
         } );
       var titleBackground = new Rectangle( 0, 0,
-        titleText.width + 5, titleText.height,
-        {
+        titleText.width + 5, titleText.height, {
           fill: 'black'
         } );
 
@@ -228,8 +229,8 @@ define( function( require ) {
     var atomDiameterTitle = new Text( atomDiameterString, textOptions );
     atomDiameterTitle.centerX = radioButtonGroup.centerX - 15;
     atomDiameterTitle.top = radioButtonGroup.bottom + 10;
-    model.atomDiameterProperty.value = model.getSigma();
-    var atomDiameterSlider = new HSlider( model.atomDiameterProperty,
+    dualAtomModel.atomDiameterProperty.value = dualAtomModel.getSigma();
+    var atomDiameterSlider = new HSlider( dualAtomModel.atomDiameterProperty,
       { min: 2 * StatesOfMatterConstants.MIN_SIGMA, max: StatesOfMatterConstants.MAX_SIGMA },
       {
         trackSize: new Dimension2( 100, 5 ),
@@ -240,10 +241,10 @@ define( function( require ) {
         trackStroke: options.tickTextColor,
         centerX: radioButtonGroup.centerX,
         startDrag: function() {
-          model.setMotionPaused( true );
+          dualAtomModel.setMotionPaused( true );
         },
         endDrag: function() {
-          model.setMotionPaused( false );
+          dualAtomModel.setMotionPaused( false );
         }
       } );
     atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MIN_SIGMA,
@@ -259,8 +260,8 @@ define( function( require ) {
     var interactionStrengthTitle = new Text( interactionStrengthString, textOptions );
     interactionStrengthTitle.centerX = radioButtonGroup.centerX - 5;
     interactionStrengthTitle.top = atomDiameterSlider.bottom + 5;
-    model.interactionStrength = model.getEpsilon();
-    var interactionStrengthSlider = new HSlider( model.interactionStrengthProperty,
+    dualAtomModel.interactionStrength = dualAtomModel.getEpsilon();
+    var interactionStrengthSlider = new HSlider( dualAtomModel.interactionStrengthProperty,
       { min: StatesOfMatterConstants.MIN_EPSILON, max: StatesOfMatterConstants.MAX_EPSILON },
       {
         trackSize: new Dimension2( 100, 5 ),
@@ -271,10 +272,10 @@ define( function( require ) {
         trackStroke: options.tickTextColor,
         centerX: radioButtonGroup.centerX,
         startDrag: function() {
-          model.setMotionPaused( true );
+          dualAtomModel.setMotionPaused( true );
         },
         endDrag: function() {
-          model.setMotionPaused( false );
+          dualAtomModel.setMotionPaused( false );
         }
       } );
     interactionStrengthSlider.addMajorTick( StatesOfMatterConstants.MIN_EPSILON,
@@ -292,40 +293,40 @@ define( function( require ) {
     } );
 
     // Update the text when the value or units changes.
-    model.moleculeTypeProperty.link(
+    dualAtomModel.moleculeTypeProperty.link(
       function( moleculeType ) {
         switch( moleculeType ) {
           case NEON_NEON:
-            model.setBothAtomTypes( AtomType.NEON );
+            dualAtomModel.setBothAtomTypes( AtomType.NEON );
             break;
 
           case ARGON_ARGON:
-            model.setBothAtomTypes( AtomType.ARGON );
+            dualAtomModel.setBothAtomTypes( AtomType.ARGON );
             break;
 
           case OXYGEN_OXYGEN:
-            model.setBothAtomTypes( AtomType.OXYGEN );
+            dualAtomModel.setBothAtomTypes( AtomType.OXYGEN );
             break;
 
           case NEON_ARGON:
-            model.settingBothAtomTypes = true;
-            model.setFixedAtomType( AtomType.NEON );
-            model.setMovableAtomType( AtomType.ARGON );
-            model.settingBothAtomTypes = false;
+            dualAtomModel.settingBothAtomTypes = true;
+            dualAtomModel.setFixedAtomType( AtomType.NEON );
+            dualAtomModel.setMovableAtomType( AtomType.ARGON );
+            dualAtomModel.settingBothAtomTypes = false;
             break;
 
           case NEON_OXYGEN:
-            model.settingBothAtomTypes = true;
-            model.setFixedAtomType( AtomType.NEON );
-            model.setMovableAtomType( AtomType.OXYGEN );
-            model.settingBothAtomTypes = false;
+            dualAtomModel.settingBothAtomTypes = true;
+            dualAtomModel.setFixedAtomType( AtomType.NEON );
+            dualAtomModel.setMovableAtomType( AtomType.OXYGEN );
+            dualAtomModel.settingBothAtomTypes = false;
             break;
 
           case ARGON_OXYGEN:
-            model.settingBothAtomTypes = true;
-            model.setFixedAtomType( AtomType.ARGON );
-            model.setMovableAtomType( AtomType.OXYGEN );
-            model.settingBothAtomTypes = false;
+            dualAtomModel.settingBothAtomTypes = true;
+            dualAtomModel.setFixedAtomType( AtomType.ARGON );
+            dualAtomModel.setMovableAtomType( AtomType.OXYGEN );
+            dualAtomModel.settingBothAtomTypes = false;
             break;
         } //end of switch
 
@@ -333,14 +334,10 @@ define( function( require ) {
           // add atom diameter slider and interaction
           atomicInteractionsControlPanel.addChild( atomDiameter );
           atomicInteractionsControlPanel.addChild( interactionStrength );
-          var backgroundShape1 = new Shape().roundRect(
-            0,
-            -4,
-            (radioButtonPanel.width + 10 ),
-            (radioButtonPanel.height + atomDiameter.height + interactionStrength.height + 20 ),
-            options.cornerRadius, options.cornerRadius
-          );
-          background.setShape( backgroundShape1 );
+          var panelHeight = radioButtonPanel.height + atomDiameter.height + interactionStrength.height + inset;
+          background.setShape( new Shape().roundRect( 0, -4,
+            radioButtonPanel.width + inset, panelHeight,
+            options.cornerRadius, options.cornerRadius ) );
         }
         else {
           //if  atom and interaction slider
@@ -349,14 +346,10 @@ define( function( require ) {
             atomicInteractionsControlPanel.removeChild( atomDiameter );
             atomicInteractionsControlPanel.removeChild( interactionStrength );
           }
-          var backgroundShape2 = new Shape().roundRect(
-            0,
-            -4,
-            (radioButtonPanel.width + 10 ),
-            (radioButtonPanel.height + 10 ),
+          background.setShape( new Shape().roundRect( 0, -4,
+            radioButtonPanel.width + inset, radioButtonPanel.height + inset,
             options.cornerRadius, options.cornerRadius
-          );
-          background.setShape( backgroundShape2 );
+          ) );
         }
       } );
     this.addChild( radioButtonGroup );
@@ -365,12 +358,12 @@ define( function( require ) {
 
   //Create an icon for the adjustable attraction  button
   var createAdjustableAttractionIcon = function() {
-    return new Circle( 5, { fill: '#B15AFF' } );
+    return new Circle( 6, { fill: '#B15AFF' } );
   };
 
   //Create an icon for the neon  button
   var createNeonIcon = function() {
-    return new Circle( 4, { fill: '#1AFFFB' } );
+    return new Circle( 5, { fill: '#1AFFFB' } );
   };
 
   //Create an icon for the argon  button
