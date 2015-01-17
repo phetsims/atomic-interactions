@@ -13,10 +13,11 @@
   "moving": "Moving",
   "atomDiameter": "Atom Diameter",
   "interactionStrength": "Interaction Strength",
-  "small": "Small",
-  "large": "Large",
-  "weak": "Weak",
-  "strong": "Strong",
+  "small": "small",
+  "large": "large",
+  "weak": "weak",
+  "returnAtom": "Return Atom",
+  "strong": "strong",
   "customAttraction": "Custom Attraction",
   "projectorColors": "Projector Colors"
 }
