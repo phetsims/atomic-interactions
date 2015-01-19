@@ -51,6 +51,7 @@ define( function( require ) {
       textColor: 'black',
       buttonAlign: 'left',
       lineWidth: 1,
+      showTitleWhenExpand: true,
       backgroundColor: '#D1D2FF',
       cornerRadius: 5 // radius of the rounded corners on the background
     }, options );
@@ -102,7 +103,7 @@ define( function( require ) {
     // pad inserts a spacing node (HStrut) so that the text, space and image together occupy a certain fixed width.
     var createItem = function( itemSpec ) {
       if ( itemSpec.icon ) {
-        var strutWidth = maxWidth - itemSpec.label.width - itemSpec.icon.width + 25;
+        var strutWidth = maxWidth - itemSpec.label.width - itemSpec.icon.width + 15;
         return new HBox( { children: [ itemSpec.label, new HStrut( strutWidth ), itemSpec.icon ] } );
       }
       else {
@@ -175,7 +176,8 @@ define( function( require ) {
         contentXSpacing: 3,
         contentXMargin: 12,
         buttonYMargin: 4,
-        buttonXMargin: 10
+        buttonXMargin: 10,
+        showTitleWhenExpanded: options.showTitleWhenExpand
       } );
     this.addChild( accordionBox );
 

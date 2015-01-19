@@ -126,7 +126,7 @@ define( function( require ) {
       // pad inserts a spacing node (HStrut) so that the rows occupy a certain fixed width.
       createItem = function( itemSpec ) {
         var strutWidth1 = maxWidth - itemSpec[ 0 ].width + 15;
-        var strutWidth2 = maxWidth - itemSpec[ 1 ].width;
+        var strutWidth2 = maxWidth - itemSpec[ 1 ].width + 15;
         return new HBox( {
           children: [ itemSpec[ 0 ], new HStrut( strutWidth1 ),
             itemSpec[ 1 ], new HStrut( strutWidth2 ) ]
@@ -158,7 +158,7 @@ define( function( require ) {
         children: [ titleNode, neonNeonRadio, argonArgonRadio, oxygenOxygenRadio,
           neonArgonRadio, neonOxygenRadio, argonOxygenRadio, adjustableAttractionRadio ],
         align: 'left',
-        spacing: 2
+        spacing: 6
       } );
       titleNode.align = atomicInteractionsControlPanel.width / 2;
     }
@@ -211,8 +211,7 @@ define( function( require ) {
       titleText = new Text( tittleString,
         {
           font: new PhetFont( 14 ),
-          fill: '#FFFFFF',
-          fontWeight: 'bold'
+          fill: '#FFFFFF'
         } );
       var titleBackground = new Rectangle( 0, 0,
         titleText.width + 5, titleText.height, {
@@ -336,7 +335,7 @@ define( function( require ) {
           atomicInteractionsControlPanel.addChild( interactionStrength );
           var panelHeight = radioButtonPanel.height + atomDiameter.height + interactionStrength.height + inset;
           background.setShape( new Shape().roundRect( 0, -4,
-            radioButtonPanel.width + inset, panelHeight,
+            radioButtonPanel.width, panelHeight,
             options.cornerRadius, options.cornerRadius ) );
         }
         else {
@@ -347,7 +346,7 @@ define( function( require ) {
             atomicInteractionsControlPanel.removeChild( interactionStrength );
           }
           background.setShape( new Shape().roundRect( 0, -4,
-            radioButtonPanel.width + inset, radioButtonPanel.height + inset,
+            radioButtonPanel.width, radioButtonPanel.height + inset,
             options.cornerRadius, options.cornerRadius
           ) );
         }

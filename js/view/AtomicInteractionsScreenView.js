@@ -46,10 +46,6 @@ define( function( require ) {
   var PUSH_PIN_WIDTH = CANVAS_WIDTH * 0.01;
 
 
-  // Constant to turn on/off a set of vertical lines that can be used to
-  // check the alignment between the graph and the atoms.
-  // var SHOW_ALIGNMENT_LINES = false;
-
   /**
    *
    * @param {DualAtomModel} dualAtomModel of the simulation
@@ -58,7 +54,7 @@ define( function( require ) {
    */
   function AtomicInteractionsScreenView( dualAtomModel, enableHeterogeneousMolecules ) {
 
-    ScreenView.call( this, { layoutBounds: new Bounds2( 0, 0, 768, 504 ) } );
+    ScreenView.call( this, { renderer: 'svg', layoutBounds: new Bounds2( 0, 0, 834, 504 ) } );
 
     this.dualAtomModel = dualAtomModel;
     this.movableParticle = dualAtomModel.getMovableAtomRef();
@@ -75,6 +71,7 @@ define( function( require ) {
       new Vector2( 80, 370 ), mvtScale );
 
     var tickTextColor = enableHeterogeneousMolecules ? 'black' : 'white';
+    var showTitleWhenExpand = !enableHeterogeneousMolecules; // force control panel title
     var textColor = enableHeterogeneousMolecules ? 'black' : 'white';
     var backgroundColor = enableHeterogeneousMolecules ? '#D1D2FF' : 'black';
     var forceControlPanelButtonAlign = enableHeterogeneousMolecules ? 'right' : 'left';
@@ -90,7 +87,7 @@ define( function( require ) {
     // add interactive potential diagram
     this.interactiveInteractionPotentialDiagram = new InteractiveInteractionPotentialDiagram(
       dualAtomModel.getSigma(), dualAtomModel.getEpsilon(), true, dualAtomModel, {
-        left: this.layoutBounds.minX + inset,
+        left: this.layoutBounds.minX + 3 * inset,
         top:  atomicInteractionsControlPanel.top + inset / 2
       } );
     this.addChild( this.interactiveInteractionPotentialDiagram );
@@ -103,7 +100,7 @@ define( function( require ) {
         dualAtomModel.resetMovableAtomPos();
       },
       left:   this.layoutBounds.minX + inset,
-      bottom: this.layoutBounds.bottom - inset
+      bottom: this.layoutBounds.bottom - 2 * inset
     } );
 
     this.addChild( this.retrieveAtomButtonNode );
@@ -115,7 +112,8 @@ define( function( require ) {
         atomicInteractionsScreenView.handNode.setVisible( true );
       },
       right:  this.layoutBounds.maxX - inset,
-      bottom: this.layoutBounds.maxY - inset
+      bottom: this.layoutBounds.maxY - 2 * inset,
+      scale: 0.75
     } );
     this.addChild( resetAllButton );
 
@@ -130,7 +128,7 @@ define( function( require ) {
         stroke: 'black',
         fill: '#005566',
         centerX: this.layoutBounds.centerX + 110,
-        bottom: this.layoutBounds.bottom - inset
+        bottom: this.layoutBounds.bottom - 2 * inset
       } );
     this.addChild( stepButton );
 
@@ -140,7 +138,8 @@ define( function( require ) {
       tickTextColor: tickTextColor,
       textColor: textColor,
       backgroundColor: backgroundColor,
-      buttonAlign: forceControlPanelButtonAlign
+      buttonAlign: forceControlPanelButtonAlign,
+      showTitleWhenExpand: showTitleWhenExpand
     } );
     var atomicInteractionsControlPanelRightOffset = 60;
     if ( enableHeterogeneousMolecules ) {
@@ -249,25 +248,13 @@ define( function( require ) {
       }
 
     } );
-    dualAtomModel.atomDiameterProperty.link( function( diameter ) {
+    dualAtomModel.atomDiameterProperty.link( function() {
       atomicInteractionsScreenView.fixedParticleNode.handleParticleRadiusChanged();
       atomicInteractionsScreenView.movableParticleNode.handleParticleRadiusChanged();
       atomicInteractionsScreenView.handleParticleRadiusChanged();
       atomicInteractionsScreenView.updateMinimumXForMovableAtom();
     } );
 
-
-    /*  var fixedAtomVerticalCenterMarker = new Path( new Shape().moveTo( 0, 0).lineTo( 0, 500 ),{fill: 'pink', stroke: 'pink'});
-     fixedAtomVerticalCenterMarker.setTranslation( 0, 0 );
-     this.addChild( fixedAtomVerticalCenterMarker );
-
-     var movableAtomVerticalCenterMarker = new Path( new Shape().moveTo( 0, 0).lineTo( 0, 500 ),{fill: 'orange', stroke: 'orange'});
-     movableAtomVerticalCenterMarker.setTranslation( atomicInteractionsModel.getMovableAtomRef().positionProperty.value.x, 0 );
-     this.addChild( movableAtomVerticalCenterMarker );
-
-     var rightSideOfChartMarker = new Path(new Shape().moveTo( 0, 0).lineTo(  0, 500 ),{fill: 'green', stroke: 'green'});
-     rightSideOfChartMarker.setTranslation( 1100, 0 );
-     this.addChild( rightSideOfChartMarker );*/
     atomicInteractionsScreenView.handNode.setVisible( true );
   }
 
@@ -275,10 +262,9 @@ define( function( require ) {
 
 
     /**
-     * Called by the animation loop. Optional, so if your view has no animation, you can omit this.
-     * @param{Number} dt - time in seconds
+     * Called by the animation loop.
      */
-    step: function( dt ) {
+    step: function() {
       this.handlePositionChanged();
     },
     /**
@@ -330,7 +316,7 @@ define( function( require ) {
         this.modelViewTransform.modelToViewY( -this.fixedParticle.getRadius() * 0.9 ) );
     },
 
-    handleFixedParticleRemoved: function( particle ) {
+    handleFixedParticleRemoved: function() {
       // Get rid of the node for this guy.
       if ( this.fixedParticleLayer.isChild( this.fixedParticleNode ) ) {
 
@@ -372,7 +358,7 @@ define( function( require ) {
       this.updatePositionMarkerOnDiagram();
     },
 
-    handleMovableParticleRemoved: function( particle ) {
+    handleMovableParticleRemoved: function() {
       // Get rid of the node for this guy.
       if ( this.movableParticleNode !== null ) {
 
