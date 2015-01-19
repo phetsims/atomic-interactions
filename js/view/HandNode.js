@@ -17,14 +17,14 @@ define( function( require ) {
 
   /***
    *
-   * @param model
-   * @param particle
-   * @param mvt
-   * @param minX
-   * @param maxX
+   * @param {DualAtomModel} dualAtomModel - model of the atomic interactions screen
+   * @param {StatesMatterAtom} particle - model of the atom that is draggable
+   * @param {ModelViewTransform2} modelViewTransform to convert between model and view co-ordinates
+   * @param {Number} minX - grabbable particle  min x position // view
+   * @param {Number} maxX - grabbable particle  max x position // view
    * @constructor
    */
-  function HandNode( model, particle, mvt, minX, maxX ) {
+  function HandNode( dualAtomModel, particle, modelViewTransform, minX, maxX ) {
 
     Node.call( this );
     var handNode = this;
@@ -58,19 +58,19 @@ define( function( require ) {
       start: function( event ) {
         // Stop the model from moving the particle at the same time the user
         // is moving it.
-        model.setMotionPaused( true );
+        dualAtomModel.setMotionPaused( true );
         startDragX = handNode.globalToParentPoint( event.pointer.point ).x;
       },
       drag: function( event ) {
         // Only allow the user to move unbonded atoms.
-        if ( model.getBondingState() !== model.BONDING_STATE_UNBONDED ) {
+        if ( dualAtomModel.getBondingState() !== dualAtomModel.BONDING_STATE_UNBONDED ) {
           // Need to release the bond before we can move the atom.
-          model.releaseBond();
+          dualAtomModel.releaseBond();
         }
         endDragX = handNode.globalToParentPoint( event.pointer.point ).x;
         var d = endDragX - startDragX;
         startDragX = endDragX;        // Make sure we don't exceed the positional limits.
-        var newPosX = mvt.modelToViewX( particle.getX() ) + d;
+        var newPosX = modelViewTransform.modelToViewX( particle.getX() ) + d;
         if ( newPosX > handNode.maxX ) {
           newPosX = handNode.maxX;
         }
@@ -78,17 +78,18 @@ define( function( require ) {
           newPosX = handNode.minX;
         }
         // Move the particle based on the amount of mouse movement.
-        particle.setPosition( mvt.viewToModelX( newPosX ), particle.getY() );
+        particle.setPosition( modelViewTransform.viewToModelX( newPosX ), particle.getY() );
       },
       end: function() {
         // Let the model move the particles again.  Note that this happens
         // even if the motion was paused by some other means.
-        model.setMotionPaused( false );
+        dualAtomModel.setMotionPaused( false );
         handNode.setVisible( false );
       }
     } ) );
-    model.movableAtom.positionProperty.link( function( position ) {
-      handNode.setTranslation( mvt.modelToViewX( position.x ), mvt.modelToViewY( position.y ) );
+    dualAtomModel.movableAtom.positionProperty.link( function( position ) {
+      handNode.setTranslation( modelViewTransform.modelToViewX( position.x ),
+        modelViewTransform.modelToViewY( position.y ) );
     } );
 
 
@@ -100,7 +101,10 @@ define( function( require ) {
       return this.minX;
     },
 
-
+    /**
+     *
+     * @param {Number} minX - particle min x  position
+     */
     setMinX: function( minX ) {
       this.minX = minX;
     },
@@ -109,6 +113,10 @@ define( function( require ) {
     getMaxX: function() {
       return this.maxX;
     },
+    /**
+     *
+     * @param {Number} maxX - particle max x  position
+     */
     setMaxX: function( maxX ) {
       this.maxX = maxX;
     }
