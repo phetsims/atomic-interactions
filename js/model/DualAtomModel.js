@@ -59,7 +59,7 @@ define( function( require ) {
         speed: 'normal',
         atomDiameter: 150,// atom diameter
         forces: 'hideForces',
-        forceControlPanelExpand: true
+        forceControlPanelExpand: false
       }
     );
     // Put the model into its initial state.
