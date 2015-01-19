@@ -34,6 +34,10 @@ define( function( require ) {
   var MAX_APPROXIMATION_ITERATIONS = 100;
 
 
+  /**
+   * This is the model for two atoms interacting with a Lennard-Jones interaction potential.
+   * @constructor
+   */
   function DualAtomModel() {
 
     this.fixedAtom = null;
