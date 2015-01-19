@@ -414,8 +414,7 @@ define( function( require ) {
                 this.minPotentialDistance = this.ljPotentialCalculator.calculateMinimumForceDistance();
                 this.bondedOscillationRightDistance = this.minPotentialDistance +
                                                       BONDED_OSCILLATION_PROPORTION * this.movableAtom.getRadius();
-                this.bondedOscillationLeftDistance =
-                this.approximateEquivalentPotentialDistance( this.bondedOscillationRightDistance );
+                this.bondedOscillationLeftDistance = this.approximateEquivalentPotentialDistance( this.bondedOscillationRightDistance );
                 this.bondingState = BONDING_STATE_BONDED;
                 this.stepFixedAtomVibration();
               }
@@ -519,8 +518,8 @@ define( function( require ) {
             // energy contained at the time of bonding.  The
             // multiplication factor in the equation below is empirically
             // determined to look good on the screen.
-            var xPos = ( Math.random() * 2 - 1 ) * this.potentialWhenAtomReleased * 5e21 * vibrationScaleFactor;
-            var yPos = ( Math.random() * 2 - 1 ) * this.potentialWhenAtomReleased * 5e21 * vibrationScaleFactor;
+            var xPos = ( Math.random() * 2 - 1 ) * this.potentialWhenAtomReleased * 5e19 * vibrationScaleFactor;
+            var yPos = ( Math.random() * 2 - 1 ) * this.potentialWhenAtomReleased * 5e19 * vibrationScaleFactor;
             this.fixedAtom.setPosition( xPos, yPos );
           }
 

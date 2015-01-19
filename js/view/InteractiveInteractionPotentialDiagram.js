@@ -31,18 +31,18 @@ define( function( require ) {
 
   /**
    *
-   * @param { Number } sigma
-   * @param { Number } epsilon
-   * @param { Number } wide
-   * @param {DualAtomModel}model
+   * @param {Number} sigma - Initial value of sigma, a.k.a. the atom diameter
+   * @param {Number} epsilon - Initial value of epsilon, a.k.a. the interaction strength
+   * @param {Boolean} wide - true if the wide screen version of the graph is needed, false if not.
+   * @param {DualAtomModel} dualAtomModel - model of the simulation
    * @param {Object} options that can be passed on to the underlying node
    * @constructor
    */
 
-  function InteractiveInteractionPotentialDiagram( sigma, epsilon, wide, model, options ) {
+  function InteractiveInteractionPotentialDiagram( sigma, epsilon, wide, dualAtomModel, options ) {
 
     InteractionPotentialDiagramNode.call( this, sigma, epsilon, wide );
-    this.model = model;
+    this.dualAtomModel = dualAtomModel;
     var interactiveInteractionPotentialDiagram = this;
 
     this.interactionEnabled = false;
@@ -59,7 +59,7 @@ define( function( require ) {
     var startDragY, endDragY;
     this.epsilonLine.addInputListener( new SimpleDragHandler( {
       start: function( event ) {
-        model.setMotionPaused( true );
+        dualAtomModel.setMotionPaused( true );
         startDragY = interactiveInteractionPotentialDiagram.epsilonLine.globalToParentPoint( event.pointer.point ).y;
       },
       drag: function( event ) {
@@ -68,10 +68,10 @@ define( function( require ) {
         startDragY = endDragY;
         var scaleFactor = StatesOfMatterConstants.MAX_EPSILON /
                           ( interactiveInteractionPotentialDiagram.getGraphHeight() / 2);
-        model.interactionStrengthProperty.value = model.getEpsilon() + ( d * scaleFactor);
+        dualAtomModel.interactionStrengthProperty.value = dualAtomModel.getEpsilon() + ( d * scaleFactor);
       },
       end: function() {
-        model.setMotionPaused( false );
+        dualAtomModel.setMotionPaused( false );
       }
     } ) );
     this.epsilonLineLayer.addChild( this.epsilonLine );
@@ -94,7 +94,7 @@ define( function( require ) {
     this.ljPotentialGraph.addChild( this.epsilonResizeHandle );
     this.epsilonResizeHandle.addInputListener( new SimpleDragHandler( {
       start: function( event ) {
-        model.setMotionPaused( true );
+        dualAtomModel.setMotionPaused( true );
         startDragY = interactiveInteractionPotentialDiagram.epsilonResizeHandle.globalToParentPoint( event.pointer.point ).y;
       },
       drag: function( event ) {
@@ -103,10 +103,10 @@ define( function( require ) {
         startDragY = endDragY;
         var scaleFactor = StatesOfMatterConstants.MAX_EPSILON /
                           ( interactiveInteractionPotentialDiagram.getGraphHeight() / 2);
-        model.interactionStrengthProperty.value = model.getEpsilon() + ( d * scaleFactor);
+        dualAtomModel.interactionStrengthProperty.value = dualAtomModel.getEpsilon() + ( d * scaleFactor);
       },
       end: function() {
-        model.setMotionPaused( false );
+        dualAtomModel.setMotionPaused( false );
       }
     } ) );
 
@@ -128,7 +128,7 @@ define( function( require ) {
     var startDragX, endDragX;
     this.sigmaResizeHandle.addInputListener( new SimpleDragHandler( {
       start: function( event ) {
-        model.setMotionPaused( true );
+        dualAtomModel.setMotionPaused( true );
         startDragX = interactiveInteractionPotentialDiagram.sigmaResizeHandle.globalToParentPoint( event.pointer.point ).x;
       },
       drag: function( event ) {
@@ -137,13 +137,13 @@ define( function( require ) {
         startDragX = endDragX;
         var scaleFactor = interactiveInteractionPotentialDiagram.MAX_INTER_ATOM_DISTANCE /
                           ( interactiveInteractionPotentialDiagram.getGraphWidth());
-        var atomDiameter = model.getSigma() + ( d * scaleFactor);
-        model.atomDiameterProperty.value = atomDiameter > StatesOfMatterConstants.MIN_SIGMA ?
-                                           (atomDiameter < StatesOfMatterConstants.MAX_SIGMA ? atomDiameter :
-                                            StatesOfMatterConstants.MAX_SIGMA) : StatesOfMatterConstants.MIN_SIGMA;
+        var atomDiameter = dualAtomModel.getSigma() + ( d * scaleFactor);
+        dualAtomModel.atomDiameterProperty.value = atomDiameter > StatesOfMatterConstants.MIN_SIGMA ?
+                                                   (atomDiameter < StatesOfMatterConstants.MAX_SIGMA ? atomDiameter :
+                                                    StatesOfMatterConstants.MAX_SIGMA) : StatesOfMatterConstants.MIN_SIGMA;
       },
       end: function() {
-        model.setMotionPaused( false );
+        dualAtomModel.setMotionPaused( false );
       }
     } ) );
 
@@ -152,33 +152,33 @@ define( function( require ) {
     this.positionMarker.setPickable( true );
     this.positionMarker.addInputListener( new SimpleDragHandler( {
       start: function( event ) {
-        model.setMotionPaused( true );
+        dualAtomModel.setMotionPaused( true );
         startDragX = interactiveInteractionPotentialDiagram.sigmaResizeHandle.globalToParentPoint( event.pointer.point ).x;
       },
       drag: function( event ) {
         endDragX = interactiveInteractionPotentialDiagram.sigmaResizeHandle.globalToParentPoint( event.pointer.point ).x;
         var d = endDragX - startDragX;
         startDragX = endDragX;
-        var atom = model.getMovableAtomRef();
+        var atom = dualAtomModel.getMovableAtomRef();
         var scaleFactor = interactiveInteractionPotentialDiagram.MAX_INTER_ATOM_DISTANCE /
                           ( interactiveInteractionPotentialDiagram.getGraphWidth());
         var newPosX = Math.max( atom.getX() + ( d * scaleFactor ), atom.getRadius() * 1.8 );
         atom.setPosition( newPosX, atom.getY() );
       },
       end: function() {
-        model.setMotionPaused( false );
+        dualAtomModel.setMotionPaused( false );
       }
     } ) );
-    Property.multilink( [ model.moleculeTypeProperty, model.interactionStrengthProperty, model.atomDiameterProperty ],
+    Property.multilink( [ dualAtomModel.moleculeTypeProperty, dualAtomModel.interactionStrengthProperty, dualAtomModel.atomDiameterProperty ],
       function( moleculeType, interactionStrength, atomDiameter ) {
 
         if ( moleculeType === AtomType.ADJUSTABLE ) {
-          model.setBothAtomTypes( AtomType.ADJUSTABLE );
-          model.setEpsilon( interactionStrength );
-          model.setAdjustableAtomSigma( atomDiameter );
+          dualAtomModel.setBothAtomTypes( AtomType.ADJUSTABLE );
+          dualAtomModel.setEpsilon( interactionStrength );
+          dualAtomModel.setAdjustableAtomSigma( atomDiameter );
         }
-        interactiveInteractionPotentialDiagram.positionMarker.changeColor( model.movableAtom.color );
-        interactiveInteractionPotentialDiagram.setLjPotentialParameters( model.getSigma(), model.getEpsilon() );
+        interactiveInteractionPotentialDiagram.positionMarker.changeColor( dualAtomModel.movableAtom.color );
+        interactiveInteractionPotentialDiagram.setLjPotentialParameters( dualAtomModel.getSigma(), dualAtomModel.getEpsilon() );
         interactiveInteractionPotentialDiagram.updateInteractivityState();
         interactiveInteractionPotentialDiagram.drawPotentialCurve();
       } );
@@ -188,7 +188,7 @@ define( function( require ) {
     // Redraw the potential curve.
     this.drawPotentialCurve();
     this.addChild( this.horizontalAxisLabel );
-    this.addChild( this.horizontalAxis );
+
     this.addChild( this.verticalAxisLabel );
     var ljGraPhAxisLabelFont = new PhetFont( 20 );
 
@@ -206,6 +206,7 @@ define( function( require ) {
 
     this.addChild( this.verticalAxis );
     this.addChild( this.ljPotentialGraph );
+    this.addChild( this.horizontalAxis );
 
     // applying color scheme to lj graph elements
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.verticalAxis, 'fill' );
@@ -254,7 +255,7 @@ define( function( require ) {
       }
     },
     updateInteractivityState: function() {
-      this.interactionEnabled = ( this.model.getFixedAtomType() === AtomType.ADJUSTABLE );
+      this.interactionEnabled = ( this.dualAtomModel.getFixedAtomType() === AtomType.ADJUSTABLE );
 
     }
   } );
