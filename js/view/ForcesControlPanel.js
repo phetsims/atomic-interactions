@@ -103,7 +103,7 @@ define( function( require ) {
     // pad inserts a spacing node (HStrut) so that the text, space and image together occupy a certain fixed width.
     var createItem = function( itemSpec ) {
       if ( itemSpec.icon ) {
-        var strutWidth = maxWidth - itemSpec.label.width - itemSpec.icon.width + 15;
+        var strutWidth = maxWidth - itemSpec.label.width - itemSpec.icon.width + 20;
         return new HBox( { children: [ itemSpec.label, new HStrut( strutWidth ), itemSpec.icon ] } );
       }
       else {
