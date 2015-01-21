@@ -28,6 +28,7 @@ define( function( require ) {
   var AtomType = require( 'STATES_OF_MATTER/common/model/AtomType' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
   var Image = require( 'SCENERY/nodes/Image' );
+  var Bounds2 = require( 'DOT/Bounds2' );
 
   // images
   var pushPinImg = require( 'image!ATOMIC_INTERACTIONS/push-pin.png' );
@@ -103,6 +104,60 @@ define( function( require ) {
     var titleText;
     var titleNode;
 
+    // add atom diameter slider
+    var atomDiameterTitle = new Text( atomDiameterString, {
+      font: new PhetFont( 12 ),
+      fill: options.textColor
+    } );
+    dualAtomModel.atomDiameterProperty.value = dualAtomModel.getSigma();
+    var atomDiameterSlider = new HSlider( dualAtomModel.atomDiameterProperty,
+      { min: 2 * StatesOfMatterConstants.MIN_SIGMA, max: StatesOfMatterConstants.MAX_SIGMA },
+      {
+        trackSize: new Dimension2( 100, 5 ),
+        trackFill: 'white',
+        thumbSize: new Dimension2( 15, 30 ),
+        majorTickLength: 15,
+        majorTickStroke: options.tickTextColor,
+        trackStroke: options.tickTextColor,
+        startDrag: function() {
+          dualAtomModel.setMotionPaused( true );
+        },
+        endDrag: function() {
+          dualAtomModel.setMotionPaused( false );
+        }
+      } );
+    var tickTextOptions = { fill: options.tickTextColor };
+    atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MIN_SIGMA, new Text( smallString, tickTextOptions ) );
+    atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MAX_SIGMA, new Text( largeString, tickTextOptions ) );
+    var atomDiameter = new Node( { children: [ atomDiameterTitle, atomDiameterSlider ] } );
+
+    // add interaction strength slider
+    var interactionStrengthTitle = new Text( interactionStrengthString, {
+      font: new PhetFont( 12 ),
+      fill: options.textColor,
+      top: atomDiameterSlider.bottom + 5
+    } );
+    dualAtomModel.interactionStrength = dualAtomModel.getEpsilon();
+    var interactionStrengthSlider = new HSlider( dualAtomModel.interactionStrengthProperty,
+      { min: StatesOfMatterConstants.MIN_EPSILON, max: StatesOfMatterConstants.MAX_EPSILON },
+      {
+        trackSize: new Dimension2( 100, 5 ),
+        trackFill: 'white',
+        thumbSize: new Dimension2( 15, 30 ),
+        majorTickLength: 15,
+        majorTickStroke: options.tickTextColor,
+        trackStroke: options.tickTextColor,
+        startDrag: function() {
+          dualAtomModel.setMotionPaused( true );
+        },
+        endDrag: function() {
+          dualAtomModel.setMotionPaused( false );
+        }
+      } );
+    interactionStrengthSlider.addMajorTick( StatesOfMatterConstants.MIN_EPSILON, new Text( weakString, tickTextOptions ) );
+    interactionStrengthSlider.addMajorTick( StatesOfMatterConstants.MAX_EPSILON, new Text( strongString, tickTextOptions ) );
+    var interactionStrength = new Node( { children: [ interactionStrengthTitle, interactionStrengthSlider ] } );
+
     if ( enableHeterogeneousMolecules ) {
       textOptions = { font: new PhetFont( 12 ), fill: options.textColor };
       neonAndNeon = [ new Text( neonString, textOptions ), new Text( neonString, textOptions ) ];
@@ -121,7 +176,8 @@ define( function( require ) {
        adjustableAttraction.width
        ) / 2;*/
 
-      maxWidth = customAttraction.width / 2 + inset;
+      maxWidth = Math.max( atomDiameter.width / 2 - inset, interactionStrength.width / 2 - inset,
+        customAttraction.width / 2 + inset );
 
       // pad inserts a spacing node (HStrut) so that the rows occupy a certain fixed width.
       createItem = function( itemSpec ) {
@@ -160,12 +216,33 @@ define( function( require ) {
         align: 'left',
         spacing: 6
       } );
+      var maxRadioButtonWidth = _.max( [ neonNeonRadio, argonArgonRadio, oxygenOxygenRadio, neonArgonRadio,
+            neonOxygenRadio, argonOxygenRadio, adjustableAttractionRadio ],
+          function( item ) {
+            return item.width;
+          } ).width + 5;
       titleNode.align = atomicInteractionsControlPanel.width / 2;
+      //touch Areas
+      neonNeonRadio.touchArea = new Bounds2( neonNeonRadio.localBounds.minX - 5, neonNeonRadio.localBounds.minY,
+        neonNeonRadio.localBounds.minX + maxRadioButtonWidth, neonNeonRadio.localBounds.maxY );
+      argonArgonRadio.touchArea = new Bounds2( argonArgonRadio.localBounds.minX - 5, argonArgonRadio.localBounds.minY,
+        argonArgonRadio.localBounds.minX + maxRadioButtonWidth, argonArgonRadio.localBounds.maxY );
+      oxygenOxygenRadio.touchArea = new Bounds2( oxygenOxygenRadio.localBounds.minX - 5, oxygenOxygenRadio.localBounds.minY,
+        oxygenOxygenRadio.localBounds.minX + maxRadioButtonWidth, oxygenOxygenRadio.localBounds.maxY );
+      neonArgonRadio.touchArea = new Bounds2( neonArgonRadio.localBounds.minX - 5,
+        neonArgonRadio.localBounds.minY,
+        neonArgonRadio.localBounds.minX + maxRadioButtonWidth, neonArgonRadio.localBounds.maxY );
+      neonOxygenRadio.touchArea = new Bounds2( neonOxygenRadio.localBounds.minX - 5, neonOxygenRadio.localBounds.minY,
+        neonOxygenRadio.localBounds.minX + maxRadioButtonWidth, neonOxygenRadio.localBounds.maxY );
+      argonOxygenRadio.touchArea = new Bounds2( argonOxygenRadio.localBounds.minX - 5,
+        argonOxygenRadio.localBounds.minY,
+        argonOxygenRadio.localBounds.minX + maxRadioButtonWidth, argonOxygenRadio.localBounds.maxY );
+      adjustableAttractionRadio.touchArea = new Bounds2( adjustableAttractionRadio.localBounds.minX - 5, adjustableAttractionRadio.localBounds.minY,
+        adjustableAttractionRadio.localBounds.minX + maxRadioButtonWidth, adjustableAttractionRadio.localBounds.maxY );
     }
 
     else {
       textOptions = { font: new PhetFont( 12 ), fill: "#FFFFFF" };
-
       // itemSpec describes the pieces that make up an item in the control panel,
       // conforms to the contract: { label: {Node}, icon: {Node} (optional) }
       var neon = { label: new Text( neonString, textOptions ), icon: createNeonIcon() };
@@ -174,13 +251,20 @@ define( function( require ) {
         label: new Text( adjustableAttractionString,
           textOptions ), icon: createAdjustableAttractionIcon()
       };
+      titleText = {
+        label: new Text( tittleString,
+          {
+            font: new PhetFont( 14 ),
+            fill: '#FFFFFF'
+          } )
+      };
 
       // compute the maximum item width
-      var widestItemSpec = _.max( [ neon, argon, adjustableAttraction ], function( item ) {
+      var widestItemSpec = _.max( [ neon, argon, adjustableAttraction, titleText ], function( item ) {
         return item.label.width + ((item.icon) ? item.icon.width : 0);
       } );
       maxWidth = widestItemSpec.label.width + ((widestItemSpec.icon) ? widestItemSpec.icon.width : 0);
-
+      maxWidth = Math.max( atomDiameter.width, interactionStrength.width, maxWidth );
       // pad inserts a spacing node (HStrut) so that the text, space and image together occupy a certain fixed width.
       createItem = function( itemSpec ) {
         if ( itemSpec.icon ) {
@@ -208,88 +292,30 @@ define( function( require ) {
         deselectedLineWidth: 0,
         deselectedContentOpacity: 1
       } );
-      titleText = new Text( tittleString,
-        {
-          font: new PhetFont( 14 ),
-          fill: '#FFFFFF'
-        } );
+
       var titleBackground = new Rectangle( 0, 0,
-        titleText.width + 5, titleText.height, {
-          fill: 'black'
+        titleText.label.width + 5, titleText.label.height, {
+          fill: 'black',
+          centerX: titleText.label.centerX,
+          centerY: titleText.label.centerY
         } );
 
-      titleBackground.centerX = titleText.centerX;
-      titleBackground.centerY = titleText.centerY;
-      titleNode = new Node( { children: [ titleBackground, titleText ] } );
+      titleNode = new Node( { children: [ titleBackground, titleText.label ] } );
       this.addChild( titleNode );
       titleNode.centerX = radioButtonGroup.centerX + 15;
     }
-    // add atom diameter slider
-    var atomDiameterTitle = new Text( atomDiameterString, textOptions );
+    // adjust the slider
     atomDiameterTitle.centerX = radioButtonGroup.centerX - 15;
     atomDiameterTitle.top = radioButtonGroup.bottom + 10;
-    dualAtomModel.atomDiameterProperty.value = dualAtomModel.getSigma();
-    var atomDiameterSlider = new HSlider( dualAtomModel.atomDiameterProperty,
-      { min: 2 * StatesOfMatterConstants.MIN_SIGMA, max: StatesOfMatterConstants.MAX_SIGMA },
-      {
-        trackSize: new Dimension2( 100, 5 ),
-        trackFill: 'white',
-        thumbSize: new Dimension2( 15, 30 ),
-        majorTickLength: 15,
-        majorTickStroke: options.tickTextColor,
-        trackStroke: options.tickTextColor,
-        centerX: radioButtonGroup.centerX,
-        startDrag: function() {
-          dualAtomModel.setMotionPaused( true );
-        },
-        endDrag: function() {
-          dualAtomModel.setMotionPaused( false );
-        }
-      } );
-    atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MIN_SIGMA,
-      new Text( smallString, { fill: options.tickTextColor } ) );
-    atomDiameterSlider.addMajorTick( StatesOfMatterConstants.MAX_SIGMA,
-      new Text( largeString, { fill: options.tickTextColor } ) );
     atomDiameterSlider.centerX = atomDiameterTitle.centerX + 30;
     atomDiameterSlider.top = atomDiameterTitle.bottom + 5;
-    var atomDiameter = new Node( {
-      children: [ atomDiameterTitle, atomDiameterSlider ]
-    } );
-    // add interaction strength slider
-    var interactionStrengthTitle = new Text( interactionStrengthString, textOptions );
     interactionStrengthTitle.centerX = radioButtonGroup.centerX - 5;
     interactionStrengthTitle.top = atomDiameterSlider.bottom + 5;
-    dualAtomModel.interactionStrength = dualAtomModel.getEpsilon();
-    var interactionStrengthSlider = new HSlider( dualAtomModel.interactionStrengthProperty,
-      { min: StatesOfMatterConstants.MIN_EPSILON, max: StatesOfMatterConstants.MAX_EPSILON },
-      {
-        trackSize: new Dimension2( 100, 5 ),
-        trackFill: 'white',
-        thumbSize: new Dimension2( 15, 30 ),
-        majorTickLength: 15,
-        majorTickStroke: options.tickTextColor,
-        trackStroke: options.tickTextColor,
-        centerX: radioButtonGroup.centerX,
-        startDrag: function() {
-          dualAtomModel.setMotionPaused( true );
-        },
-        endDrag: function() {
-          dualAtomModel.setMotionPaused( false );
-        }
-      } );
-    interactionStrengthSlider.addMajorTick( StatesOfMatterConstants.MIN_EPSILON,
-      new Text( weakString, { fill: options.tickTextColor } ) );
-    interactionStrengthSlider.addMajorTick( StatesOfMatterConstants.MAX_EPSILON,
-      new Text( strongString, { fill: options.tickTextColor } ) );
     interactionStrengthSlider.centerX = interactionStrengthTitle.centerX + 20;
     interactionStrengthSlider.top = interactionStrengthTitle.bottom + 5;
-    var interactionStrength = new Node( {
-      children: [ interactionStrengthTitle, interactionStrengthSlider ]
-    } );
-    var radioButtonPanel = new Panel( radioButtonGroup, {
-      stroke: 'black',
-      lineWidth: 0
-    } );
+    var content = new VBox( { spacing: 4, children: [ radioButtonGroup ] } );
+
+    var radioButtonPanel = new Panel( content, { lineWidth: 0, fill: options.backgroundColor } );
 
     // Update the text when the value or units changes.
     dualAtomModel.moleculeTypeProperty.link(
@@ -331,19 +357,18 @@ define( function( require ) {
 
         if ( moleculeType === ADJUSTABLE ) {
           // add atom diameter slider and interaction
-          atomicInteractionsControlPanel.addChild( atomDiameter );
-          atomicInteractionsControlPanel.addChild( interactionStrength );
-          var panelHeight = radioButtonPanel.height + atomDiameter.height + interactionStrength.height + inset;
+          content.addChild( atomDiameter );
+          content.addChild( interactionStrength );
           background.setShape( new Shape().roundRect( 0, -4,
-            radioButtonPanel.width, panelHeight,
+            radioButtonPanel.width, radioButtonPanel.height + inset,
             options.cornerRadius, options.cornerRadius ) );
         }
         else {
           //if  atom and interaction slider
-          if ( atomicInteractionsControlPanel.isChild( atomDiameter ) ||
-               atomicInteractionsControlPanel.isChild( interactionStrength ) ) {
-            atomicInteractionsControlPanel.removeChild( atomDiameter );
-            atomicInteractionsControlPanel.removeChild( interactionStrength );
+          if ( content.isChild( atomDiameter ) ||
+               content.isChild( interactionStrength ) ) {
+            content.removeChild( atomDiameter );
+            content.removeChild( interactionStrength );
           }
           background.setShape( new Shape().roundRect( 0, -4,
             radioButtonPanel.width, radioButtonPanel.height + inset,
@@ -351,7 +376,7 @@ define( function( require ) {
           ) );
         }
       } );
-    this.addChild( radioButtonGroup );
+    this.addChild( radioButtonPanel );
     this.mutate( options );
   }
 
