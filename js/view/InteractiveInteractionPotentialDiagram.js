@@ -224,6 +224,8 @@ define( function( require ) {
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.horizontalAxis, 'stroke' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.epsilonArrow, 'fill' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.sigmaArrow, 'fill' );
+    AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.epsilonLabel, 'fill' );
+    AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.sigmaLabel, 'fill' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.epsilonArrow, 'stroke' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.gridNode.verticalLinesNode, 'stroke' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.horizontalAxisLabel, 'fill' );
