@@ -111,7 +111,7 @@ define( function( require ) {
     } );
     dualAtomModel.atomDiameterProperty.value = dualAtomModel.getSigma();
     var atomDiameterSlider = new HSlider( dualAtomModel.atomDiameterProperty,
-      { min: 2 * StatesOfMatterConstants.MIN_SIGMA, max: StatesOfMatterConstants.MAX_SIGMA },
+      { min: StatesOfMatterConstants.MIN_SIGMA, max: StatesOfMatterConstants.MAX_SIGMA },
       {
         trackSize: new Dimension2( 100, 5 ),
         trackFill: 'white',
