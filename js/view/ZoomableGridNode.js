@@ -34,13 +34,13 @@ define( function( require ) {
 
     Node.call( this );
     var gridNode = this;
-    var initialHorizontalLines = MIN_LINES_HORIZONTAL;
+    var horizontalLineCount = MIN_LINES_HORIZONTAL;
     this.horizontalLinesNode = new Path( null, { stroke: 'white', lineWidth: 0.8 } );
     this.verticalLinesNode = new Path( null, { stroke: 'white', lineWidth: 0.8 } );
     this.zoomInButton = new ZoomButton( {
       listener: function() {
-        initialHorizontalLines -= ZOOM_INCREMENT;
-        gridNode.addHorizontalLines( offsetX, offsetY, width, height, initialHorizontalLines );
+        horizontalLineCount -= ZOOM_INCREMENT;
+        gridNode.addHorizontalLines( offsetX, offsetY, width, height, horizontalLineCount );
         atomsView.verticalScalingFactor *= 3.33;
         atomsView.drawPotentialCurve();
       },
@@ -56,8 +56,8 @@ define( function( require ) {
 
     this.zoomOutButton = new ZoomButton( {
       listener: function() {
-        initialHorizontalLines += 2;
-        gridNode.addHorizontalLines( offsetX, offsetY, width, height, initialHorizontalLines );
+        horizontalLineCount += 2;
+        gridNode.addHorizontalLines( offsetX, offsetY, width, height, horizontalLineCount );
         atomsView.verticalScalingFactor /= 3.33;
         atomsView.drawPotentialCurve();
       },
@@ -95,8 +95,8 @@ define( function( require ) {
     this.verticalLinesNode.setShape( verticalLineShape );
 
     this.horizontalLines = [];
-    for ( var y = 0; y < initialHorizontalLines; y++ ) {
-      var viewY = y * (height / (initialHorizontalLines - 1));
+    for ( var y = 0; y < horizontalLineCount; y++ ) {
+      var viewY = y * (height / (horizontalLineCount - 1));
       this.horizontalLines.push( {
         x1: offsetX,
         y1: viewY + offsetY,
@@ -116,18 +116,17 @@ define( function( require ) {
   return inherit( Node, ZoomableGridNode, {
 
     /**
-     *
      * @param {Number} offsetX
      * @param {Number} offsetY
-     * @param {Number} width
-     * @param {Number} height
-     * @param {Number} noOfHorizontalLines
+     * @param {Number} width -- width of the grid
+     * @param {Number} height -- height of the grid
+     * @param {Number} horizontalLineCount -- number of horizontal lines
      */
-    addHorizontalLines: function( offsetX, offsetY, width, height, noOfHorizontalLines ) {
+    addHorizontalLines: function( offsetX, offsetY, width, height, horizontalLineCount ) {
 
       this.horizontalLines = [];
-      for ( var y = 0; y < noOfHorizontalLines; y++ ) {
-        var viewY = y * (height / (noOfHorizontalLines - 1));
+      for ( var y = 0; y < horizontalLineCount; y++ ) {
+        var viewY = y * (height / (horizontalLineCount - 1));
         this.horizontalLines.push( {
           x1: offsetX,
           y1: viewY + offsetY,
@@ -143,8 +142,8 @@ define( function( require ) {
         horizontalLineShape.lineTo( line.x2, line.y2 );
       }
       this.horizontalLinesNode.setShape( horizontalLineShape );
-      this.zoomOutButton.enabled = (noOfHorizontalLines < MAX_LINES_HORIZONTAL);
-      this.zoomInButton.enabled = (noOfHorizontalLines > MIN_LINES_HORIZONTAL);
+      this.zoomOutButton.enabled = (horizontalLineCount < MAX_LINES_HORIZONTAL);
+      this.zoomInButton.enabled = (horizontalLineCount > MIN_LINES_HORIZONTAL);
 
     }
   } );
