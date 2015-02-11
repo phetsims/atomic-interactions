@@ -29,7 +29,7 @@ define( function( require ) {
   var CALCULATIONS_PER_TICK = 8;
   var THRESHOLD_VELOCITY = 100;  // Used to distinguish small oscillations from real movement.
   var VIBRATION_DURATION = 1200;  // In milliseconds.
-  var VIBRATION_COUNTER_RESET_VALUE = VIBRATION_DURATION;/// AtomicInteractionDefaults.CLOCK_FRAME_DELAY;
+  var VIBRATION_COUNTER_RESET_VALUE = VIBRATION_DURATION;
   var BONDED_OSCILLATION_PROPORTION = 0.06; // Proportion of atom radius.
   var MAX_APPROXIMATION_ITERATIONS = 100;
 
@@ -52,7 +52,7 @@ define( function( require ) {
     this.ljPotentialCalculator = new LjPotentialCalculator( StatesOfMatterConstants.MIN_SIGMA,
       StatesOfMatterConstants.MIN_EPSILON ); // Initial values arbitrary, will be set during reset.
     PropertySet.call( this, {
-        interactionStrength: 0, // notifyInteractionStrengthChanged
+        interactionStrength: 0,
         motionPaused: false,
         moleculeType: 'NEON_NEON',
         isPlaying: true,
@@ -102,7 +102,6 @@ define( function( require ) {
           this.ensureValidAtomType( atomType );
           this.bondingState = BONDING_STATE_UNBONDED;
 
-          // Inform any listeners of the removal of existing atoms.
           if ( this.fixedAtom !== null ) {
             this.fixedAtom = null;
           }
@@ -150,10 +149,6 @@ define( function( require ) {
 
           this.movableAtom = this.atomFactory.createAtom( atomType );
 
-          // Register to listen to motion of the movable atom so that we can
-          // tell when the user is moving it.
-          //this.movableAtom.addListener(this.movableAtomListener);
-
           // Set the value for sigma used in the LJ potential calculations.
           if ( this.movableAtom !== null ) {
             this.ljPotentialCalculator.setSigma( this.sigmaTable.getSigma( this.getFixedAtomType(),
@@ -176,13 +171,12 @@ define( function( require ) {
        */
       ensureValidAtomType: function( atomType ) {
         // Verify that this is a supported value.
-        if ( ( atomType !== AtomType.NEON ) &&
-             ( atomType !== AtomType.ARGON ) &&
-             ( atomType !== AtomType.OXYGEN ) &&
-             ( atomType !== AtomType.ADJUSTABLE ) ) {
-          // console.error( "Error: Unsupported atom type." );
-          //assert false;
-        }
+        assert && assert( ( atomType === AtomType.NEON ) ||
+                          ( atomType === AtomType.ARGON ) ||
+                          ( atomType === AtomType.OXYGEN ) ||
+                          ( atomType === AtomType.ADJUSTABLE ),
+          'Error: Unsupported atom type.' );
+
       },
       /**
        *
@@ -202,7 +196,7 @@ define( function( require ) {
       /**
        * Set the sigma value, a.k.a. the Atomic Diameter Parameter, for the
        * adjustable atom.  This is one of the two parameters that are used
-       * for calculating the Lennard-Jones potential.  If an attempt is made to
+       * for calculating the Lennard-Jones potential. If an attempt is made to
        * set this value when the adjustable atom is not selected, it is ignored.
        *
        * @param sigma - distance parameter
@@ -340,6 +334,7 @@ define( function( require ) {
         this.shadowMovableAtom.velocity = movableAtom.getVelocity();
         this.shadowMovableAtom.accel = movableAtom.getAccel();
       },
+
       /**
        * Called by the animation loop.
        * @param {Number} dt -- time in seconds
@@ -356,22 +351,22 @@ define( function( require ) {
 
       /**
        *
-       * @param {Number} dt -- time in second
+       * @param {Number} dt -- time in seconds
        */
       stepInternal: function( dt ) {
         this.handleClockTicked( dt );
       },
       /**
        *
-       * @param { Number }clockEvent --- time in second
+       * @param { Number } dt --- time in seconds
        */
-      handleClockTicked: function( clockEvent ) {
+      handleClockTicked: function( dt ) {
 
         // atom type doesn't really matter for the shadowMovableAtom. Position, acceleration, velocity matter though
         this.shadowMovableAtom = this.atomFactory.createAtom( DEFAULT_ATOM_TYPE );
         this.clone( this.movableAtom );
 
-        this.updateTimeStep( clockEvent );
+        this.updateTimeStep( dt );
 
         // Update the forces and motion of the atoms.
         for ( var i = 0; i < CALCULATIONS_PER_TICK; i++ ) {
@@ -502,6 +497,7 @@ define( function( require ) {
       startFixedAtomVibration: function() {
         this.vibrationCounter = VIBRATION_COUNTER_RESET_VALUE;
       },
+
       stepFixedAtomVibration: function() {
         if ( this.vibrationCounter > 0 ) {
           var vibrationScaleFactor = 1;
@@ -526,8 +522,7 @@ define( function( require ) {
           // Decrement the vibration counter.
           this.vibrationCounter--;
         }
-        else if ( this.fixedAtom.getX() !== 0 ||
-                  this.fixedAtom.getY() !== 0 ) {
+        else if ( this.fixedAtom.getX() !== 0 || this.fixedAtom.getY() !== 0 ) {
           this.fixedAtom.setPosition( 0, 0 );
         }
       },
@@ -542,8 +537,6 @@ define( function( require ) {
        * which the potential is at the minimum value.
        * @return
        */
-
-
       approximateEquivalentPotentialDistance: function( distance ) {
 
         if ( distance < this.ljPotentialCalculator.calculateMinimumForceDistance() ) {
@@ -573,6 +566,7 @@ define( function( require ) {
       }
 
     },
+    // statics
     {
       BONDING_STATE_UNBONDED: BONDING_STATE_UNBONDED,
       BONDING_STATE_BONDING: BONDING_STATE_BONDING,
