@@ -13,7 +13,7 @@ define( function( require ) {
   var ModelViewTransform2 = require( 'PHETCOMMON/view/ModelViewTransform2' );
   var Vector2 = require( 'DOT/Vector2' );
   var ResetAllButton = require( 'SCENERY_PHET/buttons/ResetAllButton' );
-  var InteractiveInteractionPotentialDiagram = require( 'ATOMIC_INTERACTIONS/view/InteractiveInteractionPotentialDiagram' );
+  var InteractiveInteractionPotentialDiagram = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/InteractiveInteractionPotentialDiagram' );
   var PlayPauseButton = require( 'SCENERY_PHET/buttons/PlayPauseButton' );
   var StepButton = require( 'SCENERY_PHET/buttons/StepButton' );
   var AquaRadioButton = require( 'SUN/AquaRadioButton' );
@@ -22,14 +22,14 @@ define( function( require ) {
   var PhetFont = require( 'SCENERY_PHET/PhetFont' );
   var Text = require( 'SCENERY/nodes/Text' );
   var Node = require( 'SCENERY/nodes/Node' );
-  var ForcesControlNode = require( 'ATOMIC_INTERACTIONS/view/ForcesControlPanel' );
-  var AtomicInteractionsControlPanel = require( 'ATOMIC_INTERACTIONS/view/AtomicInteractionsControlPanel' );
+  var ForcesControlNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/ForcesControlPanel' );
+  var AtomicInteractionsControlPanel = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/AtomicInteractionsControlPanel' );
   var TextPushButton = require( 'SUN/buttons/TextPushButton' );
-  var ParticleForceNode = require( 'ATOMIC_INTERACTIONS/view/ParticleForceNode' );
-  var GrabbableParticleNode = require( 'ATOMIC_INTERACTIONS/view/GrabbableParticleNode' );
-  var PushpinNode = require( 'ATOMIC_INTERACTIONS/view/PushpinNode' );
-  var HandNode = require( 'ATOMIC_INTERACTIONS/view/HandNode' );
-  var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/view/AtomicInteractionColors' );
+  var ParticleForceNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/ParticleForceNode' );
+  var GrabbableParticleNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/GrabbableParticleNode' );
+  var PushpinNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/PushpinNode' );
+  var HandNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/HandNode' );
+  var AtomicInteractionColors = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/AtomicInteractionColors' );
 
 
   // strings
