@@ -20,8 +20,8 @@ define( function( require ) {
    * @param {DualAtomModel} dualAtomModel - model of the atomic interactions screen
    * @param {StatesOfMatterAtom} particle - model of the atom that is draggable
    * @param {ModelViewTransform2} modelViewTransform to convert between model and view co-ordinates
-   * @param {Number} minX - grabbable particle  min x position // view
-   * @param {Number} maxX - grabbable particle  max x position // view
+   * @param {Number} minX - grabbable particle min x position // view
+   * @param {Number} maxX - grabbable particle max x position // view
    * @constructor
    */
   function HandNode( dualAtomModel, particle, modelViewTransform, minX, maxX ) {
@@ -32,19 +32,19 @@ define( function( require ) {
     this.maxX = maxX;
     var handShape = new Path( new Shape()
       .moveTo( 11, 67 )
-      .quadraticCurveTo( 0, 58, 12, 54 )//thumb round
-      .quadraticCurveTo( 26, 57, 42, 63 )//thumb right
-      .quadraticCurveTo( 24, 36, 9, 14 )//index left
-      .quadraticCurveTo( 1, 7, 12, 3 )//index left round
-      .quadraticCurveTo( 20, 0, 24, 6 )//index right round
-      .quadraticCurveTo( 29, 13, 38, 23 )//index right
-      .quadraticCurveTo( 50, 14, 62, 22 )//middle round
-      .quadraticCurveTo( 74, 14, 84, 23 )//ring round
-      .quadraticCurveTo( 98, 15, 104, 24 )//baby round
-      .quadraticCurveTo( 116, 38, 128, 58 )//hand right
-      .quadraticCurveTo( 140, 75, 125, 87 )//hand right round
-      .quadraticCurveTo( 100, 105, 76, 97 )//hand left round
-      .quadraticCurveTo( 50, 84, 13, 68 )//hand left
+      .quadraticCurveTo( 0, 58, 12, 54 ) //thumb round
+      .quadraticCurveTo( 26, 57, 42, 63 ) //thumb right
+      .quadraticCurveTo( 24, 36, 9, 14 ) //index left
+      .quadraticCurveTo( 1, 7, 12, 3 ) //index left round
+      .quadraticCurveTo( 20, 0, 24, 6 ) //index right round
+      .quadraticCurveTo( 29, 13, 38, 23 ) //index right
+      .quadraticCurveTo( 50, 14, 62, 22 ) //middle round
+      .quadraticCurveTo( 74, 14, 84, 23 ) //ring round
+      .quadraticCurveTo( 98, 15, 104, 24 ) //baby round
+      .quadraticCurveTo( 116, 38, 128, 58 ) //hand right
+      .quadraticCurveTo( 140, 75, 125, 87 ) //hand right round
+      .quadraticCurveTo( 100, 105, 76, 97 ) //hand left round
+      .quadraticCurveTo( 50, 84, 13, 68 ) //hand left
       .close(), {
       lineWidth: 1,
       stroke: 'black',
@@ -91,8 +91,6 @@ define( function( require ) {
       handNode.setTranslation( modelViewTransform.modelToViewX( position.x ),
         modelViewTransform.modelToViewY( position.y ) );
     } );
-
-
   }
 
   return inherit( Node, HandNode, {

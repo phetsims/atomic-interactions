@@ -1,7 +1,7 @@
 // Copyright (c) 2002 - 2014. University of Colorado Boulder
 
 /**
- * View for the panel for selecting the atoms/molecules
+ * View for the panel used for selecting the atoms/molecules
  * @author Siddhartha Chinthapally (Actual Concepts)
  */
 
@@ -248,12 +248,11 @@ define( function( require ) {
       var neon = { label: new Text( neonString, textOptions ), icon: createNeonIcon() };
       var argon = { label: new Text( argonString, textOptions ), icon: createArgonIcon() };
       adjustableAttraction = {
-        label: new Text( adjustableAttractionString,
-          textOptions ), icon: createAdjustableAttractionIcon()
+        label: new Text( adjustableAttractionString, textOptions ),
+        icon: createAdjustableAttractionIcon()
       };
       titleText = {
-        label: new Text( tittleString,
-          {
+        label: new Text( tittleString, {
             font: new PhetFont( 14 ),
             fill: '#FFFFFF'
           } )
@@ -365,13 +364,11 @@ define( function( require ) {
         }
         else {
           //if  atom and interaction slider
-          if ( content.isChild( atomDiameter ) ||
-               content.isChild( interactionStrength ) ) {
+          if ( content.isChild( atomDiameter ) || content.isChild( interactionStrength ) ) {
             content.removeChild( atomDiameter );
             content.removeChild( interactionStrength );
           }
-          background.setShape( new Shape().roundRect( 0, -4,
-            radioButtonPanel.width, radioButtonPanel.height + inset,
+          background.setShape( new Shape().roundRect( 0, -4, radioButtonPanel.width, radioButtonPanel.height + inset,
             options.cornerRadius, options.cornerRadius
           ) );
         }

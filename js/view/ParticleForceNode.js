@@ -1,8 +1,7 @@
 // Copyright 2002-2011, University of Colorado
 
 /**
- * This class adds the ability to display force-depicting arrows to its super
- * class.
+ * This class adds the ability to display force-depicting arrows to its super class.
  * @author Siddhartha Chinthapally (Actual Concepts)
  */
 define( function( require ) {

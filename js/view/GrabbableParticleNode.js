@@ -14,8 +14,8 @@ define( function( require ) {
   var SimpleDragHandler = require( 'SCENERY/input/SimpleDragHandler' );
 
   /**
-   *
-   * @param {HandNode} handNode
+   * Default constructor
+   * @param {HandNode} handNode - view for the hand node
    * @param {DualAtomModel} dualAtomModel - model of the simulation
    * @param {StatesOfMatterAtom} particle
    * @param {ModelViewTransform2} modelViewTransform to convert between model and view co-ordinates

@@ -49,7 +49,7 @@ define( function( require ) {
   /**
    *
    * @param {DualAtomModel} dualAtomModel of the simulation
-   * @param {Boolean} enableHeterogeneousMolecules - true to use a enable heterogeneous molecules, false if not.
+   * @param {Boolean} enableHeterogeneousMolecules - true to use a enable heterogeneous molecules, false otherwise.
    * @constructor
    */
   function AtomicInteractionsScreenView( dualAtomModel, enableHeterogeneousMolecules ) {
@@ -93,7 +93,7 @@ define( function( require ) {
     this.addChild( this.interactiveInteractionPotentialDiagram );
 
     // Add the button for retrieving the atom to the canvas.
-    this.retrieveAtomButtonNode = new TextPushButton( returnAtomString, {
+    this.retrieveAtomButton = new TextPushButton( returnAtomString, {
       font: new PhetFont( 12 ),
       baseColor: '#61BEE3',
       listener: function() {
@@ -103,7 +103,7 @@ define( function( require ) {
       bottom: this.layoutBounds.bottom - 2 * inset
     } );
 
-    this.addChild( this.retrieveAtomButtonNode );
+    this.addChild( this.retrieveAtomButton );
 
     // Create and add the Reset All Button in the bottom right, which resets the model
     var resetAllButton = new ResetAllButton( {
@@ -131,7 +131,6 @@ define( function( require ) {
         bottom: this.layoutBounds.bottom - 2 * inset
       } );
     this.addChild( stepButton );
-
 
     // add force control
     var forceControlNode = new ForcesControlNode( dualAtomModel.forcesProperty, dualAtomModel.forceControlPanelExpandProperty, {
@@ -162,18 +161,16 @@ define( function( require ) {
     dualAtomModel.isPlayingProperty.lazyLink( function( isPlaying ) {
       playPauseButton.scale( isPlaying ? ( 1 / pauseSizeIncreaseFactor ) : pauseSizeIncreaseFactor );
     } );
+
     // add sim speed controls
     var slowText = new Text( slowMotionString, { fill: 'white', font: new PhetFont( 14 ) } );
-    var slowMotionRadioBox = new AquaRadioButton( dualAtomModel.speedProperty, 'slow',
-      slowText, { radius: 10 } );
+    var slowMotionRadioBox = new AquaRadioButton( dualAtomModel.speedProperty, 'slow', slowText, { radius: 10 } );
     var normalText = new Text( normalString, { fill: 'white', font: new PhetFont( 14 ) } );
-    var normalMotionRadioBox = new AquaRadioButton( dualAtomModel.speedProperty, 'normal',
-      normalText, { radius: 10 } );
+    var normalMotionRadioBox = new AquaRadioButton( dualAtomModel.speedProperty, 'normal', normalText, { radius: 10 } );
     AtomicInteractionColors.linkAttribute( 'controlPanelText', slowText, 'fill' );
     AtomicInteractionColors.linkAttribute( 'controlPanelText', normalText, 'fill' );
 
-    var speedControlMaxWidth = ( slowMotionRadioBox.width > normalMotionRadioBox.width ) ? slowMotionRadioBox.width :
-                               normalMotionRadioBox.width;
+    var speedControlMaxWidth = ( slowMotionRadioBox.width > normalMotionRadioBox.width ) ? slowMotionRadioBox.width : normalMotionRadioBox.width;
 
     var radioButtonSpacing = 5;
     var touchAreaHeightExpansion = radioButtonSpacing / 2;
@@ -246,8 +243,8 @@ define( function( require ) {
           atomicInteractionsScreenView.setShowRepulsiveForces( true );
           atomicInteractionsScreenView.setShowTotalForces( false );
       }
-
     } );
+
     dualAtomModel.atomDiameterProperty.link( function() {
       atomicInteractionsScreenView.fixedParticleNode.handleParticleRadiusChanged();
       atomicInteractionsScreenView.movableParticleNode.handleParticleRadiusChanged();
@@ -260,16 +257,15 @@ define( function( require ) {
 
   return inherit( ScreenView, AtomicInteractionsScreenView, {
 
-
     /**
      * Called by the animation loop.
      */
     step: function() {
       this.handlePositionChanged();
     },
+
     /**
-     * Turn on/off the displaying of the force arrows that represent the
-     * attractive force.
+     * Turn on/off the displaying of the force arrows that represent the attractive force.
      */
     setShowAttractiveForces: function( showForces ) {
       this.movableParticleNode.setShowAttractiveForces( showForces );
@@ -278,8 +274,7 @@ define( function( require ) {
     },
 
     /**
-     * Turn on/off the displaying of the force arrows that represent the
-     * repulsive force.
+     * Turn on/off the displaying of the force arrows that represent the repulsive force.
      */
     setShowRepulsiveForces: function( showForces ) {
       this.movableParticleNode.setShowRepulsiveForces( showForces );
@@ -296,6 +291,7 @@ define( function( require ) {
       this.fixedParticleNode.setShowTotalForces( showForces );
       this.showTotalForces = showForces;
     },
+
     handleFixedParticleAdded: function( particle ) {
 
       this.fixedParticle = particle;
@@ -353,7 +349,6 @@ define( function( require ) {
       // of the fixed particle.
       this.updateMinimumXForMovableAtom();
 
-
       // Update the position marker to represent the new particle's position.
       this.updatePositionMarkerOnDiagram();
     },
@@ -361,15 +356,16 @@ define( function( require ) {
     handleMovableParticleRemoved: function() {
       // Get rid of the node for this guy.
       if ( this.movableParticleNode !== null ) {
-
         // Remove the particle node.
         this.movableParticleLayer.removeChild( this.movableParticleNode );
       }
       else {
         console.error( "Error: Problem encountered removing node from canvas." );
       }
+
       this.updatePositionMarkerOnDiagram();
       this.movableParticleNode = null;
+
       if ( this.handNode !== null ) {
         // Remove the particle node.
         this.removeChild( this.handNode );
@@ -400,16 +396,14 @@ define( function( require ) {
     },
 
     handlePositionChanged: function() {
-
       if ( !this.dualAtomModel.getMotionPaused() ) {
         if ( !this.fixedParticleNode.getGradientEnabled() ) {
-          // The movable particle is moving, so turn the gradient
-          // back on.
+          // The movable particle is moving, so turn the gradient back on.
           this.fixedParticleNode.setGradientEnabled( true );
         }
+
         if ( !this.movableParticleNode.getGradientEnabled() ) {
-          // The movable particle is moving, so turn the gradient
-          // back on.
+          // The movable particle is moving, so turn the gradient back on.
           this.movableParticleNode.setGradientEnabled( true );
         }
       }
@@ -417,7 +411,7 @@ define( function( require ) {
       this.updatePositionMarkerOnDiagram();
       this.updateForceVectors();
 
-      this.retrieveAtomButtonNode.visible = this.dualAtomModel.movableAtom.getX() > 3000;
+      this.retrieveAtomButton.visible = this.dualAtomModel.movableAtom.getX() > 3000;
     },
 
     /**
@@ -453,6 +447,7 @@ define( function( require ) {
         this.handNode.setMinX( this.modelViewTransform.modelToViewX( this.dualAtomModel.getSigma() * 0.9 ) );
       }
     },
+
     updateForceVectors: function() {
       if ( ( this.fixedParticle !== null ) && ( this.movableParticle !== null ) ) {
         this.fixedParticleNode.setForces( this.dualAtomModel.getAttractiveForce(),

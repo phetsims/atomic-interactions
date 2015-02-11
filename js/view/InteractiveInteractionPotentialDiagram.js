@@ -178,6 +178,7 @@ define( function( require ) {
         dualAtomModel.setMotionPaused( false );
       }
     } ) );
+
     Property.multilink( [ dualAtomModel.moleculeTypeProperty, dualAtomModel.interactionStrengthProperty, dualAtomModel.atomDiameterProperty ],
       function( moleculeType, interactionStrength, atomDiameter ) {
 
@@ -218,6 +219,7 @@ define( function( require ) {
     this.addChild( this.horizontalAxis );
 
     // applying color scheme to lj graph elements
+    // Todo: Is a single link better than multiple linkAttributes for the same property?
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.verticalAxis, 'fill' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.horizontalAxis, 'fill' );
     AtomicInteractionColors.linkAttribute( 'ljGraphColorsMode', this.verticalAxis, 'stroke' );
@@ -265,9 +267,9 @@ define( function( require ) {
         this.sigmaResizeHandle.setPickable( this.interactionEnabled );
       }
     },
+
     updateInteractivityState: function() {
       this.interactionEnabled = ( this.dualAtomModel.getFixedAtomType() === AtomType.ADJUSTABLE );
-
     }
   } );
 } );

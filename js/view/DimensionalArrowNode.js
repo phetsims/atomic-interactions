@@ -17,7 +17,6 @@ define( function( require ) {
    */
   function DimensionalArrowNode( tailX, tailY, tipX, tipY, options ) {
 
-
     // default options
     options = _.extend( {
       headHeight: 10,

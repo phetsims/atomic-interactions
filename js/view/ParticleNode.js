@@ -79,7 +79,6 @@ define( function( require ) {
 
     setGradientEnabled: function( gradientEnabled ) {
       if ( this.useGradient !== gradientEnabled ) {
-
         this.useGradient = gradientEnabled;
 
         if ( this.useGradient ) {
