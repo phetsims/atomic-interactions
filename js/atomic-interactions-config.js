@@ -36,8 +36,10 @@ require.config(
       SCENERY: '../../scenery/js',
       SCENERY_PHET: '../../scenery-phet/js',
       SUN: '../../sun/js',
-      // states of matter sim
+
+      // other sims
       STATES_OF_MATTER: '../../states-of-matter/js',
+
       // this sim
       ATOMIC_INTERACTIONS: '.'
     },

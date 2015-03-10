@@ -1,1 +1,0 @@
-push-pin.png source=PhET

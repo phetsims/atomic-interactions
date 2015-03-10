@@ -9,14 +9,14 @@ define( function( require ) {
   'use strict';
 
   // modules
-  var AtomicInteractionsScreen = require( 'ATOMIC_INTERACTIONS/atomic-interactions/AtomicInteractionsScreen' );
+  var AtomicInteractionsScreen = require( 'STATES_OF_MATTER/atomic-interactions/AtomicInteractionsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var GlobalOptionsNode = require( 'ATOMIC_INTERACTIONS/atomic-interactions/view/GlobalOptionsNode' );
+  var GlobalOptionsNode = require( 'STATES_OF_MATTER/atomic-interactions/view/GlobalOptionsNode' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var Property = require( 'AXON/Property' );
 
   // strings
-  var simTitle = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.name' );
+  var simTitle = require( 'string!STATES_OF_MATTER/atomic-interactions.name' );
 
   var colorsProperty = new Property( false );
   var simOptions = {
