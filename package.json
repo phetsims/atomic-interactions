@@ -15,5 +15,5 @@
     "uglify-js": "~2.4.0",
     "requirejs": "~2.1.8"
   },
-  "simTitleStringKey": "STATES_OF_MATTER/atomic-interactions.name"
+  "simTitleStringKey": "ATOMIC_INTERACTIONS/atomic-interactions.name"
 }
