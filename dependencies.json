@@ -1,63 +1,59 @@
 {
   "sun": {
-    "sha": "ddf6c58de9f774d63ecb8f34c633faeaa4879c49",
-    "branch": "master"
-  },
-  "states-of-matter": {
-    "sha": "952f189d0ef75366434cc770b0c45189302b8094",
+    "sha": "02da481c062bbec1e4f39c436424b89f3b442783",
     "branch": "master"
   },
   "sherpa": {
-    "sha": "ae43b4008125b8d12da115c46ad3d166795d89c7",
+    "sha": "ffa0b03a6af8b48186749dbd4794ae9b3954af94",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "63a97336113c77cf5849b9fe6d0af27ff75eacc5",
+    "sha": "f98d30b238fc00f9763c06d22faaaa3541f3c0ea",
     "branch": "master"
   },
   "scenery": {
-    "sha": "7241126abd1918ec55d8c11cd6d90585baf5dc63",
+    "sha": "50ca51c3f8c220e54d074be01c666ecd6907b6b0",
     "branch": "master"
   },
   "phetcommon": {
-    "sha": "51b843633e8e239f509c627db9a3aab42534033d",
+    "sha": "6ca0bbfdd9437ac7ab9f958ebace561bdc40562d",
     "branch": "master"
   },
   "phet-core": {
-    "sha": "0f2e759f766db545192f8d00c39033d35bc3f964",
+    "sha": "4af6a3c97444c15cd863cf6bf80fd6dd377c9d3b",
     "branch": "master"
   },
   "kite": {
-    "sha": "72b7088e8479ee59ecc86462b7062a9f9baf6c72",
+    "sha": "2607cc05ab62e5797c7b52e75e8f855b408c66d3",
     "branch": "master"
   },
   "joist": {
-    "sha": "f3fe290acc3312eb16c699c15c5f017536055b29",
+    "sha": "b86e59cd1c19e4f5e653c92709940751d01c74d2",
     "branch": "master"
   },
   "dot": {
-    "sha": "4aacde3c5451ae8638401c1bb016e7b420e5b119",
+    "sha": "78e2054714294cb362f458600d7c96d7c73d74c4",
     "branch": "master"
   },
   "chipper": {
-    "sha": "7cae24ed42a44d866062b06692067573faf8da64",
+    "sha": "f2e08a8cc4e4bc16d9e2d4731cde5cbdad8d26b3",
     "branch": "master"
   },
   "brand": {
-    "sha": "0f9ee9b8ca1a0e121f66d57109bca59f05c2ef2c",
+    "sha": "33811940cbf5fd3ccde635d2e30dba1b4898fc31",
     "branch": "master"
   },
   "axon": {
-    "sha": "5cee4599ca1b0351fb94514b8044d2ea590bba53",
+    "sha": "cbbf9400a069144940a15dc9e0b14e9c224e4468",
     "branch": "master"
   },
   "assert": {
-    "sha": "b890fa2b32599db482d8a2da96cf206e2638a922",
+    "sha": "ea1c11c986527af4c8e428b149639e3f11045fe5",
     "branch": "master"
   },
   "atomic-interactions": {
-    "sha": "d108d25c844f8b3b67420c540ead6893ead3bb9b",
+    "sha": "d5f890e9060ef992320f839244cfe18df015a87b",
     "branch": "master"
   },
-  "comment": "# atomic-interactions 1.0.0-dev.5 Wed Mar 11 2015 15:01:11 GMT-0600 (Mountain Daylight Time)"
+  "comment": "# atomic-interactions 1.0.0-dev.6 Fri Mar 13 2015 14:36:33 GMT-0600 (Mountain Daylight Time)"
 }
