@@ -11,7 +11,7 @@ define( function( require ) {
   // modules
   var AtomicInteractionsScreen = require( 'STATES_OF_MATTER/atomic-interactions/AtomicInteractionsScreen' );
   var Sim = require( 'JOIST/Sim' );
-  var GlobalOptionsNode = require( 'STATES_OF_MATTER/atomic-interactions/view/GlobalOptionsNode' );
+  var GlobalOptionsNode = require( 'STATES_OF_MATTER/common/view/GlobalOptionsNode' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
   var Property = require( 'AXON/Property' );
 
