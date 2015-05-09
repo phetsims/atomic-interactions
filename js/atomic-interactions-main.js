@@ -18,7 +18,7 @@ define( function( require ) {
   // strings
   var simTitle = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.name' );
 
-  var colorsProperty = new Property( false );
+  var projectorModeProperty = new Property( false );
   var simOptions = {
     credits: {
       leadDesign: 'Paul Beale, Yuen-ying Carpenter, Sarah McKagan, Emily Moore, Noah Podolefsky',
@@ -27,7 +27,7 @@ define( function( require ) {
       qualityAssurance: 'Steele Dalton',
       thanks: 'Thanks to Actual Concepts for working with the PhET development team\nto convert this simulation to HTML5.'
     },
-    optionsNode: new GlobalOptionsNode( colorsProperty )
+    optionsNode: new GlobalOptionsNode( projectorModeProperty )
   };
 
   // Appending '?dev' to the URL will enable developer-only features.
@@ -38,7 +38,7 @@ define( function( require ) {
   }
 
   SimLauncher.launch( function() {
-    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( colorsProperty, true, simTitle ) ], simOptions );
+    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( projectorModeProperty, true, simTitle ) ], simOptions );
     sim.start();
   } );
 } );
