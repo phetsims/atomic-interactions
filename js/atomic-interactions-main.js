@@ -38,7 +38,7 @@ define( function( require ) {
   }
 
   SimLauncher.launch( function() {
-    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( true, simTitle, colorsProperty ) ], simOptions );
+    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( colorsProperty, true, simTitle ) ], simOptions );
     sim.start();
   } );
 } );
