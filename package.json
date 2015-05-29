@@ -4,7 +4,8 @@
   "license": "GPLv3",
   "simTitleStringKey": "ATOMIC_INTERACTIONS/atomic-interactions.name",
   "phetLibs": [
-    "atomic-interactions"
+    "atomic-interactions",
+    "states-of-matter"
   ],
   "repository": {
     "type": "git",
