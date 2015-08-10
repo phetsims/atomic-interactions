@@ -2,6 +2,7 @@
   "name": "atomic-interactions",
   "version": "1.0.0-dev.8",
   "license": "GPLv3",
+  "requirejsNamespace": "ATOMIC_INTERACTIONS",
   "simTitleStringKey": "ATOMIC_INTERACTIONS/atomic-interactions.name",
   "phetLibs": [
     "atomic-interactions",
