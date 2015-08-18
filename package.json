@@ -2,12 +2,6 @@
   "name": "atomic-interactions",
   "version": "1.0.0-dev.8",
   "license": "GPLv3",
-  "requirejsNamespace": "ATOMIC_INTERACTIONS",
-  "simTitleStringKey": "ATOMIC_INTERACTIONS/atomic-interactions.name",
-  "phetLibs": [
-    "atomic-interactions",
-    "states-of-matter"
-  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/phetsims/atomic-interactions.git"
@@ -18,5 +12,13 @@
     "grunt-contrib-jshint": "~0.6.4",
     "uglify-js": "~2.4.0",
     "requirejs": "~2.1.8"
+  },
+  "phet": {
+    "requirejsNamespace": "ATOMIC_INTERACTIONS",
+    "simTitleStringKey": "ATOMIC_INTERACTIONS/atomic-interactions.name",
+    "phetLibs": [
+      "atomic-interactions",
+      "states-of-matter"
+    ]
   }
 }
