@@ -15,7 +15,6 @@
   },
   "phet": {
     "requirejsNamespace": "ATOMIC_INTERACTIONS",
-    "simTitleStringKey": "ATOMIC_INTERACTIONS/atomic-interactions.name",
     "phetLibs": [
       "states-of-matter"
     ]
