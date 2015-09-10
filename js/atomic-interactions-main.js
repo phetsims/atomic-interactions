@@ -16,7 +16,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
 
   // strings
-  var simTitle = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.name' );
+  var simTitle = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
   var projectorModeProperty = new Property( false );
   var simOptions = {
