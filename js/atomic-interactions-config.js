@@ -32,6 +32,7 @@ require.config(
       DOT: '../../dot/js',
       JOIST: '../../joist/js',
       KITE: '../../kite/js',
+      NITROGLYCERIN: '../../nitroglycerin/js',
       PHET_CORE: '../../phet-core/js',
       PHETCOMMON: '../../phetcommon/js',
       REPOSITORY: '..',

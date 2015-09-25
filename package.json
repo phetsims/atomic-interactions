@@ -16,7 +16,8 @@
   "phet": {
     "requirejsNamespace": "ATOMIC_INTERACTIONS",
     "phetLibs": [
-      "states-of-matter"
+      "states-of-matter",
+      "nitroglycerin"
     ]
   }
 }
