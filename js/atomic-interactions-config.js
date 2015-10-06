@@ -47,7 +47,7 @@ require.config(
       ATOMIC_INTERACTIONS: '.'
     },
     shim: {
-      underscore: { exports: "_" }
+      underscore: { exports: '_' }
     },
 
     // optional cache buster to make browser refresh load all included scripts, can be disabled with ?cacheBuster=false
