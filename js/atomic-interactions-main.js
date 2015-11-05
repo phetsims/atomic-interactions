@@ -16,7 +16,7 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
 
   // strings
-  var simTitle = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
+  var atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
   var projectorModeProperty = new Property( false );
   var simOptions = {
@@ -38,7 +38,7 @@ define( function( require ) {
   }
 
   SimLauncher.launch( function() {
-    var sim = new Sim( simTitle, [ new AtomicInteractionsScreen( projectorModeProperty, true, simTitle ) ], simOptions );
+    var sim = new Sim( atomicInteractionsTitleString, [ new AtomicInteractionsScreen( projectorModeProperty, true, atomicInteractionsTitleString ) ], simOptions );
     sim.start();
   } );
 } );
