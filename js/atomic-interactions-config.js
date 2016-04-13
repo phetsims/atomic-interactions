@@ -39,6 +39,7 @@ require.config(
       SCENERY: '../../scenery/js',
       SCENERY_PHET: '../../scenery-phet/js',
       SUN: '../../sun/js',
+      TANDEM: '../../tandem/js',
 
       // other sims
       STATES_OF_MATTER: '../../states-of-matter/js',
