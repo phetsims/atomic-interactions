@@ -38,7 +38,10 @@ define( function( require ) {
   }
 
   SimLauncher.launch( function() {
-    var sim = new Sim( atomicInteractionsTitleString, [ new AtomicInteractionsScreen( projectorModeProperty, true, atomicInteractionsTitleString ) ], simOptions );
+    var sim = new Sim(
+      atomicInteractionsTitleString,
+      [ new AtomicInteractionsScreen( true, atomicInteractionsTitleString ) ],
+      simOptions );
     sim.start();
   } );
 } );
