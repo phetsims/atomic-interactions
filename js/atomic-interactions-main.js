@@ -9,16 +9,19 @@ define( function( require ) {
   'use strict';
 
   // modules
+  var AtomicInteractionsQueryParameters = require( 'ATOMIC_INTERACTIONS/AtomicInteractionsQueryParameters' );
   var AtomicInteractionsScreen = require( 'STATES_OF_MATTER/atomic-interactions/AtomicInteractionsScreen' );
-  var Sim = require( 'JOIST/Sim' );
   var GlobalOptionsNode = require( 'STATES_OF_MATTER/common/view/GlobalOptionsNode' );
-  var SimLauncher = require( 'JOIST/SimLauncher' );
   var Property = require( 'AXON/Property' );
+  var Sim = require( 'JOIST/Sim' );
+  var SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
   var atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
-  var projectorModeProperty = new Property( false );
+  // property that controls projector mode, initial value can be set via a query parameter
+  var projectorModeProperty = new Property( AtomicInteractionsQueryParameters.PROJECTOR_MODE );
+
   var simOptions = {
     credits: {
       leadDesign: 'Paul Beale, Yuen-ying Carpenter, Sarah McKagan, Emily Moore,\nNoah Podolefsky, Amy Rouinfar',
