@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.0.0-dev.12 Wed Aug 31 2016 13:30:09 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions 1.0.0-dev.12 Wed Aug 31 2016 13:42:03 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "master"
   },
   "atomic-interactions": {
-    "sha": "8eb2be7cc2798378aa1a4d0444d1cbe772e4256a",
+    "sha": "c94522655bed6620f3046b62fe0734416af7a1fa",
     "branch": "master"
   },
   "axon": {
@@ -57,7 +57,7 @@
     "branch": "master"
   },
   "states-of-matter": {
-    "sha": "f9cc53a9a7fee672e1d091cefbb196a66ad872bb",
+    "sha": "ae0fec3868057bebb06e48106e6da04631684fcd",
     "branch": "master"
   },
   "sun": {
