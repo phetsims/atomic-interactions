@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.0.0-dev.11 Tue Aug 09 2016 14:33:31 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions 1.0.0-dev.12 Wed Aug 31 2016 13:30:09 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "master"
   },
   "atomic-interactions": {
-    "sha": "cc8c5e233f1a428bf1d1a55c0c9d2ba5aa794771",
+    "sha": "8eb2be7cc2798378aa1a4d0444d1cbe772e4256a",
     "branch": "master"
   },
   "axon": {
@@ -17,19 +17,19 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "81f27acd408dbd7d7eced3e38f4c266523604ce1",
+    "sha": "972ce2546255abef411993d9af1f33f94a1845aa",
     "branch": "master"
   },
   "dot": {
-    "sha": "6ee3c51e61c78acd6d31a831c060d4f30fa82770",
+    "sha": "23b13772fe60b19cd4d3b8e75ac177ff5dcec594",
     "branch": "master"
   },
   "joist": {
-    "sha": "e8a38a2cd451145ce5d4378f137860db7d9c088f",
+    "sha": "c0442ba8d2ba1732aec95d4d475257318f1d3a89",
     "branch": "master"
   },
   "kite": {
-    "sha": "88f0c3a051a24f71a6465641badeccab1246820a",
+    "sha": "3b656b9a455ced42b9af90a15a25446b248490ab",
     "branch": "master"
   },
   "nitroglycerin": {
@@ -45,11 +45,11 @@
     "branch": "master"
   },
   "scenery": {
-    "sha": "0318877f1101f0145ee6079cf4923848d742213f",
+    "sha": "0ab22ac3398ee77a64b502c451c7b0bea3ddf83d",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "70dd84b761b6963d57c94c85e22f00bb9ec62604",
+    "sha": "25be8c387ca5c75637947d60a560d80221ec1d92",
     "branch": "master"
   },
   "sherpa": {
@@ -57,15 +57,15 @@
     "branch": "master"
   },
   "states-of-matter": {
-    "sha": "0241ac13121cb159319b5aa017d78df0a09f4c32",
+    "sha": "f9cc53a9a7fee672e1d091cefbb196a66ad872bb",
     "branch": "master"
   },
   "sun": {
-    "sha": "b9074d9261fbaacdd9c9296e4ffceb91f2c1b54c",
+    "sha": "b68861c56cfbf1a63c043110b104b8900ecff1f3",
     "branch": "master"
   },
   "tandem": {
-    "sha": "05e217d1f05f71380261c205b425590987e21849",
+    "sha": "a6dec05ea8f6524719adbd75c355b770dcea99cf",
     "branch": "master"
   }
 }
