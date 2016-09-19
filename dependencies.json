@@ -1,71 +1,75 @@
 {
-  "comment": "# atomic-interactions",
+  "comment": "# atomic-interactions 1.0.0-rc.2 Mon Sep 19 2016 16:57:56 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "1c14ec287a777a72355d97f1192b6eeb118f45ac",
+    "sha": "2b5ca7e3100586e33ce06e31a6018c6ea1086647",
     "branch": "1.0"
   },
   "axon": {
     "sha": "b4404f00ef0bc210d9a5eaef3ef6e62153def751",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "brand": {
     "sha": "f0b1f7da85f87b9626562bea7fe69197fa81f05f",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "chipper": {
     "sha": "07058555426e7ba2b63c2390c5dc3c19554e4c50",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "dot": {
     "sha": "23b13772fe60b19cd4d3b8e75ac177ff5dcec594",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "joist": {
     "sha": "e62721dda5c726af1ba7f7292f06ba89d5df5222",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "kite": {
     "sha": "3b656b9a455ced42b9af90a15a25446b248490ab",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "nitroglycerin": {
     "sha": "ad3cb990a9499a465b8ab0ee01980e9311481b00",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "phet-core": {
     "sha": "c48bf32035dc5a4ed092ad611012fcbdeb5c6351",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "phetcommon": {
     "sha": "83ea84c8d9fc089e8d8ad139874366c868404152",
-    "branch": "master"
+    "branch": "HEAD"
+  },
+  "query-string-machine": {
+    "sha": "05231e54a60c79502166d7bba26301fe8b668772",
+    "branch": "HEAD"
   },
   "scenery": {
     "sha": "cee9ad579b557b1b008ecdc8b492c2c34792ab87",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "scenery-phet": {
     "sha": "9d87b6245aef39b5d14da2b9b20a930c2be7ce93",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "sherpa": {
     "sha": "bcc28cd6e710446f4be153ad006e9a02eb412e8c",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "states-of-matter": {
     "sha": "b951b9661dddd71ca314c945b31c94ee9e1ccb15",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "sun": {
     "sha": "10af95af0cde148f13f746d4e24ddd6ca5ea0f92",
-    "branch": "master"
+    "branch": "HEAD"
   },
   "tandem": {
     "sha": "4a8edbc97f8b0900831da9ca1b83b7f312ce0cd4",
-    "branch": "master"
+    "branch": "HEAD"
   }
 }
