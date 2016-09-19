@@ -1,5 +1,5 @@
 {
-  "comment": "# atomic-interactions 1.0.0-rc.1 Fri Sep 09 2016 11:00:28 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "master"
@@ -9,7 +9,7 @@
     "branch": "1.0"
   },
   "axon": {
-    "sha": "b4404f00ef0bc210d9a5eaef3ef6e62153def751",
+    "sha": "e01926086217b84c39cca1e7515fc2999e6bb541",
     "branch": "master"
   },
   "brand": {
@@ -17,19 +17,19 @@
     "branch": "master"
   },
   "chipper": {
-    "sha": "794fb3bc35a6877d63c175b82ac58d320abe9b58",
+    "sha": "07058555426e7ba2b63c2390c5dc3c19554e4c50",
     "branch": "master"
   },
   "dot": {
-    "sha": "23b13772fe60b19cd4d3b8e75ac177ff5dcec594",
+    "sha": "394365987f8653dba5a82b9ceac29b9eb3e32be9",
     "branch": "master"
   },
   "joist": {
-    "sha": "e62721dda5c726af1ba7f7292f06ba89d5df5222",
+    "sha": "b513b5ee1164a47d5baad7abd29591c7fadbe899",
     "branch": "master"
   },
   "kite": {
-    "sha": "3b656b9a455ced42b9af90a15a25446b248490ab",
+    "sha": "733028991124bcea81c36b315f00e18453ba3d7b",
     "branch": "master"
   },
   "nitroglycerin": {
@@ -44,12 +44,16 @@
     "sha": "83ea84c8d9fc089e8d8ad139874366c868404152",
     "branch": "master"
   },
+  "query-string-machine": {
+    "sha": "05231e54a60c79502166d7bba26301fe8b668772",
+    "branch": "master"
+  },
   "scenery": {
-    "sha": "cee9ad579b557b1b008ecdc8b492c2c34792ab87",
+    "sha": "e78ee4135712f253beaef864204eefa64dfa4fcb",
     "branch": "master"
   },
   "scenery-phet": {
-    "sha": "9d87b6245aef39b5d14da2b9b20a930c2be7ce93",
+    "sha": "f0fc9ae838b8744281b76d3f576271b82ce33a8a",
     "branch": "master"
   },
   "sherpa": {
@@ -61,11 +65,11 @@
     "branch": "master"
   },
   "sun": {
-    "sha": "10af95af0cde148f13f746d4e24ddd6ca5ea0f92",
+    "sha": "f2bd9d60cd649fc2c873815bef82a7bcb590ceb2",
     "branch": "master"
   },
   "tandem": {
-    "sha": "4a8edbc97f8b0900831da9ca1b83b7f312ce0cd4",
+    "sha": "d369b847dad15a3d32270318c58d482755a45168",
     "branch": "master"
   }
 }
