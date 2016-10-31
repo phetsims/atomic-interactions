@@ -11,13 +11,11 @@ define( function( require ) {
   // modules
   var atomicInteractions = require( 'ATOMIC_INTERACTIONS/atomicInteractions' );
 
-  var getQueryParameter = phet.chipper.getQueryParameter;
-
-  var AtomicInteractionsQueryParameters = {
+  var AtomicInteractionsQueryParameters = QueryStringMachine.getAll( {
 
     // fill the shape placement boards on the 'Explore' screen during startup, useful for testing
-    PROJECTOR_MODE: !!getQueryParameter( 'projectorMode' )
-  };
+    projectorMode: { type: 'flag' }
+  } );
 
   atomicInteractions.register( 'AtomicInteractionsQueryParameters', AtomicInteractionsQueryParameters );
 

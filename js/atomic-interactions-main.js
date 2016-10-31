@@ -20,7 +20,7 @@ define( function( require ) {
   var atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
   // property that controls projector mode, initial value can be set via a query parameter
-  var projectorModeProperty = new Property( AtomicInteractionsQueryParameters.PROJECTOR_MODE );
+  var projectorModeProperty = new Property( AtomicInteractionsQueryParameters.projectorMode );
 
   var simOptions = {
     credits: {
