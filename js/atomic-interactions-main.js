@@ -14,13 +14,12 @@ define( function( require ) {
   var Property = require( 'AXON/Property' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
-  var StatesOfMatterQueryParameters = require( 'STATES_OF_MATTER/common/StatesOfMatterQueryParameters' );
 
   // strings
   var atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
   // property that controls projector mode, initial value can be set via a query parameter
-  var projectorModeProperty = new Property( StatesOfMatterQueryParameters.projectorMode );
+  var projectorModeProperty = new Property( phet.chipper.queryParameters.colorProfile === 'projector' );
 
   var simOptions = {
     credits: {
