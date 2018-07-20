@@ -41,6 +41,7 @@ require.config( {
     SCENERY_PHET: '../../scenery-phet/js',
     STATES_OF_MATTER: '../../states-of-matter/js',
     SUN: '../../sun/js',
+    TAMBO: '../../tambo/js',
     TANDEM: '../../tandem/js'
   },
 
