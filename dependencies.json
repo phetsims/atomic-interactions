@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.0.6 Fri Aug 10 2018 01:43:19 GMT-0600 (MDT)",
+  "comment": "# atomic-interactions 1.0.7-rc.1 Fri Aug 10 2018 03:01:31 GMT-0600 (MDT)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "a74bd15d1e5775c2a665c4c6ae15f8dafcaafdbd",
+    "sha": "eaeaeb263861b7e4d02bcef48f1294a98ca84db2",
     "branch": "1.0"
   },
   "axon": {
@@ -42,7 +42,7 @@
   },
   "phetcommon": {
     "sha": "e0a87654115e0b8e0b2f32eaa714f3fc33ece142",
-    "branch": "atomic-interactions-1.0"
+    "branch": "HEAD"
   },
   "query-string-machine": {
     "sha": "05231e54a60c79502166d7bba26301fe8b668772",
