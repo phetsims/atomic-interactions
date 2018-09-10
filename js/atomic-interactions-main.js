@@ -11,15 +11,11 @@ define( function( require ) {
   // modules
   var AtomicInteractionsScreen = require( 'STATES_OF_MATTER/atomic-interactions/AtomicInteractionsScreen' );
   var GlobalOptionsNode = require( 'STATES_OF_MATTER/common/view/GlobalOptionsNode' );
-  var Property = require( 'AXON/Property' );
   var Sim = require( 'JOIST/Sim' );
   var SimLauncher = require( 'JOIST/SimLauncher' );
 
   // strings
   var atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
-
-  // property that controls projector mode, initial value can be set via a query parameter
-  var projectorModeProperty = new Property( phet.chipper.queryParameters.colorProfile === 'projector' );
 
   var simOptions = {
     credits: {
@@ -30,7 +26,7 @@ define( function( require ) {
       thanks: 'Thanks to Actual Concepts for working with the PhET development team to convert this simulation to ' +
               'HTML5.'
     },
-    optionsNode: new GlobalOptionsNode( projectorModeProperty )
+    optionsNode: new GlobalOptionsNode()
   };
 
   SimLauncher.launch( function() {
