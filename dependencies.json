@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.0.8-rc.1 Fri Sep 21 2018 19:02:04 GMT-0600 (MDT)",
+  "comment": "# atomic-interactions 1.0.8 Mon Sep 24 2018 17:24:59 GMT-0600 (MDT)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "75f6007f57033f35583295e0240fdb39a0111e38",
+    "sha": "b8e6a53a77694cdf4847b3bb17ce02489826bb42",
     "branch": "1.0"
   },
   "axon": {
