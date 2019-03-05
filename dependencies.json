@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.0.9 Tue Nov 06 2018 10:42:17 GMT-0700 (MST)",
+  "comment": "# atomic-interactions 1.0.9 Tue Mar 05 2019 14:30:50 GMT-0500 (EST)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "804ec86b6498046dc81e32311d2f581c6515f648",
+    "sha": "b35cc62b2f6d16e92ff4a3a909864b6c3ac05c46",
     "branch": "1.0"
   },
   "axon": {
@@ -13,8 +13,8 @@
     "branch": "HEAD"
   },
   "brand": {
-    "sha": "853b3b17a27619da1323e66ac18bb40bad17f784",
-    "branch": "HEAD"
+    "sha": "bc4c32da93abb2c62fdb88c86ac84ea8c9424481",
+    "branch": "atomic-interactions-1.0"
   },
   "chipper": {
     "sha": "c848452c3860f0788b2d82729247241b79f407eb",
@@ -25,8 +25,8 @@
     "branch": "HEAD"
   },
   "joist": {
-    "sha": "9861cefad9e9ab6c2b122b3a7937ba54b750bd31",
-    "branch": "HEAD"
+    "sha": "b936e1583c5613ecd66876bf3f487189efd71691",
+    "branch": "atomic-interactions-1.0"
   },
   "kite": {
     "sha": "3b656b9a455ced42b9af90a15a25446b248490ab",
