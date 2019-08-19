@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.1.0-rc.4 Fri Jul 26 2019 14:38:15 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions 1.1.0-rc.4 Mon Aug 19 2019 12:36:10 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "d8a2e8992420327ff72a6fc4bb93ec76549ded0e",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "e8c0889def39dfd90d715cf6f5ae07216cf3a6a7",
+    "sha": "0b0e2c0ebac4e25f39919c1f8c8856732b175435",
     "branch": "1.1"
   },
   "axon": {
@@ -25,8 +25,8 @@
     "branch": "HEAD"
   },
   "joist": {
-    "sha": "9ea7dfdc8fe866f7aafd8e864ac6fbb06fc4fb64",
-    "branch": "HEAD"
+    "sha": "ac3b9bd235a6fe1dc02d686554851767b6488689",
+    "branch": "atomic-interactions-1.1"
   },
   "kite": {
     "sha": "38d4076754ae8dd00024a6973f8cf9d622dfcf5c",
@@ -50,7 +50,7 @@
   },
   "phetcommon": {
     "sha": "f2674fa6389a48d3553d4805ce1490b1ff2c04c8",
-    "branch": "atomic-interactions-1.1"
+    "branch": "HEAD"
   },
   "phetmarks": {
     "sha": "dfc5b1da1d7cc0939c484f7f26f7148f28264ee4",
@@ -61,12 +61,12 @@
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "0449566a9ec8484ae2fd18c3d11a5d6347a8ff23",
-    "branch": "HEAD"
+    "sha": "e21d8713160079c149ab9f1105c558ccb6f91c62",
+    "branch": "atomic-interactions-1.1"
   },
   "scenery-phet": {
-    "sha": "d62c6b2e8f0c76564b52c2c11f8e06dc4181f9ea",
-    "branch": "HEAD"
+    "sha": "4edb627fd682e67d1812a6c3b385c9906a47e1cc",
+    "branch": "atomic-interactions-1.1"
   },
   "sherpa": {
     "sha": "4877464e8013ff1459091c854a8c2234c3d0e7d6",
