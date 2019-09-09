@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.1.0-rc.4 Mon Aug 19 2019 12:36:10 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions 1.1.0-rc.4 Mon Sep 09 2019 11:00:12 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "d8a2e8992420327ff72a6fc4bb93ec76549ded0e",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "0b0e2c0ebac4e25f39919c1f8c8856732b175435",
+    "sha": "444fb0b0a3f3041c9dad2e668fe9dbb9f34cdeab",
     "branch": "1.1"
   },
   "axon": {
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "joist": {
-    "sha": "ac3b9bd235a6fe1dc02d686554851767b6488689",
+    "sha": "ccd901809c1f8716447fac888f524099f2d95b02",
     "branch": "atomic-interactions-1.1"
   },
   "kite": {
@@ -62,11 +62,11 @@
   },
   "scenery": {
     "sha": "e21d8713160079c149ab9f1105c558ccb6f91c62",
-    "branch": "atomic-interactions-1.1"
+    "branch": "HEAD"
   },
   "scenery-phet": {
     "sha": "4edb627fd682e67d1812a6c3b385c9906a47e1cc",
-    "branch": "atomic-interactions-1.1"
+    "branch": "HEAD"
   },
   "sherpa": {
     "sha": "4877464e8013ff1459091c854a8c2234c3d0e7d6",
