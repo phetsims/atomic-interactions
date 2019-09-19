@@ -17,7 +17,7 @@ define( require => {
   // strings
   const atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
-  var simOptions = {
+  const simOptions = {
     credits: {
       leadDesign: 'Paul Beale, Yuen-ying Carpenter, Sarah McKagan, Emily B. Moore, Noah Podolefsky,<br>Amy Rouinfar',
       softwareDevelopment: 'John Blanco, Aaron Davis, Aadish Gupta',
@@ -32,7 +32,7 @@ define( require => {
   };
 
   SimLauncher.launch( function() {
-    var sim = new Sim(
+    const sim = new Sim(
       atomicInteractionsTitleString,
       [ new AtomicInteractionsScreen( true, atomicInteractionsTitleString ) ],
       simOptions );
