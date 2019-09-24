@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.0.15 Mon Sep 23 2019 14:29:08 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions 1.0.16-rc.1 Tue Sep 24 2019 10:31:07 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "7d27130a4d27da15aa7f8a21bbfb9245288c1b44",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "2e50aa2e29bcbb7a7303d54f17ea75666ffedf98",
+    "sha": "a6138246707912d24fb77ebb172ad3d8068416dd",
     "branch": "1.0"
   },
   "axon": {
@@ -54,7 +54,7 @@
   },
   "scenery": {
     "sha": "c6ed1e57d420242c13f5c5787dddeb7e8685c493",
-    "branch": "atomic-interactions-1.0"
+    "branch": "HEAD"
   },
   "scenery-phet": {
     "sha": "5f33d513de40f6de9b90eff995833e39a9fac872",
