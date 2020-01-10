@@ -13,6 +13,7 @@ define( require => {
   const GlobalOptionsNode = require( 'STATES_OF_MATTER/common/view/GlobalOptionsNode' );
   const Sim = require( 'JOIST/Sim' );
   const SimLauncher = require( 'JOIST/SimLauncher' );
+  const Tandem = require( 'TANDEM/Tandem' );
 
   // strings
   const atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
@@ -34,7 +35,7 @@ define( require => {
   SimLauncher.launch( function() {
     const sim = new Sim(
       atomicInteractionsTitleString,
-      [ new AtomicInteractionsScreen( true, atomicInteractionsTitleString ) ],
+      [ new AtomicInteractionsScreen( true, atomicInteractionsTitleString, Tandem.ROOT.createTandem( 'atomicInteractionsScreen' ) ) ],
       simOptions );
     sim.start();
   } );
