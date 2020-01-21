@@ -197,6 +197,28 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "BooleanIO"
     },
+    "DerivedPropertyIO<BooleanIO>": {
+      "documentation": "Like PropertyIO, but not settable.  Instead it is derived from other DerivedPropertyIO or PropertyIO instances",
+      "events": [
+        "changed"
+      ],
+      "methodOrder": [],
+      "methods": {
+        "setValue": {
+          "documentation": "Errors out when you try to set a derived property.",
+          "invocableForReadOnlyElements": false,
+          "parameterTypes": [
+            "BooleanIO"
+          ],
+          "returnType": "VoidIO"
+        }
+      },
+      "parameterTypes": [
+        "BooleanIO"
+      ],
+      "supertype": "PropertyIO<BooleanIO>",
+      "typeName": "DerivedPropertyIO<BooleanIO>"
+    },
     "DialogIO": {
       "documentation": "A dialog panel",
       "events": [],
@@ -472,6 +494,14 @@ window.phet.phetio.phetioTypes = assert &&
       ],
       "supertype": "ObjectIO",
       "typeName": "FunctionIO(StringIO,StringIO)=>VoidIO"
+    },
+    "LinkedElementIO": {
+      "documentation": "A LinkedElement",
+      "events": [],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "ObjectIO",
+      "typeName": "LinkedElementIO"
     },
     "NodeIO": {
       "documentation": "The base type for graphical and potentially interactive objects.  NodeIO has nested PropertyIO values for visibility, pickability and opacity.<br><br>Pickable can take one of three values:<br><ul><li>null: pass-through behavior. Nodes with input listeners are pickable, but nodes without input listeners won't block events for nodes behind it.</li><li>false: The node cannot be interacted with, and it blocks events for nodes behind it.</li><li>true: The node can be interacted with (if it has an input listener).</li></ul>For more about Scenery node pickability, please see <a href=\"http://phetsims.github.io/scenery/doc/implementation-notes#pickability\">http://phetsims.github.io/scenery/doc/implementation-notes#pickability</a>",
@@ -1250,6 +1280,18 @@ window.phet.phetio.phetioTypes = assert &&
       "supertype": "ObjectIO",
       "typeName": "PropertyIO<StringIO>"
     },
+    "ResetAllButtonIO": {
+      "documentation": "Button that performs an action while it is being pressed, and stops the action when released",
+      "events": [
+        "pressed",
+        "released",
+        "releasedDisabled"
+      ],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "NodeIO",
+      "typeName": "ResetAllButtonIO"
+    },
     "RichTextIO": {
       "documentation": "The tandem IO type for the scenery RichText node",
       "events": [],
@@ -1308,6 +1350,16 @@ window.phet.phetio.phetioTypes = assert &&
       },
       "supertype": "NodeIO",
       "typeName": "TextIO"
+    },
+    "ToggleButtonIO": {
+      "documentation": "A button that toggles state (in/out) when pressed",
+      "events": [
+        "toggled"
+      ],
+      "methodOrder": [],
+      "methods": {},
+      "supertype": "NodeIO",
+      "typeName": "ToggleButtonIO"
     },
     "Vector2IO": {
       "documentation": "A numerical object with x and y properties, like {x:3,y:4}",
