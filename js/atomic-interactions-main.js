@@ -28,7 +28,7 @@ define( require => {
       thanks: 'Thanks to Actual Concepts for working with the PhET development team to convert this simulation to HTML5.'
     },
 
-    // Creates content for the Options dialog
+    // create content for the Options dialog
     createOptionsDialogContent: () => new GlobalOptionsNode( Tandem.ROOT.createTandem( 'globalOptionsNode' ) )
   };
 
