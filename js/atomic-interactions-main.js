@@ -18,6 +18,9 @@ define( require => {
   // strings
   const atomicInteractionsTitleString = require( 'string!ATOMIC_INTERACTIONS/atomic-interactions.title' );
 
+  // Eagerly create GlobalOptionsNode so it works smoothly with PhET-iO
+  const globalOptionsNode = new GlobalOptionsNode( Tandem.ROOT.createTandem( 'global' ).createTandem( 'view' ).createTandem( 'globalOptionsNode' ) );
+
   const simOptions = {
     credits: {
       leadDesign: 'Paul Beale, Yuen-ying Carpenter, Sarah McKagan, Emily B. Moore, Noah Podolefsky,<br>Amy Rouinfar',
@@ -29,7 +32,7 @@ define( require => {
     },
 
     // create content for the Options dialog
-    createOptionsDialogContent: () => new GlobalOptionsNode( Tandem.ROOT.createTandem( 'globalOptionsNode' ) )
+    createOptionsDialogContent: () => globalOptionsNode
   };
 
   SimLauncher.launch( function() {

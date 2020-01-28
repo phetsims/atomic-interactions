@@ -4825,7 +4825,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "NumberPropertyIO"
     },
     "atomicInteractions.general.soundManager.enabledProperty": {
-      "phetioDocumentation": "",
+      "phetioDocumentation": "If this sim contains sound, then this Property will toggle whether sound is enabled ordisabled.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -4863,7 +4863,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4876,7 +4876,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.enabledProperty": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.enabledProperty": {
       "phetioDocumentation": "When disabled, the checkbox is grayed out and cannot be pressed.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4889,7 +4889,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.opacityProperty": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4902,7 +4902,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.pickableProperty": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4915,7 +4915,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.projectorModeEnabledProperty": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.projectorModeEnabledProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4928,7 +4928,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.property": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.property": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -4941,7 +4941,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.toggleAction": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.toggleAction": {
       "phetioDocumentation": "Emits when user input causes the checkbox to toggle, emitting a single arg: the new boolean value of the checkbox state. The arguments are:<br/><ol><li>isChecked: BooleanIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -4954,7 +4954,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<BooleanIO>"
     },
-    "atomicInteractions.globalOptionsNode.projectorModeCheckbox.visibleProperty": {
+    "atomicInteractions.global.view.globalOptionsNode.projectorModeCheckbox.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
