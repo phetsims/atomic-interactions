@@ -19,31 +19,8 @@
 
   window.phet = window.phet || {};
   window.phet.chipper = window.phet.chipper || {};
-  window.phet.chipper.packageObject = {
-    "name": "atomic-interactions",
-    "version": "1.2.0-dev.1",
-    "license": "GPL-3.0",
-    "repository": { "type": "git", "url": "https://github.com/phetsims/atomic-interactions.git" },
-    "devDependencies": { "grunt": "~1.0.0" },
-    "phet": {
-      "requirejsNamespace": "ATOMIC_INTERACTIONS",
-      "phetLibs": [ "states-of-matter", "nitroglycerin" ],
-      "runnable": true,
-      "supportedBrands": [ "phet", "adapted-from-phet", "phet-io" ],
-      "simulation": true
-    },
-    "eslintConfig": { "extends": "../chipper/eslint/sim_eslintrc.js" }
-  };
-  window.phet.chipper.stringRepos = [ {
-    "repo": "atomic-interactions",
-    "requirejsNamespace": "ATOMIC_INTERACTIONS"
-  }, { "repo": "joist", "requirejsNamespace": "JOIST" }, {
-    "repo": "scenery-phet",
-    "requirejsNamespace": "SCENERY_PHET"
-  }, { "repo": "states-of-matter", "requirejsNamespace": "STATES_OF_MATTER" }, {
-    "repo": "sun",
-    "requirejsNamespace": "SUN"
-  }, { "repo": "tambo", "requirejsNamespace": "TAMBO" } ];
+  window.phet.chipper.packageObject = {"name":"atomic-interactions","version":"1.2.0-dev.1","license":"GPL-3.0","repository":{"type":"git","url":"https://github.com/phetsims/atomic-interactions.git"},"devDependencies":{"grunt":"~1.0.0"},"phet":{"requirejsNamespace":"ATOMIC_INTERACTIONS","phetLibs":["states-of-matter","nitroglycerin"],"runnable":true,"supportedBrands":["phet","adapted-from-phet","phet-io"],"simulation":true},"eslintConfig":{"extends":"../chipper/eslint/sim_eslintrc.js"}};
+  window.phet.chipper.stringRepos = [{"repo":"atomic-interactions","requirejsNamespace":"ATOMIC_INTERACTIONS"},{"repo":"joist","requirejsNamespace":"JOIST"},{"repo":"scenery-phet","requirejsNamespace":"SCENERY_PHET"},{"repo":"states-of-matter","requirejsNamespace":"STATES_OF_MATTER"},{"repo":"sun","requirejsNamespace":"SUN"},{"repo":"tambo","requirejsNamespace":"TAMBO"}];
 
   // Identify the brand (assume generated brand if not provided with query parameters)
   const brandMatch = location.search.match( /brand=([^&]+)/ );
