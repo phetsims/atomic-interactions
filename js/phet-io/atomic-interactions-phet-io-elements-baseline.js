@@ -1266,7 +1266,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -1344,7 +1344,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -1370,7 +1370,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -1448,7 +1448,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -1513,7 +1513,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -1591,7 +1591,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -1604,7 +1604,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -2618,7 +2618,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -2822,8 +2822,8 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton": {
-      "phetioDocumentation": "Progress the simulation a single model step backwards.",
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton": {
+      "phetioDocumentation": "Progress the simulation a single model step forwards.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
@@ -2835,7 +2835,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2848,7 +2848,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.firedEmitter": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -2861,7 +2861,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2874,7 +2874,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2887,7 +2887,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.pressListener.pressAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -2900,7 +2900,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.pressListener.releaseAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -2913,7 +2913,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepBackwardButton.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.playPauseStepButtons.stepForwardButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2926,7 +2926,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2939,7 +2939,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2952,11 +2952,11 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -2965,7 +2965,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.fireListener.firedEmitter": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -2978,7 +2978,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.fireListener.pressAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -2991,7 +2991,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.fireListener.releaseAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3004,7 +3004,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3017,7 +3017,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3030,11 +3030,11 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.normal.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -3043,7 +3043,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3056,7 +3056,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3069,7 +3069,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.property": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.property": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3082,7 +3082,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3095,11 +3095,11 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.enabledProperty": {
       "phetioDocumentation": "Determines whether the AquaRadioButton is enabled (pressable) or disabled (grayed-out)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -3108,7 +3108,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.fireListener.firedEmitter": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.fireListener.firedEmitter": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3121,7 +3121,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.fireListener.pressAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.fireListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3134,7 +3134,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.fireListener.releaseAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.fireListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3147,7 +3147,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3160,7 +3160,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3173,11 +3173,11 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.slow.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.slow.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -3186,11 +3186,11 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.speedRadioButtonGroup.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
@@ -3203,7 +3203,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
-      "phetioFeatured": false,
+      "phetioFeatured": true,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
