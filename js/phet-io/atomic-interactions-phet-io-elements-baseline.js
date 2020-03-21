@@ -28,7 +28,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "atomicInteractions.atomicInteractionsScreen.model.adjustableAtomDiameterProperty": {
-      "phetioDocumentation": "",
+      "phetioDocumentation": "Diameter of the adjustable atom, in picometers",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
