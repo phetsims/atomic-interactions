@@ -248,7 +248,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<EnumerationIO(FAST|NORMAL|SLOW)>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -261,7 +261,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -274,7 +274,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "SliderIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -287,7 +287,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.enabledRangeProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.enabledRangeProperty": {
       "phetioDocumentation": "Sliders support two ranges: the outer range which specifies the min and max of the track and the enabledRangeProperty, which determines how low and high the thumb can be dragged within the track.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -300,7 +300,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<RangeIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -313,7 +313,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -326,7 +326,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumb": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumb": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -339,7 +339,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumb.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -352,7 +352,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumb.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -365,7 +365,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumb.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -378,7 +378,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumbInputListener": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -391,7 +391,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumbInputListener.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -404,7 +404,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumbInputListener.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -417,7 +417,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumbInputListener.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -430,7 +430,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.thumbInputListener.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -443,7 +443,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.track.trackInputListener": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.track.trackInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -456,7 +456,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.track.trackInputListener.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -469,7 +469,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.track.trackInputListener.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -482,7 +482,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.track.trackInputListener.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -495,7 +495,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.track.trackInputListener.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -508,7 +508,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.valueProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -521,7 +521,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.atomDiameterSlider.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -534,7 +534,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -547,7 +547,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "SliderIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.enabledProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -560,7 +560,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.enabledRangeProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.enabledRangeProperty": {
       "phetioDocumentation": "Sliders support two ranges: the outer range which specifies the min and max of the track and the enabledRangeProperty, which determines how low and high the thumb can be dragged within the track.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -573,7 +573,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<RangeIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -586,7 +586,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -599,7 +599,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumb": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumb": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -612,7 +612,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumb.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumb.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -625,7 +625,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumb.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumb.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -638,7 +638,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumb.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumb.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -651,7 +651,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumbInputListener": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumbInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -664,7 +664,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumbInputListener.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumbInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -677,7 +677,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumbInputListener.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumbInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -690,7 +690,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumbInputListener.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumbInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -703,7 +703,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.thumbInputListener.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.thumbInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -716,7 +716,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.track.trackInputListener": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.track.trackInputListener": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -729,7 +729,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.track.trackInputListener.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.track.trackInputListener.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -742,7 +742,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.track.trackInputListener.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.track.trackInputListener.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -755,7 +755,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.track.trackInputListener.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.track.trackInputListener.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -768,7 +768,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.track.trackInputListener.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.track.trackInputListener.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -781,7 +781,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.valueProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.valueProperty": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -794,7 +794,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "LinkedElementIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.interactionStrengthSlider.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -807,7 +807,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.movingNodeText": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.movingNodeText": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -820,7 +820,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.movingNodeText.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.movingNodeText.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -833,7 +833,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.movingNodeText.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.movingNodeText.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -846,7 +846,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.movingNodeText.textProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.movingNodeText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -859,7 +859,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.movingNodeText.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.movingNodeText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -872,7 +872,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -885,7 +885,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -898,7 +898,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pinnedNodeText": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pinnedNodeText": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -911,7 +911,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "TextIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pinnedNodeText.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pinnedNodeText.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -924,7 +924,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pinnedNodeText.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pinnedNodeText.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -937,7 +937,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pinnedNodeText.textProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pinnedNodeText.textProperty": {
       "phetioDocumentation": "Property for the displayed text",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -950,7 +950,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<StringIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pinnedNodeText.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pinnedNodeText.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -963,7 +963,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pushpinImage": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pushpinImage": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -976,7 +976,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pushpinImage.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pushpinImage.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -989,7 +989,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pushpinImage.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pushpinImage.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1002,7 +1002,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.pushpinImage.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.pushpinImage.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -1015,7 +1015,7 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomicInteractionsControlPanel.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
