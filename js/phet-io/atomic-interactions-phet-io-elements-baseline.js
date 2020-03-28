@@ -1431,6 +1431,19 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
+    "atomicInteractions.atomicInteractionsScreen.view.forcesControlPanel.radioButtonGroup.enabledProperty": {
+      "phetioDocumentation": "When disabled, the component is grayed out and cannot be interacted with.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
     "atomicInteractions.atomicInteractionsScreen.view.forcesControlPanel.radioButtonGroup.hideForce": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
@@ -3133,6 +3146,19 @@ window.phet.phetio.phetioElementsBaseline = assert &&
       "phetioState": false,
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
+    },
+    "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.enabledProperty": {
+      "phetioDocumentation": "When disabled, the component is grayed out and cannot be interacted with.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": true,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
     },
     "atomicInteractions.atomicInteractionsScreen.view.timeControlNode.speedRadioButtonGroup.normal": {
       "phetioDocumentation": "",
