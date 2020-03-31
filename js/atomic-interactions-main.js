@@ -11,7 +11,7 @@ import SimLauncher from '../../joist/js/SimLauncher.js';
 import AtomicInteractionsScreen from '../../states-of-matter/js/atomic-interactions/AtomicInteractionsScreen.js';
 import GlobalOptionsNode from '../../states-of-matter/js/common/view/GlobalOptionsNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
-import atomicInteractionsStrings from './atomic-interactions-strings.js';
+import atomicInteractionsStrings from './atomicInteractionsStrings.js';
 
 const atomicInteractionsTitleString = atomicInteractionsStrings[ 'atomic-interactions' ].title;
 
