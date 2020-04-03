@@ -145,7 +145,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioTypeName": "PropertyIO<EnumerationIO(COMPONENTS|TOTAL|HIDDEN)>"
     },
     "atomicInteractions.atomicInteractionsScreen.model.interactionStrengthProperty": {
-      "phetioDocumentation": "",
+      "phetioDocumentation": "intermolecular potential for the \"Adjustable Attraction\" atoms - this is a parameter in the Lennard-Jones potential equation",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
