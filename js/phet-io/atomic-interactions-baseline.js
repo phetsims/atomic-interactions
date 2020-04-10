@@ -3368,7 +3368,59 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarkerDragHandler": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker": {
+      "phetioDocumentation": "",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": false,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NodeIO"
+    },
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "NumberPropertyIO"
+    },
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
+    },
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
+      "phetioDynamicElement": false,
+      "phetioEventType": "MODEL",
+      "phetioFeatured": false,
+      "phetioHighFrequency": false,
+      "phetioIsArchetype": false,
+      "phetioPlayback": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
+      "phetioStudioControl": true,
+      "phetioTypeName": "PropertyIO<BooleanIO>"
+    },
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3381,7 +3433,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarkerDragHandler.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3394,7 +3446,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarkerDragHandler.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3407,7 +3459,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarkerDragHandler.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3420,7 +3472,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarkerDragHandler.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3433,68 +3485,55 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaResizeHandleDragHandler": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
-      "phetioEventType": "USER",
+      "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
+      "phetioReadOnly": false,
       "phetioState": false,
       "phetioStudioControl": true,
-      "phetioTypeName": "ObjectIO"
+      "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaResizeHandleDragHandler.dragAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
-      "phetioDynamicElement": false,
-      "phetioEventType": "MODEL",
-      "phetioFeatured": false,
-      "phetioHighFrequency": true,
-      "phetioIsArchetype": false,
-      "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
-      "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<Vector2IO>"
-    },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaResizeHandleDragHandler.dragEndAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow.opacityProperty": {
+      "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<Vector2IO>"
+      "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaResizeHandleDragHandler.dragStartAction": {
-      "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow.pickableProperty": {
+      "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
       "phetioStudioControl": true,
-      "phetioTypeName": "ActionIO<Vector2IO>"
+      "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaResizeHandleDragHandler.isDraggingProperty": {
-      "phetioDocumentation": "Indicates whether the object is dragging",
+    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow.visibleProperty": {
+      "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
       "phetioFeatured": false,
       "phetioHighFrequency": false,
       "phetioIsArchetype": false,
       "phetioPlayback": false,
-      "phetioReadOnly": true,
-      "phetioState": false,
+      "phetioReadOnly": false,
+      "phetioState": true,
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
