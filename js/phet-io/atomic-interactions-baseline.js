@@ -2829,7 +2829,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2842,7 +2842,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrow": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrow": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2855,7 +2855,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrow.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrow.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2868,7 +2868,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrow.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrow.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2881,7 +2881,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrow.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrow.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2894,7 +2894,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrowDragHandler": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrowDragHandler": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -2907,7 +2907,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrowDragHandler.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrowDragHandler.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2920,7 +2920,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrowDragHandler.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrowDragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2933,7 +2933,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrowDragHandler.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrowDragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2946,7 +2946,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlArrowDragHandler.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlArrowDragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2959,7 +2959,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLine": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLine": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2972,7 +2972,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLine.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLine.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2985,7 +2985,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLine.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLine.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -2998,7 +2998,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLine.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLine.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3011,7 +3011,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLineDragHandler": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLineDragHandler": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3024,7 +3024,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLineDragHandler.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLineDragHandler.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3037,7 +3037,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLineDragHandler.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLineDragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3050,7 +3050,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLineDragHandler.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLineDragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3063,7 +3063,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonControl.epsilonControlLineDragHandler.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonControl.epsilonControlLineDragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3076,7 +3076,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonGraphLabel": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonGraphLabel": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3089,7 +3089,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonGraphLabel.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonGraphLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3102,7 +3102,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonGraphLabel.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonGraphLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3115,7 +3115,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.epsilonGraphLabel.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.epsilonGraphLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3128,7 +3128,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3141,7 +3141,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3154,7 +3154,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3167,7 +3167,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3180,7 +3180,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3193,7 +3193,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3206,7 +3206,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.firedEmitter": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3219,7 +3219,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3232,7 +3232,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3245,7 +3245,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.pressListener.pressAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3258,7 +3258,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.pressListener.releaseAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3271,7 +3271,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomInButton.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomInButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3284,7 +3284,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3297,7 +3297,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.enabledProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.enabledProperty": {
       "phetioDocumentation": "When disabled, the button is grayed out and cannot be pressed",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3310,7 +3310,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.firedEmitter": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.firedEmitter": {
       "phetioDocumentation": "Emits when the button is fired No arguments.",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3323,7 +3323,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "EmitterIO<>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3336,7 +3336,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3349,7 +3349,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.pressListener.pressAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.pressListener.pressAction": {
       "phetioDocumentation": "Executes whenever a press occurs. The first argument when executing can be used to convey info about the SceneryEvent. The arguments are:<br/><ol><li>event: SceneryEventIO</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3362,7 +3362,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<SceneryEventIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.pressListener.releaseAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.pressListener.releaseAction": {
       "phetioDocumentation": "Executes whenever a release occurs. The arguments are:<br/><ol><li>event: NullableIO<SceneryEventIO></li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3375,7 +3375,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<NullableIO<SceneryEventIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.gridNode.zoomOutButton.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.gridNode.zoomOutButton.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3388,7 +3388,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3401,7 +3401,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3414,7 +3414,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3427,7 +3427,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.dragHandler": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.dragHandler": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3440,7 +3440,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.dragHandler.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.dragHandler.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3453,7 +3453,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.dragHandler.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.dragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3466,7 +3466,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.dragHandler.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.dragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3479,7 +3479,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.dragHandler.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.dragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3492,7 +3492,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3505,7 +3505,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3518,7 +3518,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.positionMarker.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3531,7 +3531,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.dragHandler": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "USER",
@@ -3544,7 +3544,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ObjectIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.dragAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.dragHandler.dragAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3557,7 +3557,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.dragEndAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.dragHandler.dragEndAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag end in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3570,7 +3570,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.dragStartAction": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.dragHandler.dragStartAction": {
       "phetioDocumentation": "A function that executes. The arguments are:<br/><ol><li>point: Vector2IO - the position of the drag start in view coordinates</li></ol>",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3583,7 +3583,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "ActionIO<Vector2IO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.dragHandler.isDraggingProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.dragHandler.isDraggingProperty": {
       "phetioDocumentation": "Indicates whether the object is dragging",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3596,7 +3596,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.sigmaControlArrow": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3609,7 +3609,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.sigmaControlArrow.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3622,7 +3622,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.sigmaControlArrow.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3635,7 +3635,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaControl.sigmaControlArrow.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaControl.sigmaControlArrow.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3648,7 +3648,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaGraphLabel": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaGraphLabel": {
       "phetioDocumentation": "",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3661,7 +3661,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NodeIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaGraphLabel.opacityProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaGraphLabel.opacityProperty": {
       "phetioDocumentation": "Opacity of the parent NodeIO, between 0 (invisible) and 1 (fully visible)",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3674,7 +3674,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "NumberPropertyIO"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaGraphLabel.pickableProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaGraphLabel.pickableProperty": {
       "phetioDocumentation": "Sets whether the node will be pickable (and hence interactive), see the NodeIO documentation for more details",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3687,7 +3687,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<NullableIO<BooleanIO>>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.sigmaGraphLabel.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaGraphLabel.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
@@ -3700,7 +3700,7 @@ window.phet.preloads.phetio.phetioElementsBaseline = assert &&
       "phetioStudioControl": true,
       "phetioTypeName": "PropertyIO<BooleanIO>"
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactiveInteractionPotentialDiagram.visibleProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.visibleProperty": {
       "phetioDocumentation": "Controls whether the Node will be visible (and interactive), see the NodeIO documentation for more details.",
       "phetioDynamicElement": false,
       "phetioEventType": "MODEL",
