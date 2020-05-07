@@ -7,7 +7,7 @@
  */
 
 import Sim from '../../joist/js/Sim.js';
-import SimLauncher from '../../joist/js/SimLauncher.js';
+import simLauncher from '../../joist/js/simLauncher.js';
 import AtomicInteractionsScreen from '../../states-of-matter/js/atomic-interactions/AtomicInteractionsScreen.js';
 import GlobalOptionsNode from '../../states-of-matter/js/common/view/GlobalOptionsNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
@@ -15,7 +15,7 @@ import atomicInteractionsStrings from './atomicInteractionsStrings.js';
 
 const atomicInteractionsTitleString = atomicInteractionsStrings[ 'atomic-interactions' ].title;
 
-SimLauncher.launch( function() {
+simLauncher.launch( function() {
 
   // Eagerly create GlobalOptionsNode so it works smoothly with PhET-iO
   const globalOptionsNode = new GlobalOptionsNode( Tandem.ROOT.createTandem( 'global' ).createTandem( 'view' ).createTandem( 'globalOptionsNode' ) );
