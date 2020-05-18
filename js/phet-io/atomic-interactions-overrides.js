@@ -81,5 +81,5 @@ window.phet.preloads.phetio.phetioElementsOverrides =
   },
   "atomicInteractions.atomicInteractionsScreen.view.returnAtomButton.visibleProperty": {
     "phetioFeatured": false
-  },
+  }
 };
