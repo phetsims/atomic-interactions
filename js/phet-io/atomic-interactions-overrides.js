@@ -16,7 +16,7 @@ window.phet.preloads.phetio.phetioElementsOverrides =
   "atomicInteractions.atomicInteractionsScreen.model.forcesExpandedProperty": {
     "phetioFeatured": true
   },
-  "atomicInteractions.atomicInteractionsScreen.model.interactionStrengthProperty": {
+  "atomicInteractions.atomicInteractionsScreen.model.adjustableAtomInteractionStrengthProperty": {
     "phetioFeatured": true
   },
   "atomicInteractions.atomicInteractionsScreen.model.isPlayingProperty": {
