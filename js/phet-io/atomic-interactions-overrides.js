@@ -16,9 +16,6 @@ window.phet.preloads.phetio.phetioElementsOverrides =
   "atomicInteractions.atomicInteractionsScreen.model.movementHintVisibleProperty": {
     "phetioFeatured": true
   },
-  "atomicInteractions.atomicInteractionsScreen.model.timeSpeedProperty": {
-    "phetioFeatured": true
-  },
   "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.title.textProperty": {
     "phetioFeatured": true
   },
