@@ -1,9 +1,6 @@
 /* eslint-disable */
 window.phet.preloads.phetio.phetioElementsOverrides =
 {
-  "atomicInteractions.atomicInteractionsScreen.model.adjustableAtomInteractionStrengthProperty": {
-    "phetioFeatured": true
-  },
   "atomicInteractions.atomicInteractionsScreen.model.isPlayingProperty": {
     "phetioFeatured": true
   },
