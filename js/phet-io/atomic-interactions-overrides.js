@@ -7,9 +7,6 @@ window.phet.preloads.phetio.phetioElementsOverrides =
   "atomicInteractions.atomicInteractionsScreen.model.movableAtom.positionProperty": {
     "phetioFeatured": true
   },
-  "atomicInteractions.atomicInteractionsScreen.model.movableAtom.radiusProperty": {
-    "phetioFeatured": true
-  },
   "atomicInteractions.atomicInteractionsScreen.model.movableAtom.velocityProperty": {
     "phetioFeatured": true
   },
