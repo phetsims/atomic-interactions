@@ -15,7 +15,7 @@ import atomicInteractionsStrings from './atomicInteractionsStrings.js';
 
 const atomicInteractionsTitleString = atomicInteractionsStrings[ 'atomic-interactions' ].title;
 
-simLauncher.launch( function() {
+simLauncher.launch( () => {
 
   const simOptions = {
     credits: {
