@@ -67,13 +67,7 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.interactiveControls.visibleProperty": {
       "phetioFeatured": true
     },
-    "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.positionMarker.pickableProperty": {
-      "phetioFeatured": true
-    },
     "atomicInteractions.atomicInteractionsScreen.view.interactivePotentialGraph.sigmaGraphLabel.visibleProperty": {
-      "phetioFeatured": true
-    },
-    "atomicInteractions.atomicInteractionsScreen.view.movableParticleNode.pickableProperty": {
       "phetioFeatured": true
     },
     "atomicInteractions.atomicInteractionsScreen.view.returnAtomButton.enabledProperty": {
