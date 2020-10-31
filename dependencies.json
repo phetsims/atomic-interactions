@@ -45,7 +45,7 @@
     "branch": "HEAD"
   },
   "phet-io-client-guides": {
-    "sha": "f3009b35e22d31bf9560db32328bd690d9360e32",
+    "sha": "7323b2abc1dfd52a1b77aa020de7ec3c7e7ce414",
     "branch": "HEAD"
   },
   "phet-io-wrappers": {
@@ -81,7 +81,7 @@
     "branch": "HEAD"
   },
   "studio": {
-    "sha": "b4f6cf2a25a60c148ffa5b9b19feaf6d3321fc37",
+    "sha": "2eff97e07ec82d3ee0e80d2fd586c1f496fecd07",
     "branch": "HEAD"
   },
   "sun": {
