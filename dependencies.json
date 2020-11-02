@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.2.0-rc.1 Thu Sep 03 2020 16:12:54 GMT-0800 (Alaska Daylight Time)",
+  "comment": "# atomic-interactions 1.2.0-rc.2 Mon Nov 02 2020 14:49:50 GMT-0700 (Mountain Standard Time)",
   "assert": {
     "sha": "1a41cef653bbed1025af5768bea958d7e3e0f8ae",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "9bae95ea31cb7ccb52b88dd255f237d925c1b54f",
+    "sha": "95c291309c118970615928afdc90783b292973f3",
     "branch": "1.2"
   },
   "axon": {
@@ -18,7 +18,7 @@
   },
   "chipper": {
     "sha": "4a593f31548991981a03adb04a1d1d1e27c237f5",
-    "branch": "atomic-interactions-1.2"
+    "branch": "HEAD"
   },
   "dot": {
     "sha": "3aa05218545989fcd42fcf53c6c4e6982605a6f2",
