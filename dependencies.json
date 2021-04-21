@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.2.0 Mon Mar 08 2021 12:00:20 GMT-0500 (Eastern Standard Time)",
+  "comment": "# atomic-interactions 1.2.0 Wed Apr 21 2021 17:05:47 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "1a41cef653bbed1025af5768bea958d7e3e0f8ae",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "80e9d0b60aa1504209683d58d5856da0236e32ce",
+    "sha": "a8ca975eaf77be2372ecbb57733b60954e74bddf",
     "branch": "1.2"
   },
   "axon": {
@@ -58,15 +58,15 @@
   },
   "phetmarks": {
     "sha": "eb19ef45c516b07c8cb03373751d59a41092a702",
-    "branch": "atomic-interactions-1.2"
+    "branch": "HEAD"
   },
   "query-string-machine": {
     "sha": "98c27e38eb6ce672dd8908c5210a521f112ff906",
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "e2746313256b09f65ae6ba72b357fbb418e3006a",
-    "branch": "HEAD"
+    "sha": "493f5cdcafa3b68daeaa0eae6db52fdc9db943b1",
+    "branch": "atomic-interactions-1.2"
   },
   "scenery-phet": {
     "sha": "561fdfe616c8ddee6a34414858218ab4e696b0d3",
