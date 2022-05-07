@@ -9,7 +9,7 @@ import atomicInteractions from './atomicInteractions.js';
 
 type StringsType = {
   'atomic-interactions': {
-    'title': string
+    'title': string;
   }
 };
 
