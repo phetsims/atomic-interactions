@@ -5,11 +5,13 @@
  */
 /* eslint-disable */
 import getStringModule from '../../chipper/js/getStringModule.js';
+import TReadOnlyProperty from '../../axon/js/TReadOnlyProperty.js';
 import atomicInteractions from './atomicInteractions.js';
 
 type StringsType = {
   'atomic-interactions': {
     'title': string;
+    'titleProperty': TReadOnlyProperty<string>;
   }
 };
 
