@@ -6,10 +6,10 @@
  * @author John Blanco
  */
 
+import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
 import AtomicInteractionsScreen from '../../states-of-matter/js/atomic-interactions/AtomicInteractionsScreen.js';
-import GlobalOptionsNode from '../../states-of-matter/js/common/view/GlobalOptionsNode.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import atomicInteractionsStrings from './atomicInteractionsStrings.js';
 
@@ -27,8 +27,11 @@ simLauncher.launch( () => {
       thanks: 'Thanks to Actual Concepts for working with the PhET development team to convert this simulation to HTML5.'
     },
 
-    // create content for the Options dialog
-    createOptionsDialogContent: tandem => new GlobalOptionsNode( tandem )
+    preferencesModel: new PreferencesModel( {
+      visualOptions: {
+        supportsProjectorMode: true
+      }
+    } )
   };
 
   const sim = new Sim(
