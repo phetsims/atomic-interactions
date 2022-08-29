@@ -11,7 +11,7 @@ import atomicInteractions from './atomicInteractions.js';
 type StringsType = {
   'atomic-interactions': {
     'title': string;
-    'titleProperty': TReadOnlyProperty<string>;
+    'titleStringProperty': TReadOnlyProperty<string>;
   }
 };
 
