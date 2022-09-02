@@ -13,7 +13,7 @@ import AtomicInteractionsScreen from '../../states-of-matter/js/atomic-interacti
 import Tandem from '../../tandem/js/Tandem.js';
 import atomicInteractionsStrings from './atomicInteractionsStrings.js';
 
-const atomicInteractionsTitleString = atomicInteractionsStrings[ 'atomic-interactions' ].title;
+const atomicInteractionsTitleStringProperty = atomicInteractionsStrings[ 'atomic-interactions' ].titleStringProperty;
 
 simLauncher.launch( () => {
 
@@ -35,8 +35,8 @@ simLauncher.launch( () => {
   };
 
   const sim = new Sim(
-    atomicInteractionsTitleString,
-    [ new AtomicInteractionsScreen( true, atomicInteractionsTitleString, Tandem.ROOT.createTandem( 'atomicInteractionsScreen' ) ) ],
+    atomicInteractionsTitleStringProperty,
+    [ new AtomicInteractionsScreen( true, atomicInteractionsTitleStringProperty.value, Tandem.ROOT.createTandem( 'atomicInteractionsScreen' ) ) ],
     simOptions );
   sim.start();
 } );
