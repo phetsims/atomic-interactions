@@ -15,8 +15,8 @@ type StringsType = {
   }
 };
 
-const atomicInteractionsStrings = getStringModule( 'ATOMIC_INTERACTIONS' ) as StringsType;
+const AtomicInteractionsStrings = getStringModule( 'ATOMIC_INTERACTIONS' ) as StringsType;
 
-atomicInteractions.register( 'atomicInteractionsStrings', atomicInteractionsStrings );
+atomicInteractions.register( 'AtomicInteractionsStrings', AtomicInteractionsStrings );
 
-export default atomicInteractionsStrings;
+export default AtomicInteractionsStrings;
