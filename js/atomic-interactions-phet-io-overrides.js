@@ -40,13 +40,13 @@ window.phet.preloads.phetio.phetioElementsOverrides =
     "atomicInteractions.atomicInteractionsScreen.model.timeSpeedProperty": {
       "phetioFeatured": true
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.title.textProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.titleText.textProperty": {
       "phetioFeatured": true
     },
     "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.atomDiameterSlider.visibleProperty": {
       "phetioFeatured": true
     },
-    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.title.textProperty": {
+    "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.titleText.textProperty": {
       "phetioFeatured": true
     },
     "atomicInteractions.atomicInteractionsScreen.view.atomsControlPanel.interactionStrengthSlider.visibleProperty": {
