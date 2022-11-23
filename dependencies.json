@@ -5,7 +5,7 @@
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "1efa6b1e23548b661d78dbc108c6eb76e09a7ecb",
+    "sha": "fcfbe307830e536378c00d6f01b84ae799f8a527",
     "branch": "1.2"
   },
   "axon": {
@@ -17,7 +17,7 @@
     "branch": "HEAD"
   },
   "chipper": {
-    "sha": "913c0e11ee6cd1584cab894561e5e258f0a621f3",
+    "sha": "ad60bc5616cdd4029edfd43348d2f0ad3d9853e0",
     "branch": "HEAD"
   },
   "dot": {
