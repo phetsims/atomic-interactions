@@ -5,7 +5,7 @@
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "8343585331b371c7f2e3ed849ab8a93cdf5ce86e",
+    "sha": "7aa061c35bf3085c9c1d24f603f37b117d11d5e6",
     "branch": "1.2"
   },
   "axon": {
@@ -37,7 +37,7 @@
     "branch": "HEAD"
   },
   "phet-core": {
-    "sha": "6144cb330e52b20cadda567aa3dcb592f668ff17",
+    "sha": "e6040a07b92ad1182b4c51f9992e6a3a1fe6be56",
     "branch": "HEAD"
   },
   "phet-io": {
