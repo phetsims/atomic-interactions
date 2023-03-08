@@ -9,11 +9,18 @@
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
+import MappedProperty from '../../axon/js/MappedProperty.js';
 import AtomicInteractionsScreen from '../../states-of-matter/js/atomic-interactions/AtomicInteractionsScreen.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import AtomicInteractionsStrings from './AtomicInteractionsStrings.js';
 
 const atomicInteractionsTitleStringProperty = AtomicInteractionsStrings[ 'atomic-interactions' ].titleStringProperty;
+
+// You cannot pass the same Property instance as a single as the sim and screen name.
+const screenNameProperty = new MappedProperty( atomicInteractionsTitleStringProperty, {
+  bidirectional: true,
+  map: _.identity, inverseMap: _.identity
+} );
 
 simLauncher.launch( () => {
 
@@ -36,7 +43,7 @@ simLauncher.launch( () => {
 
   const sim = new Sim(
     atomicInteractionsTitleStringProperty,
-    [ new AtomicInteractionsScreen( true, Tandem.ROOT.createTandem( 'atomicInteractionsScreen' ) ) ],
+    [ new AtomicInteractionsScreen( true, screenNameProperty, Tandem.ROOT.createTandem( 'atomicInteractionsScreen' ) ) ],
     simOptions );
   sim.start();
 } );
