@@ -5,7 +5,7 @@
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "16bb833577ecf8f841ddb9ec806ec0b29a4fd852",
+    "sha": "7daad6a9838eed3bef90267181d0fed126a81bf8",
     "branch": "1.2"
   },
   "axon": {
@@ -65,7 +65,7 @@
     "branch": "HEAD"
   },
   "scenery": {
-    "sha": "d18069ee9da13ad855f6e761482e7955a04cc3f5",
+    "sha": "781cc0a9939719894e716dff756b940a837db4bb",
     "branch": "HEAD"
   },
   "scenery-phet": {
