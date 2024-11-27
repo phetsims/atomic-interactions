@@ -6,10 +6,10 @@
  * @author John Blanco
  */
 
+import MappedProperty from '../../axon/js/MappedProperty.js';
 import PreferencesModel from '../../joist/js/preferences/PreferencesModel.js';
 import Sim from '../../joist/js/Sim.js';
 import simLauncher from '../../joist/js/simLauncher.js';
-import MappedProperty from '../../axon/js/MappedProperty.js';
 import AtomicInteractionsScreen from '../../states-of-matter/js/atomic-interactions/AtomicInteractionsScreen.js';
 import Tandem from '../../tandem/js/Tandem.js';
 import AtomicInteractionsStrings from './AtomicInteractionsStrings.js';
