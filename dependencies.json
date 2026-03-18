@@ -5,7 +5,7 @@
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "3e72f9871147377e54c3b70645460748abdf0c9f",
+    "sha": "8b74b2d470644dc6e791b545476189dd2cef87cd",
     "branch": "1.2"
   },
   "axon": {
@@ -25,7 +25,7 @@
     "branch": "HEAD"
   },
   "joist": {
-    "sha": "383b99e6b8f3a8830361d6545ad0dbee2f2607a6",
+    "sha": "c7625af0daa923c7eaba1f19d1b8cff067c4e826",
     "branch": "HEAD"
   },
   "kite": {
