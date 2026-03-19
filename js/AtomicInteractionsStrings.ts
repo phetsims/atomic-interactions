@@ -20,6 +20,4 @@ type StringsType = {
 
 const AtomicInteractionsStrings = getStringModule( 'ATOMIC_INTERACTIONS' ) as StringsType;
 
-atomicInteractions.register( 'AtomicInteractionsStrings', AtomicInteractionsStrings );
-
 export default AtomicInteractionsStrings;
