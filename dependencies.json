@@ -1,11 +1,11 @@
 {
-  "comment": "# atomic-interactions 1.2.20-rc.3 Wed Mar 25 2026 07:28:42 GMT-0600 (Mountain Daylight Time)",
+  "comment": "# atomic-interactions 1.2.20 Fri Mar 27 2026 12:57:18 GMT-0600 (Mountain Daylight Time)",
   "assert": {
     "sha": "1a41cef653bbed1025af5768bea958d7e3e0f8ae",
     "branch": "HEAD"
   },
   "atomic-interactions": {
-    "sha": "612d8703990dc223af8c0002b81617867d9edcb0",
+    "sha": "31e856ae582e6ea872474018af79d9f9f98c1b48",
     "branch": "1.2"
   },
   "axon": {
